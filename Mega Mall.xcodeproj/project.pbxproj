@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE83AD3A2AE3C16200E40FF1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD392AE3C16200E40FF1 /* Colors.xcassets */; };
+		EE83AD3D2AE3C20100E40FF1 /* Cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD3C2AE3C20100E40FF1 /* Cairo.ttf */; };
+		EE83AD402AE3C38900E40FF1 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD3E2AE3C38900E40FF1 /* HelloViewController.swift */; };
+		EE83AD412AE3C38900E40FF1 /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD3F2AE3C38900E40FF1 /* HelloViewController.xib */; };
+		EE83AD432AE3C4A900E40FF1 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD422AE3C4A900E40FF1 /* UIFont+Style.swift */; };
+		EE83AD452AE3CEFB00E40FF1 /* DMSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD442AE3CEFA00E40FF1 /* DMSans.ttf */; };
+		EE83AD4F2AE3D19B00E40FF1 /* H1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD4E2AE3D19B00E40FF1 /* H1Label.swift */; };
+		EE83AD512AE3D1F000E40FF1 /* H2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD502AE3D1F000E40FF1 /* H2Label.swift */; };
+		EE83AD532AE3D20D00E40FF1 /* H3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD522AE3D20D00E40FF1 /* H3Label.swift */; };
+		EE83AD552AE3D22000E40FF1 /* MediumLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD542AE3D22000E40FF1 /* MediumLabel.swift */; };
+		EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD562AE3D23B00E40FF1 /* RegularLabel.swift */; };
+		EE83AD592AE3D24F00E40FF1 /* SmallLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD582AE3D24F00E40FF1 /* SmallLabel.swift */; };
 		EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */; };
 		EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */; };
-		EECEA29A2AE3AC3E009B2FD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2992AE3AC3E009B2FD9 /* ViewController.swift */; };
-		EECEA29D2AE3AC3E009B2FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECEA29B2AE3AC3E009B2FD9 /* Main.storyboard */; };
 		EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */; };
 		EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECEA2A02AE3AC3F009B2FD9 /* LaunchScreen.storyboard */; };
 		EECEA2AD2AE3AC3F009B2FD9 /* Mega_MallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2AC2AE3AC3F009B2FD9 /* Mega_MallTests.swift */; };
 		EECEA2B72AE3AC3F009B2FD9 /* Mega_MallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2B62AE3AC3F009B2FD9 /* Mega_MallUITests.swift */; };
 		EECEA2B92AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2B82AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift */; };
+		EEECB3472AE3B51800549C83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEECB3492AE3B51800549C83 /* Localizable.strings */; };
+		EEECB3702AE3BB3000549C83 /* Localizable in Frameworks */ = {isa = PBXBuildFile; productRef = EEECB36F2AE3BB3000549C83 /* Localizable */; };
+		EEECB3722AE3BF0900549C83 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EEECB3712AE3BF0900549C83 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +49,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mega Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE83AD392AE3C16200E40FF1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EE83AD3C2AE3C20100E40FF1 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
+		EE83AD3E2AE3C38900E40FF1 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		EE83AD3F2AE3C38900E40FF1 /* HelloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloViewController.xib; sourceTree = "<group>"; };
+		EE83AD422AE3C4A900E40FF1 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
+		EE83AD442AE3CEFA00E40FF1 /* DMSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DMSans.ttf; sourceTree = "<group>"; };
+		EE83AD4E2AE3D19B00E40FF1 /* H1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H1Label.swift; sourceTree = "<group>"; };
+		EE83AD502AE3D1F000E40FF1 /* H2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H2Label.swift; sourceTree = "<group>"; };
+		EE83AD522AE3D20D00E40FF1 /* H3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H3Label.swift; sourceTree = "<group>"; };
+		EE83AD542AE3D22000E40FF1 /* MediumLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumLabel.swift; sourceTree = "<group>"; };
+		EE83AD562AE3D23B00E40FF1 /* RegularLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularLabel.swift; sourceTree = "<group>"; };
+		EE83AD582AE3D24F00E40FF1 /* SmallLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallLabel.swift; sourceTree = "<group>"; };
+		EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Mega Mall.app"; path = "/Users/ahmed-yamany/Desktop/Mega Mall/build/Debug-iphoneos/Mega Mall.app"; sourceTree = "<absolute>"; };
 		EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EECEA2992AE3AC3E009B2FD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EECEA29C2AE3AC3E009B2FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EECEA2A12AE3AC3F009B2FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EECEA2A32AE3AC3F009B2FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EECEA2A82AE3AC3F009B2FD9 /* Mega MallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mega MallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EECEA2A82AE3AC3F009B2FD9 /* Mega MallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Mega MallTests.xctest"; path = "/Users/ahmed-yamany/Desktop/Mega Mall/build/Debug-iphoneos/Mega MallTests.xctest"; sourceTree = "<absolute>"; };
 		EECEA2AC2AE3AC3F009B2FD9 /* Mega_MallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallTests.swift; sourceTree = "<group>"; };
-		EECEA2B22AE3AC3F009B2FD9 /* Mega MallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mega MallUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EECEA2B22AE3AC3F009B2FD9 /* Mega MallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Mega MallUITests.xctest"; path = "/Users/ahmed-yamany/Desktop/Mega Mall/build/Debug-iphoneos/Mega MallUITests.xctest"; sourceTree = "<absolute>"; };
 		EECEA2B62AE3AC3F009B2FD9 /* Mega_MallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallUITests.swift; sourceTree = "<group>"; };
 		EECEA2B82AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEECB3422AE3B17B00549C83 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EEECB3482AE3B51800549C83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EEECB34A2AE3B51A00549C83 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EEECB36E2AE3BB2000549C83 /* Localizable */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Localizable; path = Packages/Localizable; sourceTree = "<group>"; };
+		EEECB3712AE3BF0900549C83 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEECB3702AE3BB3000549C83 /* Localizable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,34 +105,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE83AD372AE3C0FD00E40FF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD3B2AE3C17400E40FF1 /* Fonts */,
+				EE83AD382AE3C14200E40FF1 /* Localization */,
+				EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */,
+				EE83AD392AE3C16200E40FF1 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EE83AD382AE3C14200E40FF1 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EEECB3492AE3B51800549C83 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		EE83AD3B2AE3C17400E40FF1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD422AE3C4A900E40FF1 /* UIFont+Style.swift */,
+				EE83AD442AE3CEFA00E40FF1 /* DMSans.ttf */,
+				EE83AD3C2AE3C20100E40FF1 /* Cairo.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EE83AD462AE3D12A00E40FF1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD472AE3D13C00E40FF1 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EE83AD472AE3D13C00E40FF1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		EE83AD482AE3D14A00E40FF1 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD492AE3D15A00E40FF1 /* Labels */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		EE83AD492AE3D15A00E40FF1 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD4E2AE3D19B00E40FF1 /* H1Label.swift */,
+				EE83AD502AE3D1F000E40FF1 /* H2Label.swift */,
+				EE83AD522AE3D20D00E40FF1 /* H3Label.swift */,
+				EE83AD542AE3D22000E40FF1 /* MediumLabel.swift */,
+				EE83AD562AE3D23B00E40FF1 /* RegularLabel.swift */,
+				EE83AD582AE3D24F00E40FF1 /* SmallLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
 		EECEA2892AE3AC3E009B2FD9 = {
 			isa = PBXGroup;
 			children = (
+				EEECB36E2AE3BB2000549C83 /* Localizable */,
+				EEECB3712AE3BF0900549C83 /* .swiftlint.yml */,
 				EECEA2942AE3AC3E009B2FD9 /* Mega Mall */,
 				EECEA2AB2AE3AC3F009B2FD9 /* Mega MallTests */,
 				EECEA2B52AE3AC3F009B2FD9 /* Mega MallUITests */,
-				EECEA2932AE3AC3E009B2FD9 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		EECEA2932AE3AC3E009B2FD9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */,
-				EECEA2A82AE3AC3F009B2FD9 /* Mega MallTests.xctest */,
-				EECEA2B22AE3AC3F009B2FD9 /* Mega MallUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EECEA2942AE3AC3E009B2FD9 /* Mega Mall */ = {
 			isa = PBXGroup;
 			children = (
+				EECEA2C52AE3ADE8009B2FD9 /* Utilities */,
+				EE83AD372AE3C0FD00E40FF1 /* Resources */,
 				EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */,
 				EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */,
-				EECEA2992AE3AC3E009B2FD9 /* ViewController.swift */,
-				EECEA29B2AE3AC3E009B2FD9 /* Main.storyboard */,
-				EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */,
 				EECEA2A02AE3AC3F009B2FD9 /* LaunchScreen.storyboard */,
 				EECEA2A32AE3AC3F009B2FD9 /* Info.plist */,
 			);
@@ -127,6 +211,17 @@
 			path = "Mega MallUITests";
 			sourceTree = "<group>";
 		};
+		EECEA2C52AE3ADE8009B2FD9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD482AE3D14A00E40FF1 /* Custom Views */,
+				EE83AD462AE3D12A00E40FF1 /* Extensions */,
+				EE83AD3E2AE3C38900E40FF1 /* HelloViewController.swift */,
+				EE83AD3F2AE3C38900E40FF1 /* HelloViewController.xib */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EECEA2BC2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega Mall" */;
 			buildPhases = (
+				EEECB3732AE3BF3100549C83 /* swiftlint */,
 				EECEA28E2AE3AC3E009B2FD9 /* Sources */,
 				EECEA28F2AE3AC3E009B2FD9 /* Frameworks */,
 				EECEA2902AE3AC3E009B2FD9 /* Resources */,
@@ -143,6 +239,9 @@
 			dependencies = (
 			);
 			name = "Mega Mall";
+			packageProductDependencies = (
+				EEECB36F2AE3BB3000549C83 /* Localizable */,
+			);
 			productName = "Mega Mall";
 			productReference = EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */;
 			productType = "com.apple.product-type.application";
@@ -213,9 +312,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = EECEA2892AE3AC3E009B2FD9;
-			productRefGroup = EECEA2932AE3AC3E009B2FD9 /* Products */;
+			packageReferences = (
+			);
+			productRefGroup = EECEA2892AE3AC3E009B2FD9;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -231,9 +333,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE83AD3A2AE3C16200E40FF1 /* Colors.xcassets in Resources */,
+				EEECB3722AE3BF0900549C83 /* .swiftlint.yml in Resources */,
+				EE83AD412AE3C38900E40FF1 /* HelloViewController.xib in Resources */,
 				EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */,
+				EE83AD452AE3CEFB00E40FF1 /* DMSans.ttf in Resources */,
+				EEECB3472AE3B51800549C83 /* Localizable.strings in Resources */,
 				EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */,
-				EECEA29D2AE3AC3E009B2FD9 /* Main.storyboard in Resources */,
+				EE83AD3D2AE3C20100E40FF1 /* Cairo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +360,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EEECB3732AE3BF3100549C83 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EECEA28E2AE3AC3E009B2FD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EECEA29A2AE3AC3E009B2FD9 /* ViewController.swift in Sources */,
+				EE83AD592AE3D24F00E40FF1 /* SmallLabel.swift in Sources */,
+				EE83AD4F2AE3D19B00E40FF1 /* H1Label.swift in Sources */,
+				EE83AD402AE3C38900E40FF1 /* HelloViewController.swift in Sources */,
+				EE83AD532AE3D20D00E40FF1 /* H3Label.swift in Sources */,
+				EE83AD512AE3D1F000E40FF1 /* H2Label.swift in Sources */,
 				EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */,
+				EE83AD552AE3D22000E40FF1 /* MediumLabel.swift in Sources */,
+				EE83AD432AE3C4A900E40FF1 /* UIFont+Style.swift in Sources */,
 				EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */,
+				EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,20 +433,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EECEA29B2AE3AC3E009B2FD9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EECEA29C2AE3AC3E009B2FD9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EECEA2A02AE3AC3F009B2FD9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EECEA2A12AE3AC3F009B2FD9 /* Base */,
+				EEECB3422AE3B17B00549C83 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EEECB3492AE3B51800549C83 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEECB3482AE3B51800549C83 /* en */,
+				EEECB34A2AE3B51A00549C83 /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -321,6 +459,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -353,7 +492,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -368,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -384,6 +523,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -416,7 +556,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -425,7 +565,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -447,7 +587,6 @@
 				INFOPLIST_FILE = "Mega Mall/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +614,6 @@
 				INFOPLIST_FILE = "Mega Mall/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,6 +745,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEECB36F2AE3BB3000549C83 /* Localizable */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Localizable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EECEA28A2AE3AC3E009B2FD9 /* Project object */;
 }
