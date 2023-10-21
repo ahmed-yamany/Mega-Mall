@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */; };
+		EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */; };
+		EECEA29A2AE3AC3E009B2FD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2992AE3AC3E009B2FD9 /* ViewController.swift */; };
+		EECEA29D2AE3AC3E009B2FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECEA29B2AE3AC3E009B2FD9 /* Main.storyboard */; };
+		EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */; };
+		EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECEA2A02AE3AC3F009B2FD9 /* LaunchScreen.storyboard */; };
+		EECEA2AD2AE3AC3F009B2FD9 /* Mega_MallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2AC2AE3AC3F009B2FD9 /* Mega_MallTests.swift */; };
+		EECEA2B72AE3AC3F009B2FD9 /* Mega_MallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2B62AE3AC3F009B2FD9 /* Mega_MallUITests.swift */; };
+		EECEA2B92AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2B82AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EECEA2A92AE3AC3F009B2FD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EECEA28A2AE3AC3E009B2FD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EECEA2912AE3AC3E009B2FD9;
+			remoteInfo = "Mega Mall";
+		};
+		EECEA2B32AE3AC3F009B2FD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EECEA28A2AE3AC3E009B2FD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EECEA2912AE3AC3E009B2FD9;
+			remoteInfo = "Mega Mall";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mega Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EECEA2992AE3AC3E009B2FD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EECEA29C2AE3AC3E009B2FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EECEA2A12AE3AC3F009B2FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EECEA2A32AE3AC3F009B2FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EECEA2A82AE3AC3F009B2FD9 /* Mega MallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mega MallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EECEA2AC2AE3AC3F009B2FD9 /* Mega_MallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallTests.swift; sourceTree = "<group>"; };
+		EECEA2B22AE3AC3F009B2FD9 /* Mega MallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mega MallUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EECEA2B62AE3AC3F009B2FD9 /* Mega_MallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallUITests.swift; sourceTree = "<group>"; };
+		EECEA2B82AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EECEA28F2AE3AC3E009B2FD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECEA2A52AE3AC3F009B2FD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECEA2AF2AE3AC3F009B2FD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EECEA2892AE3AC3E009B2FD9 = {
+			isa = PBXGroup;
+			children = (
+				EECEA2942AE3AC3E009B2FD9 /* Mega Mall */,
+				EECEA2AB2AE3AC3F009B2FD9 /* Mega MallTests */,
+				EECEA2B52AE3AC3F009B2FD9 /* Mega MallUITests */,
+				EECEA2932AE3AC3E009B2FD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EECEA2932AE3AC3E009B2FD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */,
+				EECEA2A82AE3AC3F009B2FD9 /* Mega MallTests.xctest */,
+				EECEA2B22AE3AC3F009B2FD9 /* Mega MallUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EECEA2942AE3AC3E009B2FD9 /* Mega Mall */ = {
+			isa = PBXGroup;
+			children = (
+				EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */,
+				EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */,
+				EECEA2992AE3AC3E009B2FD9 /* ViewController.swift */,
+				EECEA29B2AE3AC3E009B2FD9 /* Main.storyboard */,
+				EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */,
+				EECEA2A02AE3AC3F009B2FD9 /* LaunchScreen.storyboard */,
+				EECEA2A32AE3AC3F009B2FD9 /* Info.plist */,
+			);
+			path = "Mega Mall";
+			sourceTree = "<group>";
+		};
+		EECEA2AB2AE3AC3F009B2FD9 /* Mega MallTests */ = {
+			isa = PBXGroup;
+			children = (
+				EECEA2AC2AE3AC3F009B2FD9 /* Mega_MallTests.swift */,
+			);
+			path = "Mega MallTests";
+			sourceTree = "<group>";
+		};
+		EECEA2B52AE3AC3F009B2FD9 /* Mega MallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EECEA2B62AE3AC3F009B2FD9 /* Mega_MallUITests.swift */,
+				EECEA2B82AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift */,
+			);
+			path = "Mega MallUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EECEA2912AE3AC3E009B2FD9 /* Mega Mall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EECEA2BC2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega Mall" */;
+			buildPhases = (
+				EECEA28E2AE3AC3E009B2FD9 /* Sources */,
+				EECEA28F2AE3AC3E009B2FD9 /* Frameworks */,
+				EECEA2902AE3AC3E009B2FD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mega Mall";
+			productName = "Mega Mall";
+			productReference = EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EECEA2A72AE3AC3F009B2FD9 /* Mega MallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EECEA2BF2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega MallTests" */;
+			buildPhases = (
+				EECEA2A42AE3AC3F009B2FD9 /* Sources */,
+				EECEA2A52AE3AC3F009B2FD9 /* Frameworks */,
+				EECEA2A62AE3AC3F009B2FD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EECEA2AA2AE3AC3F009B2FD9 /* PBXTargetDependency */,
+			);
+			name = "Mega MallTests";
+			productName = "Mega MallTests";
+			productReference = EECEA2A82AE3AC3F009B2FD9 /* Mega MallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EECEA2B12AE3AC3F009B2FD9 /* Mega MallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EECEA2C22AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega MallUITests" */;
+			buildPhases = (
+				EECEA2AE2AE3AC3F009B2FD9 /* Sources */,
+				EECEA2AF2AE3AC3F009B2FD9 /* Frameworks */,
+				EECEA2B02AE3AC3F009B2FD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EECEA2B42AE3AC3F009B2FD9 /* PBXTargetDependency */,
+			);
+			name = "Mega MallUITests";
+			productName = "Mega MallUITests";
+			productReference = EECEA2B22AE3AC3F009B2FD9 /* Mega MallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EECEA28A2AE3AC3E009B2FD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EECEA2912AE3AC3E009B2FD9 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					EECEA2A72AE3AC3F009B2FD9 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = EECEA2912AE3AC3E009B2FD9;
+					};
+					EECEA2B12AE3AC3F009B2FD9 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = EECEA2912AE3AC3E009B2FD9;
+					};
+				};
+			};
+			buildConfigurationList = EECEA28D2AE3AC3E009B2FD9 /* Build configuration list for PBXProject "Mega Mall" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EECEA2892AE3AC3E009B2FD9;
+			productRefGroup = EECEA2932AE3AC3E009B2FD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EECEA2912AE3AC3E009B2FD9 /* Mega Mall */,
+				EECEA2A72AE3AC3F009B2FD9 /* Mega MallTests */,
+				EECEA2B12AE3AC3F009B2FD9 /* Mega MallUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EECEA2902AE3AC3E009B2FD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */,
+				EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */,
+				EECEA29D2AE3AC3E009B2FD9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECEA2A62AE3AC3F009B2FD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECEA2B02AE3AC3F009B2FD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EECEA28E2AE3AC3E009B2FD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EECEA29A2AE3AC3E009B2FD9 /* ViewController.swift in Sources */,
+				EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */,
+				EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECEA2A42AE3AC3F009B2FD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EECEA2AD2AE3AC3F009B2FD9 /* Mega_MallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EECEA2AE2AE3AC3F009B2FD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EECEA2B92AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift in Sources */,
+				EECEA2B72AE3AC3F009B2FD9 /* Mega_MallUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EECEA2AA2AE3AC3F009B2FD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EECEA2912AE3AC3E009B2FD9 /* Mega Mall */;
+			targetProxy = EECEA2A92AE3AC3F009B2FD9 /* PBXContainerItemProxy */;
+		};
+		EECEA2B42AE3AC3F009B2FD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EECEA2912AE3AC3E009B2FD9 /* Mega Mall */;
+			targetProxy = EECEA2B32AE3AC3F009B2FD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EECEA29B2AE3AC3E009B2FD9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EECEA29C2AE3AC3E009B2FD9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EECEA2A02AE3AC3F009B2FD9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EECEA2A12AE3AC3F009B2FD9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EECEA2BA2AE3AC3F009B2FD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EECEA2BB2AE3AC3F009B2FD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EECEA2BD2AE3AC3F009B2FD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mega Mall/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yamany.Mega-Mall";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EECEA2BE2AE3AC3F009B2FD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mega Mall/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yamany.Mega-Mall";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EECEA2C02AE3AC3F009B2FD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yamany.Mega-MallTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mega Mall.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mega Mall";
+			};
+			name = Debug;
+		};
+		EECEA2C12AE3AC3F009B2FD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yamany.Mega-MallTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mega Mall.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mega Mall";
+			};
+			name = Release;
+		};
+		EECEA2C32AE3AC3F009B2FD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yamany.Mega-MallUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mega Mall";
+			};
+			name = Debug;
+		};
+		EECEA2C42AE3AC3F009B2FD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yamany.Mega-MallUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mega Mall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EECEA28D2AE3AC3E009B2FD9 /* Build configuration list for PBXProject "Mega Mall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EECEA2BA2AE3AC3F009B2FD9 /* Debug */,
+				EECEA2BB2AE3AC3F009B2FD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EECEA2BC2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega Mall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EECEA2BD2AE3AC3F009B2FD9 /* Debug */,
+				EECEA2BE2AE3AC3F009B2FD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EECEA2BF2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega MallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EECEA2C02AE3AC3F009B2FD9 /* Debug */,
+				EECEA2C12AE3AC3F009B2FD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EECEA2C22AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega MallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EECEA2C32AE3AC3F009B2FD9 /* Debug */,
+				EECEA2C42AE3AC3F009B2FD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EECEA28A2AE3AC3E009B2FD9 /* Project object */;
+}
