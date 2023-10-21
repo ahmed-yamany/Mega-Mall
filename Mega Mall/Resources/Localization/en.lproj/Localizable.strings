@@ -5,4 +5,18 @@
   Created by Ahmed Yamany on 21/10/2023.
   
 */
-"title" = "good";
+// MARK: - Onboarding
+"onboarding.signin" = "Sign In";
+"onboarding.forgotpassword" = "Forgot Password";
+"onboarding.signup" = "Sign Up";
+// Login
+"onboarding.login.decription.title" = "Welcome back to Mega Mall";
+"onboarding.login.decription.subtitle" = "Please enter data to log in";
+"onboarding.login.email.label" = "Email/Phone";
+"onboarding.login.email.placeholder" = "Enter your Email Address/ Telephone Number";
+"onboarding.login.password.label" = "Password";
+"onboarding.login.password.placeholder" = "Enter Account Password";
+
+// Register
+"onboarding.register.email.decription.title" = "Register Account";
+"onboarding.register.email.decription.subtitle" = "Enter Email/Number. Mobile to register";

@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		EE83AD3A2AE3C16200E40FF1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD392AE3C16200E40FF1 /* Colors.xcassets */; };
 		EE83AD3D2AE3C20100E40FF1 /* Cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD3C2AE3C20100E40FF1 /* Cairo.ttf */; };
-		EE83AD402AE3C38900E40FF1 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD3E2AE3C38900E40FF1 /* HelloViewController.swift */; };
-		EE83AD412AE3C38900E40FF1 /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD3F2AE3C38900E40FF1 /* HelloViewController.xib */; };
 		EE83AD432AE3C4A900E40FF1 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD422AE3C4A900E40FF1 /* UIFont+Style.swift */; };
 		EE83AD452AE3CEFB00E40FF1 /* DMSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD442AE3CEFA00E40FF1 /* DMSans.ttf */; };
 		EE83AD4F2AE3D19B00E40FF1 /* H1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD4E2AE3D19B00E40FF1 /* H1Label.swift */; };
@@ -19,6 +17,24 @@
 		EE83AD552AE3D22000E40FF1 /* MediumLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD542AE3D22000E40FF1 /* MediumLabel.swift */; };
 		EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD562AE3D23B00E40FF1 /* RegularLabel.swift */; };
 		EE83AD592AE3D24F00E40FF1 /* SmallLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD582AE3D24F00E40FF1 /* SmallLabel.swift */; };
+		EE83AD622AE3E3A300E40FF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD5E2AE3E3A300E40FF1 /* LoginViewController.swift */; };
+		EE83AD632AE3E3A300E40FF1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD5F2AE3E3A300E40FF1 /* LoginViewModel.swift */; };
+		EE83AD642AE3E3A300E40FF1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD602AE3E3A300E40FF1 /* LoginViewController.xib */; };
+		EE83AD672AE3E40400E40FF1 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD662AE3E40400E40FF1 /* Factory */; };
+		EE83AD6A2AE3E45100E40FF1 /* ViewModel Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD692AE3E45100E40FF1 /* ViewModel Container.swift */; };
+		EE83AD6F2AE3E5C900E40FF1 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD6D2AE3E5C900E40FF1 /* DescriptionView.swift */; };
+		EE83AD702AE3E5C900E40FF1 /* DescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD6E2AE3E5C900E40FF1 /* DescriptionView.xib */; };
+		EE83AD762AE3E92A00E40FF1 /* MakeConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD752AE3E92A00E40FF1 /* MakeConstraints */; };
+		EE83AD792AE3E94700E40FF1 /* Localizable in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD782AE3E94700E40FF1 /* Localizable */; };
+		EE83AD802AE3EF5B00E40FF1 /* EmailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD7C2AE3EF5B00E40FF1 /* EmailViewModelType.swift */; };
+		EE83AD812AE3EF5B00E40FF1 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD7D2AE3EF5B00E40FF1 /* EmailViewController.swift */; };
+		EE83AD822AE3EF5B00E40FF1 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD7E2AE3EF5B00E40FF1 /* EmailViewModel.swift */; };
+		EE83AD832AE3EF5B00E40FF1 /* EmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD7F2AE3EF5B00E40FF1 /* EmailViewController.xib */; };
+		EE83AD852AE3F2BC00E40FF1 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD842AE3F2BC00E40FF1 /* swiftgen.yml */; };
+		EE83AD8B2AE3F7C600E40FF1 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD8A2AE3F7C600E40FF1 /* Strings+Generated.swift */; };
+		EE83AD912AE3FC3D00E40FF1 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD8F2AE3FC3D00E40FF1 /* OnboardingTextField.swift */; };
+		EE83AD922AE3FC3D00E40FF1 /* OnboardingTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */; };
+		EE83AD952AE3FD3800E40FF1 /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD942AE3FD3800E40FF1 /* Extensions */; };
 		EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */; };
 		EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */; };
 		EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */; };
@@ -27,8 +43,10 @@
 		EECEA2B72AE3AC3F009B2FD9 /* Mega_MallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2B62AE3AC3F009B2FD9 /* Mega_MallUITests.swift */; };
 		EECEA2B92AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2B82AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift */; };
 		EEECB3472AE3B51800549C83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEECB3492AE3B51800549C83 /* Localizable.strings */; };
-		EEECB3702AE3BB3000549C83 /* Localizable in Frameworks */ = {isa = PBXBuildFile; productRef = EEECB36F2AE3BB3000549C83 /* Localizable */; };
 		EEECB3722AE3BF0900549C83 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EEECB3712AE3BF0900549C83 /* .swiftlint.yml */; };
+		EEFCC62C2AE4126200213626 /* FullButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFCC62B2AE4126200213626 /* FullButton.swift */; };
+		EEFCC62F2AE418E100213626 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EEFCC62E2AE418E100213626 /* IQKeyboardManagerSwift */; };
+		EEFCC6312AE41DC400213626 /* LabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFCC6302AE41DC400213626 /* LabelButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE23D8DD2AE4851D00B37EDD /* MegaMallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegaMallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE23D8DE2AE4851D00B37EDD /* MegaMallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegaMallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE83AD392AE3C16200E40FF1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EE83AD3C2AE3C20100E40FF1 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
-		EE83AD3E2AE3C38900E40FF1 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
-		EE83AD3F2AE3C38900E40FF1 /* HelloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloViewController.xib; sourceTree = "<group>"; };
 		EE83AD422AE3C4A900E40FF1 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		EE83AD442AE3CEFA00E40FF1 /* DMSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DMSans.ttf; sourceTree = "<group>"; };
 		EE83AD4E2AE3D19B00E40FF1 /* H1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H1Label.swift; sourceTree = "<group>"; };
@@ -61,22 +79,35 @@
 		EE83AD542AE3D22000E40FF1 /* MediumLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumLabel.swift; sourceTree = "<group>"; };
 		EE83AD562AE3D23B00E40FF1 /* RegularLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularLabel.swift; sourceTree = "<group>"; };
 		EE83AD582AE3D24F00E40FF1 /* SmallLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallLabel.swift; sourceTree = "<group>"; };
-		EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Mega Mall.app"; path = "/Users/ahmed-yamany/Desktop/Mega Mall/build/Debug-iphoneos/Mega Mall.app"; sourceTree = "<absolute>"; };
+		EE83AD5E2AE3E3A300E40FF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EE83AD5F2AE3E3A300E40FF1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EE83AD602AE3E3A300E40FF1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		EE83AD692AE3E45100E40FF1 /* ViewModel Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel Container.swift"; sourceTree = "<group>"; };
+		EE83AD6D2AE3E5C900E40FF1 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		EE83AD6E2AE3E5C900E40FF1 /* DescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionView.xib; sourceTree = "<group>"; };
+		EE83AD7C2AE3EF5B00E40FF1 /* EmailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModelType.swift; sourceTree = "<group>"; };
+		EE83AD7D2AE3EF5B00E40FF1 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		EE83AD7E2AE3EF5B00E40FF1 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
+		EE83AD7F2AE3EF5B00E40FF1 /* EmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailViewController.xib; sourceTree = "<group>"; };
+		EE83AD842AE3F2BC00E40FF1 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		EE83AD862AE3F33C00E40FF1 /* Mega Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mega Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE83AD8A2AE3F7C600E40FF1 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		EE83AD8F2AE3FC3D00E40FF1 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
+		EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingTextField.xib; sourceTree = "<group>"; };
 		EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EECEA2A12AE3AC3F009B2FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EECEA2A32AE3AC3F009B2FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EECEA2A82AE3AC3F009B2FD9 /* Mega MallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Mega MallTests.xctest"; path = "/Users/ahmed-yamany/Desktop/Mega Mall/build/Debug-iphoneos/Mega MallTests.xctest"; sourceTree = "<absolute>"; };
 		EECEA2AC2AE3AC3F009B2FD9 /* Mega_MallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallTests.swift; sourceTree = "<group>"; };
-		EECEA2B22AE3AC3F009B2FD9 /* Mega MallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Mega MallUITests.xctest"; path = "/Users/ahmed-yamany/Desktop/Mega Mall/build/Debug-iphoneos/Mega MallUITests.xctest"; sourceTree = "<absolute>"; };
 		EECEA2B62AE3AC3F009B2FD9 /* Mega_MallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallUITests.swift; sourceTree = "<group>"; };
 		EECEA2B82AE3AC3F009B2FD9 /* Mega_MallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mega_MallUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EEECB3422AE3B17B00549C83 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EEECB3482AE3B51800549C83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EEECB34A2AE3B51A00549C83 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EEECB36E2AE3BB2000549C83 /* Localizable */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Localizable; path = Packages/Localizable; sourceTree = "<group>"; };
 		EEECB3712AE3BF0900549C83 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		EEFCC62B2AE4126200213626 /* FullButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullButton.swift; sourceTree = "<group>"; };
+		EEFCC6302AE41DC400213626 /* LabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +115,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEECB3702AE3BB3000549C83 /* Localizable in Frameworks */,
+				EEFCC62F2AE418E100213626 /* IQKeyboardManagerSwift in Frameworks */,
+				EE83AD792AE3E94700E40FF1 /* Localizable in Frameworks */,
+				EE83AD672AE3E40400E40FF1 /* Factory in Frameworks */,
+				EE83AD952AE3FD3800E40FF1 /* Extensions in Frameworks */,
+				EE83AD762AE3E92A00E40FF1 /* MakeConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +143,7 @@
 		EE83AD372AE3C0FD00E40FF1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EE83AD892AE3F7AD00E40FF1 /* Generated */,
 				EE83AD3B2AE3C17400E40FF1 /* Fonts */,
 				EE83AD382AE3C14200E40FF1 /* Localization */,
 				EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */,
@@ -134,25 +170,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		EE83AD462AE3D12A00E40FF1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EE83AD472AE3D13C00E40FF1 /* UIKit */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		EE83AD472AE3D13C00E40FF1 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
 		EE83AD482AE3D14A00E40FF1 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
 				EE83AD492AE3D15A00E40FF1 /* Labels */,
+				EE83AD6C2AE3E5B400E40FF1 /* Description View */,
+				EE83AD8E2AE3FC1B00E40FF1 /* Onboarding TextField */,
+				EEFCC62B2AE4126200213626 /* FullButton.swift */,
+				EEFCC6302AE41DC400213626 /* LabelButton.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -170,14 +195,97 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		EE83AD5A2AE3D56E00E40FF1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD5B2AE3E08D00E40FF1 /* Onboarding */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EE83AD5B2AE3E08D00E40FF1 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD5C2AE3E31000E40FF1 /* Login */,
+				EE83AD7A2AE3EE8500E40FF1 /* Register */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		EE83AD5C2AE3E31000E40FF1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD5F2AE3E3A300E40FF1 /* LoginViewModel.swift */,
+				EE83AD5E2AE3E3A300E40FF1 /* LoginViewController.swift */,
+				EE83AD602AE3E3A300E40FF1 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EE83AD682AE3E43500E40FF1 /* Factory Containers */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD692AE3E45100E40FF1 /* ViewModel Container.swift */,
+			);
+			path = "Factory Containers";
+			sourceTree = "<group>";
+		};
+		EE83AD6C2AE3E5B400E40FF1 /* Description View */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD6D2AE3E5C900E40FF1 /* DescriptionView.swift */,
+				EE83AD6E2AE3E5C900E40FF1 /* DescriptionView.xib */,
+			);
+			path = "Description View";
+			sourceTree = "<group>";
+		};
+		EE83AD7A2AE3EE8500E40FF1 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD7B2AE3EF4F00E40FF1 /* Email */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		EE83AD7B2AE3EF4F00E40FF1 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD7C2AE3EF5B00E40FF1 /* EmailViewModelType.swift */,
+				EE83AD7D2AE3EF5B00E40FF1 /* EmailViewController.swift */,
+				EE83AD7E2AE3EF5B00E40FF1 /* EmailViewModel.swift */,
+				EE83AD7F2AE3EF5B00E40FF1 /* EmailViewController.xib */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		EE83AD892AE3F7AD00E40FF1 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD8A2AE3F7C600E40FF1 /* Strings+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		EE83AD8E2AE3FC1B00E40FF1 /* Onboarding TextField */ = {
+			isa = PBXGroup;
+			children = (
+				EE83AD8F2AE3FC3D00E40FF1 /* OnboardingTextField.swift */,
+				EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */,
+			);
+			path = "Onboarding TextField";
+			sourceTree = "<group>";
+		};
 		EECEA2892AE3AC3E009B2FD9 = {
 			isa = PBXGroup;
 			children = (
-				EEECB36E2AE3BB2000549C83 /* Localizable */,
+				EE83AD842AE3F2BC00E40FF1 /* swiftgen.yml */,
 				EEECB3712AE3BF0900549C83 /* .swiftlint.yml */,
 				EECEA2942AE3AC3E009B2FD9 /* Mega Mall */,
 				EECEA2AB2AE3AC3F009B2FD9 /* Mega MallTests */,
 				EECEA2B52AE3AC3F009B2FD9 /* Mega MallUITests */,
+				EE83AD862AE3F33C00E40FF1 /* Mega Mall.app */,
+				EE23D8DD2AE4851D00B37EDD /* MegaMallTests.xctest */,
+				EE23D8DE2AE4851D00B37EDD /* MegaMallUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,10 +322,9 @@
 		EECEA2C52AE3ADE8009B2FD9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EE83AD682AE3E43500E40FF1 /* Factory Containers */,
 				EE83AD482AE3D14A00E40FF1 /* Custom Views */,
-				EE83AD462AE3D12A00E40FF1 /* Extensions */,
-				EE83AD3E2AE3C38900E40FF1 /* HelloViewController.swift */,
-				EE83AD3F2AE3C38900E40FF1 /* HelloViewController.xib */,
+				EE83AD5A2AE3D56E00E40FF1 /* Scenes */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -229,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EECEA2BC2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega Mall" */;
 			buildPhases = (
+				EE83AD8C2AE3F7E700E40FF1 /* swiftgen */,
 				EEECB3732AE3BF3100549C83 /* swiftlint */,
 				EECEA28E2AE3AC3E009B2FD9 /* Sources */,
 				EECEA28F2AE3AC3E009B2FD9 /* Frameworks */,
@@ -240,15 +348,19 @@
 			);
 			name = "Mega Mall";
 			packageProductDependencies = (
-				EEECB36F2AE3BB3000549C83 /* Localizable */,
+				EE83AD662AE3E40400E40FF1 /* Factory */,
+				EE83AD752AE3E92A00E40FF1 /* MakeConstraints */,
+				EE83AD782AE3E94700E40FF1 /* Localizable */,
+				EE83AD942AE3FD3800E40FF1 /* Extensions */,
+				EEFCC62E2AE418E100213626 /* IQKeyboardManagerSwift */,
 			);
 			productName = "Mega Mall";
-			productReference = EECEA2922AE3AC3E009B2FD9 /* Mega Mall.app */;
+			productReference = EE83AD862AE3F33C00E40FF1 /* Mega Mall.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EECEA2A72AE3AC3F009B2FD9 /* Mega MallTests */ = {
+		EECEA2A72AE3AC3F009B2FD9 /* MegaMallTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EECEA2BF2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega MallTests" */;
+			buildConfigurationList = EECEA2BF2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "MegaMallTests" */;
 			buildPhases = (
 				EECEA2A42AE3AC3F009B2FD9 /* Sources */,
 				EECEA2A52AE3AC3F009B2FD9 /* Frameworks */,
@@ -259,14 +371,14 @@
 			dependencies = (
 				EECEA2AA2AE3AC3F009B2FD9 /* PBXTargetDependency */,
 			);
-			name = "Mega MallTests";
+			name = MegaMallTests;
 			productName = "Mega MallTests";
-			productReference = EECEA2A82AE3AC3F009B2FD9 /* Mega MallTests.xctest */;
+			productReference = EE23D8DD2AE4851D00B37EDD /* MegaMallTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EECEA2B12AE3AC3F009B2FD9 /* Mega MallUITests */ = {
+		EECEA2B12AE3AC3F009B2FD9 /* MegaMallUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EECEA2C22AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega MallUITests" */;
+			buildConfigurationList = EECEA2C22AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "MegaMallUITests" */;
 			buildPhases = (
 				EECEA2AE2AE3AC3F009B2FD9 /* Sources */,
 				EECEA2AF2AE3AC3F009B2FD9 /* Frameworks */,
@@ -277,9 +389,9 @@
 			dependencies = (
 				EECEA2B42AE3AC3F009B2FD9 /* PBXTargetDependency */,
 			);
-			name = "Mega MallUITests";
+			name = MegaMallUITests;
 			productName = "Mega MallUITests";
-			productReference = EECEA2B22AE3AC3F009B2FD9 /* Mega MallUITests.xctest */;
+			productReference = EE23D8DE2AE4851D00B37EDD /* MegaMallUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -316,14 +428,19 @@
 			);
 			mainGroup = EECEA2892AE3AC3E009B2FD9;
 			packageReferences = (
+				EE83AD652AE3E40400E40FF1 /* XCRemoteSwiftPackageReference "Factory" */,
+				EE83AD742AE3E92A00E40FF1 /* XCLocalSwiftPackageReference "Packages/MakeConstraints" */,
+				EE83AD772AE3E94700E40FF1 /* XCLocalSwiftPackageReference "Packages/Localizable" */,
+				EE83AD932AE3FD3800E40FF1 /* XCLocalSwiftPackageReference "Packages/Extensions" */,
+				EEFCC62D2AE418E100213626 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = EECEA2892AE3AC3E009B2FD9;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EECEA2912AE3AC3E009B2FD9 /* Mega Mall */,
-				EECEA2A72AE3AC3F009B2FD9 /* Mega MallTests */,
-				EECEA2B12AE3AC3F009B2FD9 /* Mega MallUITests */,
+				EECEA2A72AE3AC3F009B2FD9 /* MegaMallTests */,
+				EECEA2B12AE3AC3F009B2FD9 /* MegaMallUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,12 +450,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE83AD922AE3FC3D00E40FF1 /* OnboardingTextField.xib in Resources */,
+				EE83AD642AE3E3A300E40FF1 /* LoginViewController.xib in Resources */,
 				EE83AD3A2AE3C16200E40FF1 /* Colors.xcassets in Resources */,
 				EEECB3722AE3BF0900549C83 /* .swiftlint.yml in Resources */,
-				EE83AD412AE3C38900E40FF1 /* HelloViewController.xib in Resources */,
+				EE83AD832AE3EF5B00E40FF1 /* EmailViewController.xib in Resources */,
 				EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */,
+				EE83AD702AE3E5C900E40FF1 /* DescriptionView.xib in Resources */,
 				EE83AD452AE3CEFB00E40FF1 /* DMSans.ttf in Resources */,
 				EEECB3472AE3B51800549C83 /* Localizable.strings in Resources */,
+				EE83AD852AE3F2BC00E40FF1 /* swiftgen.yml in Resources */,
 				EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */,
 				EE83AD3D2AE3C20100E40FF1 /* Cairo.ttf in Resources */,
 			);
@@ -361,6 +482,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		EE83AD8C2AE3F7E700E40FF1 /* swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n";
+		};
 		EEECB3732AE3BF3100549C83 /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -387,16 +527,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE83AD6F2AE3E5C900E40FF1 /* DescriptionView.swift in Sources */,
+				EEFCC62C2AE4126200213626 /* FullButton.swift in Sources */,
+				EE83AD8B2AE3F7C600E40FF1 /* Strings+Generated.swift in Sources */,
+				EEFCC6312AE41DC400213626 /* LabelButton.swift in Sources */,
 				EE83AD592AE3D24F00E40FF1 /* SmallLabel.swift in Sources */,
 				EE83AD4F2AE3D19B00E40FF1 /* H1Label.swift in Sources */,
-				EE83AD402AE3C38900E40FF1 /* HelloViewController.swift in Sources */,
+				EE83AD822AE3EF5B00E40FF1 /* EmailViewModel.swift in Sources */,
 				EE83AD532AE3D20D00E40FF1 /* H3Label.swift in Sources */,
 				EE83AD512AE3D1F000E40FF1 /* H2Label.swift in Sources */,
 				EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */,
 				EE83AD552AE3D22000E40FF1 /* MediumLabel.swift in Sources */,
+				EE83AD912AE3FC3D00E40FF1 /* OnboardingTextField.swift in Sources */,
+				EE83AD802AE3EF5B00E40FF1 /* EmailViewModelType.swift in Sources */,
 				EE83AD432AE3C4A900E40FF1 /* UIFont+Style.swift in Sources */,
+				EE83AD632AE3E3A300E40FF1 /* LoginViewModel.swift in Sources */,
+				EE83AD812AE3EF5B00E40FF1 /* EmailViewController.swift in Sources */,
 				EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */,
 				EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */,
+				EE83AD6A2AE3E45100E40FF1 /* ViewModel Container.swift in Sources */,
+				EE83AD622AE3E3A300E40FF1 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +736,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mega Mall/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -613,7 +763,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mega Mall/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -638,7 +788,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yamany.Mega-MallTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -658,7 +808,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yamany.Mega-MallTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -726,7 +876,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EECEA2BF2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega MallTests" */ = {
+		EECEA2BF2AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "MegaMallTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EECEA2C02AE3AC3F009B2FD9 /* Debug */,
@@ -735,7 +885,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EECEA2C22AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "Mega MallUITests" */ = {
+		EECEA2C22AE3AC3F009B2FD9 /* Build configuration list for PBXNativeTarget "MegaMallUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EECEA2C32AE3AC3F009B2FD9 /* Debug */,
@@ -746,10 +896,62 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		EE83AD742AE3E92A00E40FF1 /* XCLocalSwiftPackageReference "Packages/MakeConstraints" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/MakeConstraints;
+		};
+		EE83AD772AE3E94700E40FF1 /* XCLocalSwiftPackageReference "Packages/Localizable" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Localizable;
+		};
+		EE83AD932AE3FD3800E40FF1 /* XCLocalSwiftPackageReference "Packages/Extensions" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Extensions;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE83AD652AE3E40400E40FF1 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+		EEFCC62D2AE418E100213626 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		EEECB36F2AE3BB3000549C83 /* Localizable */ = {
+		EE83AD662AE3E40400E40FF1 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE83AD652AE3E40400E40FF1 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		EE83AD752AE3E92A00E40FF1 /* MakeConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MakeConstraints;
+		};
+		EE83AD782AE3E94700E40FF1 /* Localizable */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Localizable;
+		};
+		EE83AD942AE3FD3800E40FF1 /* Extensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Extensions;
+		};
+		EEFCC62E2AE418E100213626 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEFCC62D2AE418E100213626 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

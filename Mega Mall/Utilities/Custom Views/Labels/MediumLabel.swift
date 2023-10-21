@@ -18,5 +18,6 @@ class MediumLabel: UILabel {
     }
     private func update() {
         font = .medium
+        numberOfLines = 0
     }
 }

@@ -35,8 +35,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EECEA2A72AE3AC3F009B2FD9"
-               BuildableName = "Mega MallTests.xctest"
-               BlueprintName = "Mega MallTests"
+               BuildableName = "MegaMallTests.xctest"
+               BlueprintName = "MegaMallTests"
                ReferencedContainer = "container:Mega Mall.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -46,8 +46,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EECEA2B12AE3AC3F009B2FD9"
-               BuildableName = "Mega MallUITests.xctest"
-               BlueprintName = "Mega MallUITests"
+               BuildableName = "MegaMallUITests.xctest"
+               BlueprintName = "MegaMallUITests"
                ReferencedContainer = "container:Mega Mall.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,7 +57,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "ar"
+      language = "en"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
