@@ -5,7 +5,7 @@
 //
 
 import UIKit
-
+// swiftlint:disable all
 extension UIImage {
     /**
      Create an image of a solid color with the specified size.
@@ -41,3 +41,4 @@ extension UIImage {
         self.init(cgImage: cgImage)
     }
 }
+// swiftlint:enable all

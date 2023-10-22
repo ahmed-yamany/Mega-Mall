@@ -11,8 +11,12 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
   internal enum Onboarding {
+    /// Continue
+    internal static let `continue` = L10n.tr("Localizable", "onboarding.continue", fallback: "Continue")
     /// Forgot Password
     internal static let forgotpassword = L10n.tr("Localizable", "onboarding.forgotpassword", fallback: "Forgot Password")
+    /// Reset
+    internal static let reset = L10n.tr("Localizable", "onboarding.reset", fallback: "Reset")
     /// Localizable.strings
     ///   Mega Mall
     /// 
@@ -20,6 +24,20 @@ internal enum L10n {
     internal static let signin = L10n.tr("Localizable", "onboarding.signin", fallback: "Sign In")
     /// Sign Up
     internal static let signup = L10n.tr("Localizable", "onboarding.signup", fallback: "Sign Up")
+    internal enum ForgotPassword {
+      internal enum Decription {
+        /// Enter Email/Number to reset your password
+        internal static let subtitle = L10n.tr("Localizable", "onboarding.forgotPassword.decription.subtitle", fallback: "Enter Email/Number to reset your password")
+        /// Reset Password
+        internal static let title = L10n.tr("Localizable", "onboarding.forgotPassword.decription.title", fallback: "Reset Password")
+      }
+      internal enum Email {
+        /// Email/Phone
+        internal static let label = L10n.tr("Localizable", "onboarding.forgotPassword.email.label", fallback: "Email/Phone")
+        /// Enter Email/Number to reset password
+        internal static let placeholder = L10n.tr("Localizable", "onboarding.forgotPassword.email.placeholder", fallback: "Enter Email/Number to reset password")
+      }
+    }
     internal enum Login {
       internal enum Decription {
         /// Please enter data to log in
@@ -42,9 +60,13 @@ internal enum L10n {
     }
     internal enum Register {
       internal enum Email {
+        /// Email/Phone
+        internal static let label = L10n.tr("Localizable", "onboarding.register.email.label", fallback: "Email/Phone")
+        /// Enter your Email Address/ Telephone Number
+        internal static let placeholder = L10n.tr("Localizable", "onboarding.register.email.placeholder", fallback: "Enter your Email Address/ Telephone Number")
         internal enum Decription {
-          /// Enter Email/Number. Mobile to register
-          internal static let subtitle = L10n.tr("Localizable", "onboarding.register.email.decription.subtitle", fallback: "Enter Email/Number. Mobile to register")
+          /// Enter Email/Number to register
+          internal static let subtitle = L10n.tr("Localizable", "onboarding.register.email.decription.subtitle", fallback: "Enter Email/Number to register")
           /// Register Account
           internal static let title = L10n.tr("Localizable", "onboarding.register.email.decription.title", fallback: "Register Account")
         }

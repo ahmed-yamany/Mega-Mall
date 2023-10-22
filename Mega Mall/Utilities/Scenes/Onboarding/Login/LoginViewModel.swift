@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 import Extensions
-
+import SwiftUI
 // MARK: LoginViewModel
 //
 class LoginViewModel {
@@ -9,7 +9,8 @@ class LoginViewModel {
                                                                            placeholder: L10n.Onboarding.Login.Email.placeholder))
     var passwordViewModel: OnboardingTextField.ViewModel = .init(model:
             .init(label: L10n.Onboarding.Login.Password.label,
-                  placeholder: L10n.Onboarding.Login.Password.placeholder, securedTextField: true))
+                  placeholder: L10n.Onboarding.Login.Password.placeholder,
+                  securedTextField: true))
     @Published var isValid: Bool = false
     var cancellableSet: Set<AnyCancellable> = .init()
     init() {

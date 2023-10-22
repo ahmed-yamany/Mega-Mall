@@ -9,6 +9,8 @@
 "onboarding.signin" = "Sign In";
 "onboarding.forgotpassword" = "Forgot Password";
 "onboarding.signup" = "Sign Up";
+"onboarding.continue" = "Continue";
+"onboarding.reset" = "Reset";
 // Login
 "onboarding.login.decription.title" = "Welcome back to Mega Mall";
 "onboarding.login.decription.subtitle" = "Please enter data to log in";
@@ -16,7 +18,13 @@
 "onboarding.login.email.placeholder" = "Enter your Email Address/ Telephone Number";
 "onboarding.login.password.label" = "Password";
 "onboarding.login.password.placeholder" = "Enter Account Password";
-
+// Forgot Password
+"onboarding.forgotPassword.decription.title" = "Reset Password";
+"onboarding.forgotPassword.decription.subtitle" = "Enter Email/Number to reset your password";
+"onboarding.forgotPassword.email.label" = "Email/Phone";
+"onboarding.forgotPassword.email.placeholder" = "Enter Email/Number to reset password";
 // Register
 "onboarding.register.email.decription.title" = "Register Account";
-"onboarding.register.email.decription.subtitle" = "Enter Email/Number. Mobile to register";
+"onboarding.register.email.decription.subtitle" = "Enter Email/Number to register";
+"onboarding.register.email.label" = "Email/Phone";
+"onboarding.register.email.placeholder" = "Enter your Email Address/ Telephone Number";

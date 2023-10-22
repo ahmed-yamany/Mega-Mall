@@ -26,15 +26,20 @@
 		EE83AD702AE3E5C900E40FF1 /* DescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD6E2AE3E5C900E40FF1 /* DescriptionView.xib */; };
 		EE83AD762AE3E92A00E40FF1 /* MakeConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD752AE3E92A00E40FF1 /* MakeConstraints */; };
 		EE83AD792AE3E94700E40FF1 /* Localizable in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD782AE3E94700E40FF1 /* Localizable */; };
-		EE83AD802AE3EF5B00E40FF1 /* EmailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD7C2AE3EF5B00E40FF1 /* EmailViewModelType.swift */; };
-		EE83AD812AE3EF5B00E40FF1 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD7D2AE3EF5B00E40FF1 /* EmailViewController.swift */; };
-		EE83AD822AE3EF5B00E40FF1 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD7E2AE3EF5B00E40FF1 /* EmailViewModel.swift */; };
-		EE83AD832AE3EF5B00E40FF1 /* EmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD7F2AE3EF5B00E40FF1 /* EmailViewController.xib */; };
 		EE83AD852AE3F2BC00E40FF1 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD842AE3F2BC00E40FF1 /* swiftgen.yml */; };
 		EE83AD8B2AE3F7C600E40FF1 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD8A2AE3F7C600E40FF1 /* Strings+Generated.swift */; };
 		EE83AD912AE3FC3D00E40FF1 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD8F2AE3FC3D00E40FF1 /* OnboardingTextField.swift */; };
 		EE83AD922AE3FC3D00E40FF1 /* OnboardingTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */; };
 		EE83AD952AE3FD3800E40FF1 /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD942AE3FD3800E40FF1 /* Extensions */; };
+		EE945D672AE50DE10013DF0B /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D632AE50DE10013DF0B /* RegisterEmailViewController.swift */; };
+		EE945D682AE50DE10013DF0B /* RegisterEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D642AE50DE10013DF0B /* RegisterEmailViewModel.swift */; };
+		EE945D692AE50DE10013DF0B /* RegisterEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE945D652AE50DE10013DF0B /* RegisterEmailViewController.xib */; };
+		EE945D702AE51A3C0013DF0B /* RegisterVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D6C2AE51A3C0013DF0B /* RegisterVerificationViewController.swift */; };
+		EE945D712AE51A3C0013DF0B /* RegisterVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D6D2AE51A3C0013DF0B /* RegisterVerificationViewModel.swift */; };
+		EE945D722AE51A3C0013DF0B /* RegisterVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE945D6E2AE51A3C0013DF0B /* RegisterVerificationViewController.xib */; };
+		EE945D792AE51B310013DF0B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D752AE51B310013DF0B /* ResetPasswordViewController.swift */; };
+		EE945D7A2AE51B310013DF0B /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */; };
+		EE945D7B2AE51B310013DF0B /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */; };
 		EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */; };
 		EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */; };
 		EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */; };
@@ -85,15 +90,20 @@
 		EE83AD692AE3E45100E40FF1 /* ViewModel Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel Container.swift"; sourceTree = "<group>"; };
 		EE83AD6D2AE3E5C900E40FF1 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		EE83AD6E2AE3E5C900E40FF1 /* DescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionView.xib; sourceTree = "<group>"; };
-		EE83AD7C2AE3EF5B00E40FF1 /* EmailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModelType.swift; sourceTree = "<group>"; };
-		EE83AD7D2AE3EF5B00E40FF1 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
-		EE83AD7E2AE3EF5B00E40FF1 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
-		EE83AD7F2AE3EF5B00E40FF1 /* EmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailViewController.xib; sourceTree = "<group>"; };
 		EE83AD842AE3F2BC00E40FF1 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		EE83AD862AE3F33C00E40FF1 /* Mega Mall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mega Mall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE83AD8A2AE3F7C600E40FF1 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		EE83AD8F2AE3FC3D00E40FF1 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
 		EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingTextField.xib; sourceTree = "<group>"; };
+		EE945D632AE50DE10013DF0B /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
+		EE945D642AE50DE10013DF0B /* RegisterEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewModel.swift; sourceTree = "<group>"; };
+		EE945D652AE50DE10013DF0B /* RegisterEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterEmailViewController.xib; sourceTree = "<group>"; };
+		EE945D6C2AE51A3C0013DF0B /* RegisterVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVerificationViewController.swift; sourceTree = "<group>"; };
+		EE945D6D2AE51A3C0013DF0B /* RegisterVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVerificationViewModel.swift; sourceTree = "<group>"; };
+		EE945D6E2AE51A3C0013DF0B /* RegisterVerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVerificationViewController.xib; sourceTree = "<group>"; };
+		EE945D752AE51B310013DF0B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				EE83AD5C2AE3E31000E40FF1 /* Login */,
+				EE945D732AE51B020013DF0B /* ForgotPassword */,
 				EE83AD7A2AE3EE8500E40FF1 /* Register */,
 			);
 			path = Onboarding;
@@ -243,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				EE83AD7B2AE3EF4F00E40FF1 /* Email */,
+				EE945D6A2AE519340013DF0B /* Verification */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -250,10 +262,9 @@
 		EE83AD7B2AE3EF4F00E40FF1 /* Email */ = {
 			isa = PBXGroup;
 			children = (
-				EE83AD7C2AE3EF5B00E40FF1 /* EmailViewModelType.swift */,
-				EE83AD7D2AE3EF5B00E40FF1 /* EmailViewController.swift */,
-				EE83AD7E2AE3EF5B00E40FF1 /* EmailViewModel.swift */,
-				EE83AD7F2AE3EF5B00E40FF1 /* EmailViewController.xib */,
+				EE945D642AE50DE10013DF0B /* RegisterEmailViewModel.swift */,
+				EE945D632AE50DE10013DF0B /* RegisterEmailViewController.swift */,
+				EE945D652AE50DE10013DF0B /* RegisterEmailViewController.xib */,
 			);
 			path = Email;
 			sourceTree = "<group>";
@@ -273,6 +284,26 @@
 				EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */,
 			);
 			path = "Onboarding TextField";
+			sourceTree = "<group>";
+		};
+		EE945D6A2AE519340013DF0B /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				EE945D6D2AE51A3C0013DF0B /* RegisterVerificationViewModel.swift */,
+				EE945D6C2AE51A3C0013DF0B /* RegisterVerificationViewController.swift */,
+				EE945D6E2AE51A3C0013DF0B /* RegisterVerificationViewController.xib */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		EE945D732AE51B020013DF0B /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				EE945D752AE51B310013DF0B /* ResetPasswordViewController.swift */,
+				EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */,
+				EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		EECEA2892AE3AC3E009B2FD9 = {
@@ -454,13 +485,15 @@
 				EE83AD642AE3E3A300E40FF1 /* LoginViewController.xib in Resources */,
 				EE83AD3A2AE3C16200E40FF1 /* Colors.xcassets in Resources */,
 				EEECB3722AE3BF0900549C83 /* .swiftlint.yml in Resources */,
-				EE83AD832AE3EF5B00E40FF1 /* EmailViewController.xib in Resources */,
 				EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */,
 				EE83AD702AE3E5C900E40FF1 /* DescriptionView.xib in Resources */,
 				EE83AD452AE3CEFB00E40FF1 /* DMSans.ttf in Resources */,
 				EEECB3472AE3B51800549C83 /* Localizable.strings in Resources */,
+				EE945D692AE50DE10013DF0B /* RegisterEmailViewController.xib in Resources */,
+				EE945D7B2AE51B310013DF0B /* ResetPasswordViewController.xib in Resources */,
 				EE83AD852AE3F2BC00E40FF1 /* swiftgen.yml in Resources */,
 				EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */,
+				EE945D722AE51A3C0013DF0B /* RegisterVerificationViewController.xib in Resources */,
 				EE83AD3D2AE3C20100E40FF1 /* Cairo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,21 +562,24 @@
 			files = (
 				EE83AD6F2AE3E5C900E40FF1 /* DescriptionView.swift in Sources */,
 				EEFCC62C2AE4126200213626 /* FullButton.swift in Sources */,
+				EE945D712AE51A3C0013DF0B /* RegisterVerificationViewModel.swift in Sources */,
 				EE83AD8B2AE3F7C600E40FF1 /* Strings+Generated.swift in Sources */,
 				EEFCC6312AE41DC400213626 /* LabelButton.swift in Sources */,
 				EE83AD592AE3D24F00E40FF1 /* SmallLabel.swift in Sources */,
 				EE83AD4F2AE3D19B00E40FF1 /* H1Label.swift in Sources */,
-				EE83AD822AE3EF5B00E40FF1 /* EmailViewModel.swift in Sources */,
 				EE83AD532AE3D20D00E40FF1 /* H3Label.swift in Sources */,
 				EE83AD512AE3D1F000E40FF1 /* H2Label.swift in Sources */,
 				EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */,
 				EE83AD552AE3D22000E40FF1 /* MediumLabel.swift in Sources */,
 				EE83AD912AE3FC3D00E40FF1 /* OnboardingTextField.swift in Sources */,
-				EE83AD802AE3EF5B00E40FF1 /* EmailViewModelType.swift in Sources */,
+				EE945D682AE50DE10013DF0B /* RegisterEmailViewModel.swift in Sources */,
 				EE83AD432AE3C4A900E40FF1 /* UIFont+Style.swift in Sources */,
 				EE83AD632AE3E3A300E40FF1 /* LoginViewModel.swift in Sources */,
-				EE83AD812AE3EF5B00E40FF1 /* EmailViewController.swift in Sources */,
 				EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */,
+				EE945D7A2AE51B310013DF0B /* ResetPasswordViewModel.swift in Sources */,
+				EE945D792AE51B310013DF0B /* ResetPasswordViewController.swift in Sources */,
+				EE945D702AE51A3C0013DF0B /* RegisterVerificationViewController.swift in Sources */,
+				EE945D672AE50DE10013DF0B /* RegisterEmailViewController.swift in Sources */,
 				EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */,
 				EE83AD6A2AE3E45100E40FF1 /* ViewModel Container.swift in Sources */,
 				EE83AD622AE3E3A300E40FF1 /* LoginViewController.swift in Sources */,

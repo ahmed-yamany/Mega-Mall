@@ -66,6 +66,9 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="onboarding.forgotpassword"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="forgotPasswordTapped:" destination="-1" eventType="touchUpInside" id="ZnL-Fr-2gS"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHs-XK-cUi" customClass="LabelButton" customModule="Mega_Mall" customModuleProvider="target">
                                                     <rect key="frame" x="307" y="0.0" width="46" height="38.333333333333336"/>
@@ -74,6 +77,9 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="onboarding.signup"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="signupButtonTapped:" destination="-1" eventType="touchUpInside" id="xrD-BR-Uhy"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>

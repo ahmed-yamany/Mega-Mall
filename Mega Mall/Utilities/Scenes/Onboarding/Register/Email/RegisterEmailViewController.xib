@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterEmailViewControllerViewController" customModule="Mega_Mall" customModuleProvider="target">
+            <connections>
+                <outlet property="continueButton" destination="LLf-qS-k8v" id="KrV-kt-zsq"/>
+                <outlet property="descriptionView" destination="XkE-Zy-p1L" id="Axu-Y3-9Yf"/>
+                <outlet property="emailTextFieldView" destination="xJZ-jR-Zfj" id="hB7-ak-baF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGc-bK-92B">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-ff-2XQ" userLabel="container View">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="354.33333333333331"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="I2x-sF-LnG">
+                                    <rect key="frame" x="20" y="0.0" width="353" height="334.33333333333331"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkE-Zy-p1L" customClass="DescriptionView" customModule="Mega_Mall" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="128"/>
+                                            <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="So8-OP-b5H">
+                                            <rect key="frame" x="0.0" y="152" width="353" height="182.33333333333337"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJZ-jR-Zfj" userLabel="Email Text Field" customClass="OnboardingTextField" customModule="Mega_Mall" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="128"/>
+                                                    <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLf-qS-k8v" customClass="FullButton" customModule="Mega_Mall" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="144" width="353" height="38.333333333333343"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="onboarding.continue"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="I2x-sF-LnG" firstAttribute="leading" secondItem="JaB-ff-2XQ" secondAttribute="leading" constant="20" id="JnM-Md-s3l"/>
+                                <constraint firstAttribute="bottom" secondItem="I2x-sF-LnG" secondAttribute="bottom" constant="20" id="OIg-yl-OeS"/>
+                                <constraint firstItem="I2x-sF-LnG" firstAttribute="top" secondItem="JaB-ff-2XQ" secondAttribute="top" id="Uot-7y-arC"/>
+                                <constraint firstAttribute="trailing" secondItem="I2x-sF-LnG" secondAttribute="trailing" constant="20" id="WgX-Xf-BlZ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="JaB-ff-2XQ" firstAttribute="bottom" secondItem="bOZ-HR-7SM" secondAttribute="bottom" id="3gF-IP-7v3"/>
+                        <constraint firstItem="JaB-ff-2XQ" firstAttribute="top" secondItem="bOZ-HR-7SM" secondAttribute="top" id="e6u-fX-7sG"/>
+                        <constraint firstItem="JaB-ff-2XQ" firstAttribute="leading" secondItem="bOZ-HR-7SM" secondAttribute="leading" id="edN-iu-zdg"/>
+                        <constraint firstItem="JaB-ff-2XQ" firstAttribute="trailing" secondItem="bOZ-HR-7SM" secondAttribute="trailing" id="s37-x6-h8Q"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="bOZ-HR-7SM"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="bcH-8A-FN4"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
+            <constraints>
+                <constraint firstItem="JaB-ff-2XQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="1fX-w1-cKf"/>
+                <constraint firstAttribute="trailing" secondItem="yGc-bK-92B" secondAttribute="trailing" id="8SN-rG-sEP"/>
+                <constraint firstItem="yGc-bK-92B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HHi-82-J9r"/>
+                <constraint firstAttribute="bottom" secondItem="yGc-bK-92B" secondAttribute="bottom" id="K4H-aP-swh"/>
+                <constraint firstItem="yGc-bK-92B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iRm-uK-sYf"/>
+            </constraints>
+            <point key="canvasLocation" x="88" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Mega-Primary-PureWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

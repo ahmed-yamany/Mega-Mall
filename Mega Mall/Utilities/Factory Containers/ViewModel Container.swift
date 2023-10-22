@@ -16,4 +16,10 @@ extension ViewModelContainer {
     var login: Factory<LoginViewModel> {
         self { LoginViewModel() }
     }
+    var registerEmail: Factory<RegisterEmailViewModel> {
+        self { RegisterEmailViewModel() }
+    }
+    var resetPassword: Factory<ResetPasswordViewModel> {
+        self { ResetPasswordViewModel() }
+    }
 }
