@@ -48,6 +48,9 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="onboarding.continue"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="continueButtonTapped:" destination="-1" eventType="touchUpInside" id="6qQ-eL-nhW"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>

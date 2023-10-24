@@ -13,9 +13,9 @@ import Combine
 class OnboardingTextField: UIView {
     // MARK: IBOutlet
     //
-    @IBOutlet weak private var label: MediumLabel!
-    @IBOutlet weak var textfield: UITextField!
-    weak private var viewModel: ViewModel?
+    @IBOutlet weak private(set) var label: MediumLabel!
+    @IBOutlet weak private(set) var textfield: UITextField!
+    weak private(set) var viewModel: ViewModel?
     // MARK: Init
     //
     override init(frame: CGRect) {
@@ -80,7 +80,6 @@ extension OnboardingTextField {
         self.viewModel = viewModel
     }
 }
-
 // MARK: - Actions
 //
 extension OnboardingTextField {

@@ -11,6 +11,8 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
   internal enum Onboarding {
+    /// Change
+    internal static let change = L10n.tr("Localizable", "onboarding.change", fallback: "Change")
     /// Continue
     internal static let `continue` = L10n.tr("Localizable", "onboarding.continue", fallback: "Continue")
     /// Forgot Password
@@ -70,6 +72,20 @@ internal enum L10n {
           /// Register Account
           internal static let title = L10n.tr("Localizable", "onboarding.register.email.decription.title", fallback: "Register Account")
         }
+      }
+    }
+    internal enum Verification {
+      internal enum Decription {
+        /// We have sent a verification code to
+        internal static let subtitle = L10n.tr("Localizable", "onboarding.verification.decription.subtitle", fallback: "We have sent a verification code to")
+        /// Verification
+        internal static let title = L10n.tr("Localizable", "onboarding.verification.decription.title", fallback: "Verification")
+      }
+      internal enum Resend {
+        /// Re-send Code
+        internal static let button = L10n.tr("Localizable", "onboarding.verification.resend.button", fallback: "Re-send Code")
+        /// Verification Code
+        internal static let label = L10n.tr("Localizable", "onboarding.verification.resend.label", fallback: "Verification Code")
       }
     }
   }

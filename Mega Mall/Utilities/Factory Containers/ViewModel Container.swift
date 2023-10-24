@@ -13,13 +13,8 @@ final class ViewModelContainer: SharedContainer {
 }
 // MARK: - Onboarding
 extension ViewModelContainer {
-    var login: Factory<LoginViewModel> {
-        self { LoginViewModel() }
-    }
-    var registerEmail: Factory<RegisterEmailViewModel> {
-        self { RegisterEmailViewModel() }
-    }
-    var resetPassword: Factory<ResetPasswordViewModel> {
-        self { ResetPasswordViewModel() }
+
+    var verification: ParameterFactory<String, VerificationViewModel> {
+        self { VerificationViewModel(email: $0) }
     }
 }

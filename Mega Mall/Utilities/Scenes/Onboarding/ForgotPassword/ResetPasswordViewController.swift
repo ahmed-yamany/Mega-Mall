@@ -3,13 +3,23 @@ import Factory
 
 class ResetPasswordViewController: UIViewController {
     // MARK: Outlets
-    @IBOutlet weak var descriptionView: DescriptionView!
-    @IBOutlet weak var emailTextFieldView: OnboardingTextField!
-    @IBOutlet weak var resetButton: FullButton!
-    //
+    @IBOutlet weak private(set) var descriptionView: DescriptionView!
+    @IBOutlet weak private(set) var emailTextFieldView: OnboardingTextField!
+    @IBOutlet weak private(set) var resetButton: FullButton!
     // MARK: Properties
-    @Injected(\ViewModelContainer.resetPassword) var viewModel: ResetPasswordViewModel
-    //
+    private(set) var viewModel: ResetPasswordViewModelType
+    var emailViewModel: OnboardingTextField.ViewModel = .init(model:
+            .init(label: L10n.Onboarding.ForgotPassword.Email.label,
+                  placeholder: L10n.Onboarding.ForgotPassword.Email.placeholder))
+
+    // MARK: - Init
+    init() {
+        self.viewModel = ResetPasswordViewModel(emailViewModel: emailViewModel)
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("failed to inirialder Verification View Controller from coder")
+    }
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +36,10 @@ extension ResetPasswordViewController {
         descriptionView.configure(with: .init(title: L10n.Onboarding.ForgotPassword.Decription.title,
                                               subtitle: L10n.Onboarding.ForgotPassword.Decription.subtitle))
         emailTextFieldView.configure(with: viewModel.emailViewModel)
-        viewModel.$isValid.sink { [unowned self] isValid in
-            resetButton.isEnabled = isValid
-        }.store(in: &viewModel.cancellableSet)
+        emailTextFieldView.textfield.keyboardType = .emailAddress
+        viewModel.enableButton
+            .assign(to: \.isEnabled, on: resetButton)
+            .store(in: &viewModel.cancellableSet)
     }
 }
 //

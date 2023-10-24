@@ -3,16 +3,15 @@ import Combine
 
 // MARK: ResetPasswordViewModel
 //
-class ResetPasswordViewModel {
-    var emailViewModel: OnboardingTextField.ViewModel = .init(model:
-            .init(label: L10n.Onboarding.ForgotPassword.Email.label,
-                  placeholder: L10n.Onboarding.ForgotPassword.Email.placeholder))
-    @Published var isValid: Bool = false
-    var cancellableSet: Set<AnyCancellable> = .init()
-    init() {
-        emailViewModel.$text.sink { [unowned self] email in
-            isValid = email.isValidEmail() || email.isValidEgyptPhoneNumber()
-        }.store(in: &cancellableSet)
+class ResetPasswordViewModel: ResetPasswordViewModelType {
+    let emailViewModel: OnboardingTextField.ViewModel
+    var enableButton: AnyPublisher<Bool, Never>
+    var cancellableSet: Set<AnyCancellable> = []
+    init(emailViewModel: OnboardingTextField.ViewModel) {
+        self.emailViewModel = emailViewModel
+        enableButton = emailViewModel.$text.map { email in
+            email.isValidEmail() || email.isValidEgyptPhoneNumber()
+        }.eraseToAnyPublisher()
     }
 }
 // MARK: Private Handlers
