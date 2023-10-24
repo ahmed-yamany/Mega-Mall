@@ -18,5 +18,6 @@ class SmallLabel: UILabel {
     }
     private func update() {
         font = .small
+        numberOfLines = 0
     }
 }

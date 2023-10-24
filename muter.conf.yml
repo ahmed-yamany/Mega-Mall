@@ -1,0 +1,11 @@
+arguments:
+- -workspace
+- Mega Mall.xcworkspace
+- -scheme
+- Mega Mall
+- -destination
+- platform=iOS Simulator,name=iPhone SE (3rd generation)
+- test
+executable: /usr/bin/xcodebuild
+exclude: []
+excludeCalls: []

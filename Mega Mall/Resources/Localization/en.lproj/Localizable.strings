@@ -5,4 +5,32 @@
   Created by Ahmed Yamany on 21/10/2023.
   
 */
-"title" = "good";
+// MARK: - Onboarding
+"onboarding.signin" = "Sign In";
+"onboarding.forgotpassword" = "Forgot Password";
+"onboarding.signup" = "Sign Up";
+"onboarding.continue" = "Continue";
+"onboarding.reset" = "Reset";
+"onboarding.change" = "Change";
+// Login
+"onboarding.login.decription.title" = "Welcome back to Mega Mall";
+"onboarding.login.decription.subtitle" = "Please enter data to log in";
+"onboarding.login.email.label" = "Email/Phone";
+"onboarding.login.email.placeholder" = "Enter your Email Address/ Telephone Number";
+"onboarding.login.password.label" = "Password";
+"onboarding.login.password.placeholder" = "Enter Account Password";
+// Forgot Password
+"onboarding.forgotPassword.decription.title" = "Reset Password";
+"onboarding.forgotPassword.decription.subtitle" = "Enter Email/Number to reset your password";
+"onboarding.forgotPassword.email.label" = "Email/Phone";
+"onboarding.forgotPassword.email.placeholder" = "Enter Email/Number to reset password";
+// Verification
+"onboarding.verification.decription.title" = "Verification";
+"onboarding.verification.decription.subtitle" = "We have sent a verification code to";
+"onboarding.verification.resend.label" = "Verification Code";
+"onboarding.verification.resend.button" = "Re-send Code";
+// Register
+"onboarding.register.email.decription.title" = "Register Account";
+"onboarding.register.email.decription.subtitle" = "Enter Email/Number to register";
+"onboarding.register.email.label" = "Email/Phone";
+"onboarding.register.email.placeholder" = "Enter your Email Address/ Telephone Number";

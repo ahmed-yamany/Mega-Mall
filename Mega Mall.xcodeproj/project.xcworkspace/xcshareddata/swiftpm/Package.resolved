@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "factory",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hmlongco/Factory",
+      "state" : {
+        "revision" : "8ca11a7bd1ede031e8e6d7a912bb116e2e43961b",
+        "version" : "2.3.1"
+      }
+    },
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager",
+      "state" : {
+        "revision" : "c00b1ae9fa1ad8af4465bb6ca901f6943fc98eba",
+        "version" : "6.5.16"
+      }
+    }
+  ],
+  "version" : 2
+}

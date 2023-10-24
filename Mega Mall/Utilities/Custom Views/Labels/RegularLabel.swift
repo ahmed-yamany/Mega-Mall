@@ -18,5 +18,6 @@ class RegularLabel: UILabel {
     }
     private func update() {
         font = .regular
+        numberOfLines = 0
     }
 }

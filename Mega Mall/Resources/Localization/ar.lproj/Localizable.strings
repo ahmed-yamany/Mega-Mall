@@ -5,5 +5,8 @@
   Created by Ahmed Yamany on 21/10/2023.
   
 */
+"onboarding.login.decription.title" = "مرحبا بكم مرة أخرى في ميجا مول";
+"onboarding.login.decription.subtitle" = "الرجاء إدخال البيانات لتسجيل الدخول";
 
-"title" = "منيح";
+"onboarding.register.email.decription.title" = "تسجيل حساب";
+"onboarding.register.email.decription.subtitle" = "أدخل البريد الإلكتروني/الرقم. الجوال للتسجيل";

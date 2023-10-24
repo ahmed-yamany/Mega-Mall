@@ -18,5 +18,6 @@ class H2Label: UILabel {
     }
     private func update() {
         font = .h2
+        numberOfLines = 0
     }
 }
