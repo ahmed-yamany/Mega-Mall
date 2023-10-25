@@ -8,7 +8,7 @@
 import XCTest
 @testable import Mega_Mall
 
-final class ForgotPassword: XCTestCase {
+final class ResetPassword: XCTestCase {
     var viewController: ResetPasswordViewController?
     override func setUpWithError() throws {
         viewController = ResetPasswordViewController()

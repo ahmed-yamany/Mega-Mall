@@ -12,7 +12,7 @@ final class Verification: XCTestCase {
     var viewController: VerificationViewController!
     var viewModel: VerificationViewModel!
     override func setUpWithError() throws {
-        viewModel = .init(email: "ahmed@gmail.com")
+        viewModel = .init(email: "ahmed@gmail.com", type: .register)
         viewController = VerificationViewController(viewModel: viewModel)
         viewController.loadViewIfNeeded()
     }

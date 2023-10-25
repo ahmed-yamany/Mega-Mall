@@ -3,7 +3,7 @@ import Combine
 
 // MARK: ResetPasswordViewModel
 //
-class ResetPasswordViewModel: ResetPasswordViewModelType {
+class ResetPasswordViewModel {
     let emailViewModel: OnboardingTextField.ViewModel
     var enableButton: AnyPublisher<Bool, Never>
     var cancellableSet: Set<AnyCancellable> = []
