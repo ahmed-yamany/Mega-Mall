@@ -31,7 +31,7 @@ class RegisterViewController: UIViewController {
 // MARK: - Actions
 extension RegisterViewController {
     @IBAction func continueButtonTapped(_ sender: FullButton) {
-        let verificationViewModel = VerificationViewModel(email: viewModel.emailViewModel.text)
+        let verificationViewModel = VerificationViewModel(email: viewModel.emailViewModel.text, type: .register)
         navigationController?.pushViewController(VerificationViewController(viewModel: verificationViewModel), animated: true)
     }
 }

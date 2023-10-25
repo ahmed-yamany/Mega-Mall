@@ -5,8 +5,53 @@
   Created by Ahmed Yamany on 21/10/2023.
   
 */
-"onboarding.login.decription.title" = "مرحبا بكم مرة أخرى في ميجا مول";
+// MARK: - Onboarding
+"onboarding.signin" = "تسجيل الدخول";
+"onboarding.forgotpassword" = "نسيت كلمة المرور";
+"onboarding.signup" = "تسجيل";
+"onboarding.continue" = "المتابعة";
+"onboarding.reset" = "استرجاع";
+"onboarding.change" = "تغيير";
+"onboarding.saveUpdates" = "حفظ التحديثات";
+"onboarding.confirmation" = "تأكيد";
+// Login
+"onboarding.login.decription.title" = "مرحبا بكم مرة أخرى في Mega Mall";
 "onboarding.login.decription.subtitle" = "الرجاء إدخال البيانات لتسجيل الدخول";
+"onboarding.login.email.label" = "البريد/الهاتف";
+"onboarding.login.email.placeholder" = "أدخل عنوان البريد الإلكتروني/رقم الهاتف الخاص بك";
+"onboarding.login.password.label" = "كلمة السر";
+"onboarding.login.password.placeholder" = "أدخل كلمة سر الحساب";
+// Forgot Password
+"onboarding.forgotPassword.decription.title" = "إعادة تعيين كلمة السر";
+"onboarding.forgotPassword.decription.subtitle" = "أدخل البريد الإلكتروني/الرقم لإعادة تعيين كلمة مرورك";
+"onboarding.forgotPassword.email.label" = "البريد/الهاتف";
+"onboarding.forgotPassword.email.placeholder" = "أدخل البريد الإلكتروني/الرقم لإعادة تعيين كلمة مرورك";
+// Update Password
+"onboarding.updatePassword.decription.title" = "تحديث كلمة السر";
+"onboarding.updatePassword.decription.subtitle" = "أكمل البيانات النهائية التالية للدخول إلى تطبيق Mega Mall";
+"onboarding.updatePassword.password.label" = "كلمة سر جديدة";
+"onboarding.updatePassword.password.placeholder" = "Rahasia12345";
+"onboarding.updatePassword.confirmPassword.label" = "تأكيد كلمة السر الجديدة";
+"onboarding.updatePassword.confirmPassword.placeholder" = "Rahasia12345";
+"onboarding.updatePassword.insight.label" = "كلمة المرور يجب أن تكون 6 أحرف أو أكثر";
 
-"onboarding.register.email.decription.title" = "تسجيل حساب";
-"onboarding.register.email.decription.subtitle" = "أدخل البريد الإلكتروني/الرقم. الجوال للتسجيل";
+// Verification
+"onboarding.verification.decription.title" = "التحقّق";
+"onboarding.verification.decription.subtitle" = "أرسلنا رمز التحقق إلى";
+"onboarding.verification.resend.label" = "رمز التفعيل";
+"onboarding.verification.resend.button" = "إعادة إرسال الكود";
+// Register
+"onboarding.register.email.decription.title" = "سجل الحساب";
+"onboarding.register.email.decription.subtitle" = "أدخل البريد الإلكتروني/الرقم للتسجيل";
+"onboarding.register.email.label" = "البريد/الهاتف";
+"onboarding.register.email.placeholder" = "أدخل عنوان بريدك الإلكتروني/رقم الهاتف";
+// Update Profile
+"onboarding.updateProfile.decription.title" = "الملف الشخصي وكلمة السر";
+"onboarding.updateProfile.decription.subtitle" = "أكمل البيانات النهائية التالية للدخول إلى تطبيق Mega Mall";
+"onboarding.updateProfile.fullName.label" = "الاسم بالكامل";
+"onboarding.updateProfile.fullName.placeholder" = "Matias Duarte";
+"onboarding.updateProfile.password.label" = "كلمة السر";
+"onboarding.updateProfile.password.placeholder" = "Rahasia12345";
+"onboarding.updateProfile.referalCode.label" = "كود الإحالة (اختياري)";
+"onboarding.updateProfile.referalCode.placeholder" = "أدخل الكود الخاص بك";
+"onboarding.updateProfile.insight.label" = "كلمة المرور يجب أن تكون 6 أحرف أو أكثر";

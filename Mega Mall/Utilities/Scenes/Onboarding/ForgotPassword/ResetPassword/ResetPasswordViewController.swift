@@ -7,7 +7,7 @@ class ResetPasswordViewController: UIViewController {
     @IBOutlet weak private(set) var emailTextFieldView: OnboardingTextField!
     @IBOutlet weak private(set) var resetButton: FullButton!
     // MARK: Properties
-    private(set) var viewModel: ResetPasswordViewModelType
+    private(set) var viewModel: ResetPasswordViewModel
     var emailViewModel: OnboardingTextField.ViewModel = .init(model:
             .init(label: L10n.Onboarding.ForgotPassword.Email.label,
                   placeholder: L10n.Onboarding.ForgotPassword.Email.placeholder))
@@ -28,7 +28,13 @@ class ResetPasswordViewController: UIViewController {
 }
 //
 // MARK: - Actions
-extension ResetPasswordViewController {}
+extension ResetPasswordViewController {
+    @IBAction func resetButtonTapped(_ sender: FullButton) {
+        let verificationViewModel = VerificationViewModel(email: emailViewModel.text, type: .forgotPassword)
+        let verificationViewController = VerificationViewController(viewModel: verificationViewModel)
+        navigationController?.pushViewController(verificationViewController, animated: true)
+    }
+}
 //
 // MARK: - Configurations
 extension ResetPasswordViewController {

@@ -11,10 +11,3 @@ final class ViewModelContainer: SharedContainer {
     static var shared: ViewModelContainer = .init()
     var manager: ContainerManager = .init()
 }
-// MARK: - Onboarding
-extension ViewModelContainer {
-
-    var verification: ParameterFactory<String, VerificationViewModel> {
-        self { VerificationViewModel(email: $0) }
-    }
-}

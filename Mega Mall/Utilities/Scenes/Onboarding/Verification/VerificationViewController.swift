@@ -29,7 +29,13 @@ class VerificationViewController: UIViewController {
 }
 //
 // MARK: - Actions
-extension VerificationViewController {}
+extension VerificationViewController {
+    @IBAction func continueButtonTapped(_ sender: FullButton) {
+        let viewController = viewModel.verificationType == .register ?
+        ProfileUpdateViewController() : UpdatePasswordViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
 //
 // MARK: - Configurations
 extension VerificationViewController {

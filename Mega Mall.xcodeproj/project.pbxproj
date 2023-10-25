@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE71DA982AE80F1C00B09801 /* ResetPasswordViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA972AE80F1C00B09801 /* ResetPasswordViewModelType.swift */; };
-		EE71DA9A2AE8130A00B09801 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA992AE8130A00B09801 /* ForgotPassword.swift */; };
+		EE71DA9A2AE8130A00B09801 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA992AE8130A00B09801 /* ResetPassword.swift */; };
 		EE71DA9C2AE816F100B09801 /* RegisterViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA9B2AE816F100B09801 /* RegisterViewModelType.swift */; };
 		EE71DA9F2AE818B400B09801 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA9E2AE818B400B09801 /* Register.swift */; };
 		EE83AD3A2AE3C16200E40FF1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD392AE3C16200E40FF1 /* Colors.xcassets */; };
@@ -45,11 +44,19 @@
 		EE945D7A2AE51B310013DF0B /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */; };
 		EE945D7B2AE51B310013DF0B /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */; };
 		EEA0EF6A2AE7DEAE0018383D /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0EF672AE7DEAE0018383D /* LoginViewModelType.swift */; };
+		EEC988EE2AE90BED00675F6C /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */; };
+		EEC988F02AE9108D00675F6C /* ProfileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */; };
 		EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */; };
 		EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */; };
 		EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */; };
 		EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECEA2A02AE3AC3F009B2FD9 /* LaunchScreen.storyboard */; };
 		EECF08012AE8217600E77E2E /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF08002AE8217600E77E2E /* Verification.swift */; };
+		EECF080B2AE82DE900E77E2E /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF08072AE82DE900E77E2E /* UpdatePasswordViewController.swift */; };
+		EECF080C2AE82DE900E77E2E /* UpdatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF08082AE82DE900E77E2E /* UpdatePasswordViewModel.swift */; };
+		EECF080D2AE82DE900E77E2E /* UpdatePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECF08092AE82DE900E77E2E /* UpdatePasswordViewController.xib */; };
+		EECF08142AE8394A00E77E2E /* ProfileUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF08102AE8394A00E77E2E /* ProfileUpdateViewController.swift */; };
+		EECF08152AE8394A00E77E2E /* ProfileUpdateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECF08112AE8394A00E77E2E /* ProfileUpdateViewModel.swift */; };
+		EECF08162AE8394A00E77E2E /* ProfileUpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECF08122AE8394A00E77E2E /* ProfileUpdateViewController.xib */; };
 		EEE19DF42AE6727100A132E1 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE19DF22AE6727100A132E1 /* OTPTextField.swift */; };
 		EEE19DF72AE689C100A132E1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE19DF62AE689C100A132E1 /* Logger.swift */; };
 		EEE7BE2E2AE7F487006C0460 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7BE2D2AE7F487006C0460 /* Login.swift */; };
@@ -71,8 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EE71DA972AE80F1C00B09801 /* ResetPasswordViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModelType.swift; sourceTree = "<group>"; };
-		EE71DA992AE8130A00B09801 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		EE71DA992AE8130A00B09801 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		EE71DA9B2AE816F100B09801 /* RegisterViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelType.swift; sourceTree = "<group>"; };
 		EE71DA9E2AE818B400B09801 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		EE83AD392AE3C16200E40FF1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -106,12 +112,20 @@
 		EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		EEA0EF672AE7DEAE0018383D /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
+		EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
+		EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdate.swift; sourceTree = "<group>"; };
 		EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EECEA2A12AE3AC3F009B2FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EECEA2A32AE3AC3F009B2FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EECF08002AE8217600E77E2E /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		EECF08072AE82DE900E77E2E /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
+		EECF08082AE82DE900E77E2E /* UpdatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewModel.swift; sourceTree = "<group>"; };
+		EECF08092AE82DE900E77E2E /* UpdatePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatePasswordViewController.xib; sourceTree = "<group>"; };
+		EECF08102AE8394A00E77E2E /* ProfileUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewController.swift; sourceTree = "<group>"; };
+		EECF08112AE8394A00E77E2E /* ProfileUpdateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewModel.swift; sourceTree = "<group>"; };
+		EECF08122AE8394A00E77E2E /* ProfileUpdateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileUpdateViewController.xib; sourceTree = "<group>"; };
 		EEE19DF22AE6727100A132E1 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		EEE19DF62AE689C100A132E1 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EEE7BE202AE7F3F5006C0460 /* Mega MallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mega MallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				EE71DA9E2AE818B400B09801 /* Register.swift */,
-				EECF08002AE8217600E77E2E /* Verification.swift */,
+				EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -224,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				EE83AD5C2AE3E31000E40FF1 /* Login */,
+				EE945D6A2AE519340013DF0B /* Verification */,
 				EE945D732AE51B020013DF0B /* ForgotPassword */,
 				EE83AD7A2AE3EE8500E40FF1 /* Register */,
 			);
@@ -262,7 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				EE83AD7B2AE3EF4F00E40FF1 /* Email */,
-				EE945D6A2AE519340013DF0B /* Verification */,
+				EECF080E2AE838ED00E77E2E /* ProfileUpdate */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -308,10 +323,17 @@
 		EE945D732AE51B020013DF0B /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
-				EE71DA972AE80F1C00B09801 /* ResetPasswordViewModelType.swift */,
-				EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */,
-				EE945D752AE51B310013DF0B /* ResetPasswordViewController.swift */,
-				EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */,
+				EECF08042AE82DB500E77E2E /* ResetPassword */,
+				EECF08052AE82DC200E77E2E /* UpdatePassword */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		EEC988EC2AE90BAF00675F6C /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				EE71DA992AE8130A00B09801 /* ResetPassword.swift */,
+				EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -352,6 +374,36 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		EECF08042AE82DB500E77E2E /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */,
+				EE945D752AE51B310013DF0B /* ResetPasswordViewController.swift */,
+				EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		EECF08052AE82DC200E77E2E /* UpdatePassword */ = {
+			isa = PBXGroup;
+			children = (
+				EECF08082AE82DE900E77E2E /* UpdatePasswordViewModel.swift */,
+				EECF08072AE82DE900E77E2E /* UpdatePasswordViewController.swift */,
+				EECF08092AE82DE900E77E2E /* UpdatePasswordViewController.xib */,
+			);
+			path = UpdatePassword;
+			sourceTree = "<group>";
+		};
+		EECF080E2AE838ED00E77E2E /* ProfileUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				EECF08102AE8394A00E77E2E /* ProfileUpdateViewController.swift */,
+				EECF08112AE8394A00E77E2E /* ProfileUpdateViewModel.swift */,
+				EECF08122AE8394A00E77E2E /* ProfileUpdateViewController.xib */,
+			);
+			path = ProfileUpdate;
+			sourceTree = "<group>";
+		};
 		EEE7BE212AE7F3F5006C0460 /* Mega MallTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,7 +424,8 @@
 			isa = PBXGroup;
 			children = (
 				EEE7BE2D2AE7F487006C0460 /* Login.swift */,
-				EE71DA992AE8130A00B09801 /* ForgotPassword.swift */,
+				EECF08002AE8217600E77E2E /* Verification.swift */,
+				EEC988EC2AE90BAF00675F6C /* ForgotPassword */,
 				EE71DA9D2AE8189B00B09801 /* Register */,
 			);
 			path = Onboarding;
@@ -479,7 +532,9 @@
 				EE83AD922AE3FC3D00E40FF1 /* OnboardingTextField.xib in Resources */,
 				EE83AD642AE3E3A300E40FF1 /* LoginViewController.xib in Resources */,
 				EE83AD3A2AE3C16200E40FF1 /* Colors.xcassets in Resources */,
+				EECF08162AE8394A00E77E2E /* ProfileUpdateViewController.xib in Resources */,
 				EEECB3722AE3BF0900549C83 /* .swiftlint.yml in Resources */,
+				EECF080D2AE82DE900E77E2E /* UpdatePasswordViewController.xib in Resources */,
 				EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */,
 				EE83AD702AE3E5C900E40FF1 /* DescriptionView.xib in Resources */,
 				EE83AD452AE3CEFB00E40FF1 /* DMSans.ttf in Resources */,
@@ -550,13 +605,15 @@
 			files = (
 				EE83AD6F2AE3E5C900E40FF1 /* DescriptionView.swift in Sources */,
 				EE71DA9C2AE816F100B09801 /* RegisterViewModelType.swift in Sources */,
+				EECF080B2AE82DE900E77E2E /* UpdatePasswordViewController.swift in Sources */,
+				EECF08142AE8394A00E77E2E /* ProfileUpdateViewController.swift in Sources */,
 				EEFCC62C2AE4126200213626 /* FullButton.swift in Sources */,
+				EECF08152AE8394A00E77E2E /* ProfileUpdateViewModel.swift in Sources */,
 				EE945D712AE51A3C0013DF0B /* VerificationViewModel.swift in Sources */,
 				EE83AD8B2AE3F7C600E40FF1 /* Strings+Generated.swift in Sources */,
 				EEFCC6312AE41DC400213626 /* LabelButton.swift in Sources */,
 				EE83AD592AE3D24F00E40FF1 /* SmallLabel.swift in Sources */,
 				EE83AD4F2AE3D19B00E40FF1 /* H1Label.swift in Sources */,
-				EE71DA982AE80F1C00B09801 /* ResetPasswordViewModelType.swift in Sources */,
 				EE83AD532AE3D20D00E40FF1 /* H3Label.swift in Sources */,
 				EE83AD512AE3D1F000E40FF1 /* H2Label.swift in Sources */,
 				EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */,
@@ -568,6 +625,7 @@
 				EEE19DF42AE6727100A132E1 /* OTPTextField.swift in Sources */,
 				EE83AD632AE3E3A300E40FF1 /* LoginViewModel.swift in Sources */,
 				EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */,
+				EECF080C2AE82DE900E77E2E /* UpdatePasswordViewModel.swift in Sources */,
 				EE945D7A2AE51B310013DF0B /* ResetPasswordViewModel.swift in Sources */,
 				EE945D792AE51B310013DF0B /* ResetPasswordViewController.swift in Sources */,
 				EE945D702AE51A3C0013DF0B /* VerificationViewController.swift in Sources */,
@@ -583,10 +641,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC988EE2AE90BED00675F6C /* UpdatePassword.swift in Sources */,
 				EECF08012AE8217600E77E2E /* Verification.swift in Sources */,
 				EE71DA9F2AE818B400B09801 /* Register.swift in Sources */,
 				EEE7BE2E2AE7F487006C0460 /* Login.swift in Sources */,
-				EE71DA9A2AE8130A00B09801 /* ForgotPassword.swift in Sources */,
+				EEC988F02AE9108D00675F6C /* ProfileUpdate.swift in Sources */,
+				EE71DA9A2AE8130A00B09801 /* ResetPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

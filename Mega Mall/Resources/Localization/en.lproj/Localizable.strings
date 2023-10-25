@@ -12,6 +12,8 @@
 "onboarding.continue" = "Continue";
 "onboarding.reset" = "Reset";
 "onboarding.change" = "Change";
+"onboarding.saveUpdates" = "Save Update";
+"onboarding.confirmation" = "Confirmation";
 // Login
 "onboarding.login.decription.title" = "Welcome back to Mega Mall";
 "onboarding.login.decription.subtitle" = "Please enter data to log in";
@@ -24,6 +26,15 @@
 "onboarding.forgotPassword.decription.subtitle" = "Enter Email/Number to reset your password";
 "onboarding.forgotPassword.email.label" = "Email/Phone";
 "onboarding.forgotPassword.email.placeholder" = "Enter Email/Number to reset password";
+// Update Password
+"onboarding.updatePassword.decription.title" = "Update Password";
+"onboarding.updatePassword.decription.subtitle" = "Complete the following final data to enter the Mega Mall application";
+"onboarding.updatePassword.password.label" = "New Password";
+"onboarding.updatePassword.password.placeholder" = "Rahasia12345";
+"onboarding.updatePassword.confirmPassword.label" = "Confirm New Password";
+"onboarding.updatePassword.confirmPassword.placeholder" = "Rahasia12345";
+"onboarding.updatePassword.insight.label" = "Password must be 6 characters or more";
+
 // Verification
 "onboarding.verification.decription.title" = "Verification";
 "onboarding.verification.decription.subtitle" = "We have sent a verification code to";
@@ -34,3 +45,13 @@
 "onboarding.register.email.decription.subtitle" = "Enter Email/Number to register";
 "onboarding.register.email.label" = "Email/Phone";
 "onboarding.register.email.placeholder" = "Enter your Email Address/ Telephone Number";
+// Update Profile
+"onboarding.updateProfile.decription.title" = "Profile & Password";
+"onboarding.updateProfile.decription.subtitle" = "Complete the following final data to enter the Mega Mall application";
+"onboarding.updateProfile.fullName.label" = "Full Name";
+"onboarding.updateProfile.fullName.placeholder" = "Matias Duarte";
+"onboarding.updateProfile.password.label" = "Password";
+"onboarding.updateProfile.password.placeholder" = "Rahasia12345";
+"onboarding.updateProfile.referalCode.label" = "Referal Code (Optional)";
+"onboarding.updateProfile.referalCode.placeholder" = "Input your code";
+"onboarding.updateProfile.insight.label" = "Password must be 6 characters or more";

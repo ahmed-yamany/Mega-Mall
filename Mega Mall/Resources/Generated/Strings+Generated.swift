@@ -13,12 +13,16 @@ internal enum L10n {
   internal enum Onboarding {
     /// Change
     internal static let change = L10n.tr("Localizable", "onboarding.change", fallback: "Change")
+    /// Confirmation
+    internal static let confirmation = L10n.tr("Localizable", "onboarding.confirmation", fallback: "Confirmation")
     /// Continue
     internal static let `continue` = L10n.tr("Localizable", "onboarding.continue", fallback: "Continue")
     /// Forgot Password
     internal static let forgotpassword = L10n.tr("Localizable", "onboarding.forgotpassword", fallback: "Forgot Password")
     /// Reset
     internal static let reset = L10n.tr("Localizable", "onboarding.reset", fallback: "Reset")
+    /// Save Update
+    internal static let saveUpdates = L10n.tr("Localizable", "onboarding.saveUpdates", fallback: "Save Update")
     /// Localizable.strings
     ///   Mega Mall
     /// 
@@ -72,6 +76,60 @@ internal enum L10n {
           /// Register Account
           internal static let title = L10n.tr("Localizable", "onboarding.register.email.decription.title", fallback: "Register Account")
         }
+      }
+    }
+    internal enum UpdatePassword {
+      internal enum ConfirmPassword {
+        /// Confirm New Password
+        internal static let label = L10n.tr("Localizable", "onboarding.updatePassword.confirmPassword.label", fallback: "Confirm New Password")
+        /// Rahasia12345
+        internal static let placeholder = L10n.tr("Localizable", "onboarding.updatePassword.confirmPassword.placeholder", fallback: "Rahasia12345")
+      }
+      internal enum Decription {
+        /// Complete the following final data to enter the Mega Mall application
+        internal static let subtitle = L10n.tr("Localizable", "onboarding.updatePassword.decription.subtitle", fallback: "Complete the following final data to enter the Mega Mall application")
+        /// Update Password
+        internal static let title = L10n.tr("Localizable", "onboarding.updatePassword.decription.title", fallback: "Update Password")
+      }
+      internal enum Insight {
+        /// Password must be 6 characters or more
+        internal static let label = L10n.tr("Localizable", "onboarding.updatePassword.insight.label", fallback: "Password must be 6 characters or more")
+      }
+      internal enum Password {
+        /// New Password
+        internal static let label = L10n.tr("Localizable", "onboarding.updatePassword.password.label", fallback: "New Password")
+        /// Rahasia12345
+        internal static let placeholder = L10n.tr("Localizable", "onboarding.updatePassword.password.placeholder", fallback: "Rahasia12345")
+      }
+    }
+    internal enum UpdateProfile {
+      internal enum Decription {
+        /// Complete the following final data to enter the Mega Mall application
+        internal static let subtitle = L10n.tr("Localizable", "onboarding.updateProfile.decription.subtitle", fallback: "Complete the following final data to enter the Mega Mall application")
+        /// Profile & Password
+        internal static let title = L10n.tr("Localizable", "onboarding.updateProfile.decription.title", fallback: "Profile & Password")
+      }
+      internal enum FullName {
+        /// Full Name
+        internal static let label = L10n.tr("Localizable", "onboarding.updateProfile.fullName.label", fallback: "Full Name")
+        /// Matias Duarte
+        internal static let placeholder = L10n.tr("Localizable", "onboarding.updateProfile.fullName.placeholder", fallback: "Matias Duarte")
+      }
+      internal enum Insight {
+        /// Password must be 6 characters or more
+        internal static let label = L10n.tr("Localizable", "onboarding.updateProfile.insight.label", fallback: "Password must be 6 characters or more")
+      }
+      internal enum Password {
+        /// Password
+        internal static let label = L10n.tr("Localizable", "onboarding.updateProfile.password.label", fallback: "Password")
+        /// Rahasia12345
+        internal static let placeholder = L10n.tr("Localizable", "onboarding.updateProfile.password.placeholder", fallback: "Rahasia12345")
+      }
+      internal enum ReferalCode {
+        /// Referal Code (Optional)
+        internal static let label = L10n.tr("Localizable", "onboarding.updateProfile.referalCode.label", fallback: "Referal Code (Optional)")
+        /// Input your code
+        internal static let placeholder = L10n.tr("Localizable", "onboarding.updateProfile.referalCode.placeholder", fallback: "Input your code")
       }
     }
     internal enum Verification {
