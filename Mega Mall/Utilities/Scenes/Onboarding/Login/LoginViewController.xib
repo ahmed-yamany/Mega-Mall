@@ -26,10 +26,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-ff-2XQ" userLabel="container View">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="458.66666666666669"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="478.66666666666669"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="I2x-sF-LnG">
-                                    <rect key="frame" x="20" y="0.0" width="353" height="438.66666666666669"/>
+                                    <rect key="frame" x="20" y="20" width="353" height="438.66666666666669"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5D-6m-pox" customClass="DescriptionView" customModule="Mega_Mall" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="158"/>
@@ -53,6 +53,9 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="onboarding.signin"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="signinButtonTapped:" destination="-1" eventType="touchUpInside" id="HAx-jm-d1b"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -89,7 +92,7 @@
                             <constraints>
                                 <constraint firstItem="I2x-sF-LnG" firstAttribute="leading" secondItem="JaB-ff-2XQ" secondAttribute="leading" constant="20" id="JnM-Md-s3l"/>
                                 <constraint firstAttribute="bottom" secondItem="I2x-sF-LnG" secondAttribute="bottom" constant="20" id="OIg-yl-OeS"/>
-                                <constraint firstItem="I2x-sF-LnG" firstAttribute="top" secondItem="JaB-ff-2XQ" secondAttribute="top" id="Uot-7y-arC"/>
+                                <constraint firstItem="I2x-sF-LnG" firstAttribute="top" secondItem="JaB-ff-2XQ" secondAttribute="top" constant="20" id="Uot-7y-arC"/>
                                 <constraint firstAttribute="trailing" secondItem="I2x-sF-LnG" secondAttribute="trailing" constant="20" id="WgX-Xf-BlZ"/>
                             </constraints>
                         </view>

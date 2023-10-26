@@ -14,7 +14,7 @@ import MakeConstraints
 class TabBarController: AnimatableTabBarController {
     // MARK: - View Controllers
     //
-    let homeVC = UINavigationController(rootViewController: LoginViewController())
+    let homeVC = MegaNavigationController(rootViewController: HomeViewController())
     let wishlistVC = WishListViewController()
     let orderVC = OrderViewController()
     let accountVC = AccountViewController()
@@ -30,7 +30,15 @@ class TabBarController: AnimatableTabBarController {
         subscribeSelectedItem()
         subscribeIsLogin()
     }
-
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        super.tabBar(tabBar, didSelect: item)
+        if !viewModel.isLogin && item.tag == TabBarItems.account.rawValue {
+            UIApplication
+                .shared
+                .mainWindow?
+                .rootViewController = MegaNavigationController(rootViewController: LoginViewController())
+        }
+    }
     override func animate(_ view: UIView, at item: UITabBarItem) {
         switch item.tag {
         case TabBarItems.wishlist.rawValue:

@@ -10,6 +10,14 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum App {
+    internal enum Search {
+      internal enum TextField {
+        /// Search Product Name
+        internal static let placeholder = L10n.tr("Localizable", "app.search.textField.placeholder", fallback: "Search Product Name")
+      }
+    }
+  }
   internal enum Onboarding {
     /// Change
     internal static let change = L10n.tr("Localizable", "onboarding.change", fallback: "Change")

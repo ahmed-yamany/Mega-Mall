@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0C8D802AEAB5120019B7FA /* MegaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0C8D7F2AEAB5120019B7FA /* MegaNavigationController.swift */; };
 		EE71DA9A2AE8130A00B09801 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA992AE8130A00B09801 /* ResetPassword.swift */; };
 		EE71DA9C2AE816F100B09801 /* RegisterViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA9B2AE816F100B09801 /* RegisterViewModelType.swift */; };
 		EE71DA9F2AE818B400B09801 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA9E2AE818B400B09801 /* Register.swift */; };
@@ -44,12 +45,16 @@
 		EE945D7A2AE51B310013DF0B /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */; };
 		EE945D7B2AE51B310013DF0B /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */; };
 		EEA0EF6A2AE7DEAE0018383D /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0EF672AE7DEAE0018383D /* LoginViewModelType.swift */; };
+		EEB009522AEA9CC50032A287 /* HomeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0094E2AEA9CC50032A287 /* HomeViewModelType.swift */; };
+		EEB009532AEA9CC50032A287 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0094F2AEA9CC50032A287 /* HomeViewController.swift */; };
+		EEB009542AEA9CC50032A287 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB009502AEA9CC50032A287 /* HomeViewModel.swift */; };
+		EEB009552AEA9CC50032A287 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB009512AEA9CC50032A287 /* HomeViewController.xib */; };
+		EEB009592AEA9D350032A287 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB009572AEA9D350032A287 /* SearchTextField.swift */; };
 		EEC30B1F2AE946730003F2ED /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = EEC30B1E2AE946730003F2ED /* ViewAnimator */; };
 		EEC988EE2AE90BED00675F6C /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */; };
 		EEC988F02AE9108D00675F6C /* ProfileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */; };
 		EEC988F42AE917DE00675F6C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F22AE917DE00675F6C /* TabBarController.swift */; };
 		EEC988F72AE924A500675F6C /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F62AE924A500675F6C /* TabBarViewModel.swift */; };
-		EEC988FA2AE929D400675F6C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F92AE929D400675F6C /* HomeViewController.swift */; };
 		EEC988FF2AE92A1400675F6C /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988FE2AE92A1400675F6C /* WishListViewController.swift */; };
 		EEC989012AE92A1900675F6C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC989002AE92A1900675F6C /* OrderViewController.swift */; };
 		EEC989032AE92A1F00675F6C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC989022AE92A1F00675F6C /* AccountViewController.swift */; };
@@ -85,6 +90,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0C8D7F2AEAB5120019B7FA /* MegaNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaNavigationController.swift; sourceTree = "<group>"; };
 		EE71DA992AE8130A00B09801 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		EE71DA9B2AE816F100B09801 /* RegisterViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelType.swift; sourceTree = "<group>"; };
 		EE71DA9E2AE818B400B09801 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
@@ -119,11 +125,15 @@
 		EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		EEA0EF672AE7DEAE0018383D /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
+		EEB0094E2AEA9CC50032A287 /* HomeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelType.swift; sourceTree = "<group>"; };
+		EEB0094F2AEA9CC50032A287 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EEB009502AEA9CC50032A287 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EEB009512AEA9CC50032A287 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		EEB009572AEA9D350032A287 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
 		EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdate.swift; sourceTree = "<group>"; };
 		EEC988F22AE917DE00675F6C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EEC988F62AE924A500675F6C /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
-		EEC988F92AE929D400675F6C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EEC988FE2AE92A1400675F6C /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		EEC989002AE92A1900675F6C /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		EEC989022AE92A1F00675F6C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +233,8 @@
 				EEFCC62B2AE4126200213626 /* FullButton.swift */,
 				EEFCC6302AE41DC400213626 /* LabelButton.swift */,
 				EEE19DF22AE6727100A132E1 /* OTPTextField.swift */,
+				EEB009572AEA9D350032A287 /* SearchTextField.swift */,
+				EE0C8D7F2AEAB5120019B7FA /* MegaNavigationController.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -369,7 +381,10 @@
 		EEC988F82AE929B400675F6C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EEC988F92AE929D400675F6C /* HomeViewController.swift */,
+				EEB0094E2AEA9CC50032A287 /* HomeViewModelType.swift */,
+				EEB0094F2AEA9CC50032A287 /* HomeViewController.swift */,
+				EEB009502AEA9CC50032A287 /* HomeViewModel.swift */,
+				EEB009512AEA9CC50032A287 /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -604,6 +619,7 @@
 				EE945D692AE50DE10013DF0B /* RegisterViewController.xib in Resources */,
 				EE945D7B2AE51B310013DF0B /* ResetPasswordViewController.xib in Resources */,
 				EE83AD852AE3F2BC00E40FF1 /* swiftgen.yml in Resources */,
+				EEB009552AEA9CC50032A287 /* HomeViewController.xib in Resources */,
 				EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */,
 				EE945D722AE51A3C0013DF0B /* VerificationViewController.xib in Resources */,
 				EE83AD3D2AE3C20100E40FF1 /* Cairo.ttf in Resources */,
@@ -667,10 +683,10 @@
 			files = (
 				EEC989032AE92A1F00675F6C /* AccountViewController.swift in Sources */,
 				EE83AD6F2AE3E5C900E40FF1 /* DescriptionView.swift in Sources */,
+				EE0C8D802AEAB5120019B7FA /* MegaNavigationController.swift in Sources */,
 				EEC988FF2AE92A1400675F6C /* WishListViewController.swift in Sources */,
 				EEC988F42AE917DE00675F6C /* TabBarController.swift in Sources */,
 				EE71DA9C2AE816F100B09801 /* RegisterViewModelType.swift in Sources */,
-				EEC988FA2AE929D400675F6C /* HomeViewController.swift in Sources */,
 				EECF080B2AE82DE900E77E2E /* UpdatePasswordViewController.swift in Sources */,
 				EECF08142AE8394A00E77E2E /* ProfileUpdateViewController.swift in Sources */,
 				EEFCC62C2AE4126200213626 /* FullButton.swift in Sources */,
@@ -681,11 +697,14 @@
 				EE83AD592AE3D24F00E40FF1 /* SmallLabel.swift in Sources */,
 				EE83AD4F2AE3D19B00E40FF1 /* H1Label.swift in Sources */,
 				EE83AD532AE3D20D00E40FF1 /* H3Label.swift in Sources */,
+				EEB009592AEA9D350032A287 /* SearchTextField.swift in Sources */,
+				EEB009522AEA9CC50032A287 /* HomeViewModelType.swift in Sources */,
 				EE83AD512AE3D1F000E40FF1 /* H2Label.swift in Sources */,
 				EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */,
 				EE83AD552AE3D22000E40FF1 /* MediumLabel.swift in Sources */,
 				EE83AD912AE3FC3D00E40FF1 /* OnboardingTextField.swift in Sources */,
 				EE945D682AE50DE10013DF0B /* RegisterViewModel.swift in Sources */,
+				EEB009532AEA9CC50032A287 /* HomeViewController.swift in Sources */,
 				EE83AD432AE3C4A900E40FF1 /* UIFont+Style.swift in Sources */,
 				EEA0EF6A2AE7DEAE0018383D /* LoginViewModelType.swift in Sources */,
 				EEE19DF42AE6727100A132E1 /* OTPTextField.swift in Sources */,
@@ -698,6 +717,7 @@
 				EEE19DF72AE689C100A132E1 /* Logger.swift in Sources */,
 				EE945D672AE50DE10013DF0B /* RegisterViewController.swift in Sources */,
 				EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */,
+				EEB009542AEA9CC50032A287 /* HomeViewModel.swift in Sources */,
 				EE83AD6A2AE3E45100E40FF1 /* ViewModel Container.swift in Sources */,
 				EEC988F72AE924A500675F6C /* TabBarViewModel.swift in Sources */,
 				EE83AD622AE3E3A300E40FF1 /* LoginViewController.swift in Sources */,

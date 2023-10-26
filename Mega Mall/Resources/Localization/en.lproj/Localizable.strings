@@ -55,3 +55,6 @@
 "onboarding.updateProfile.referalCode.label" = "Referal Code (Optional)";
 "onboarding.updateProfile.referalCode.placeholder" = "Input your code";
 "onboarding.updateProfile.insight.label" = "Password must be 6 characters or more";
+
+// App
+"app.search.textField.placeholder" = "Search Product Name";

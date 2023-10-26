@@ -31,13 +31,20 @@ extension UIImage {
      - Returns: An instance of `UIImage` filled with the specified color, or `nil` if the image creation fails.
      */
     convenience public init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+        // Create a CGRect with the specified size
         let rect = CGRect(origin: .zero, size: size)
+        // Begin a graphics context with the specified size and scale
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        // Fill the entire context with the specified color
         color.setFill()
         UIRectFill(rect)
+        // Get the image from the current graphics context
         let image = UIGraphicsGetImageFromCurrentImageContext()
+        // End the graphics context
         UIGraphicsEndImageContext()
+        // Check if the image was successfully created and get its CGImage
         guard let cgImage = image?.cgImage else { return nil }
+        // Initialize the UIImage instance with the CGImage
         self.init(cgImage: cgImage)
     }
 }

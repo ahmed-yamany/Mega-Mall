@@ -31,7 +31,7 @@ extension UITextField {
     /// - Parameters:
     ///   - image: The image to be displayed.
     ///   - tintColor: The color to apply to the image.
-    public func addPaddingRightIcon(_ image: UIImage, padding: CGFloat, tintColor: UIColor = .blue) {
+    public func addPaddingRightIcon(_ image: UIImage?, padding: CGFloat, tintColor: UIColor = .blue) {
         let view = UIView()
         let imageView = UIImageView(image: image)
         imageView.tintColor = tintColor
