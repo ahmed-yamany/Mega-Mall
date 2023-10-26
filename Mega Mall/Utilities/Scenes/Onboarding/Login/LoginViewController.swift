@@ -2,13 +2,13 @@ import UIKit
 import Factory
 
 class LoginViewController: UIViewController {
-    // MARK: Outlets
+    // MARK: - Outlets
     //
     @IBOutlet weak private(set) var descriptionView: DescriptionView!
     @IBOutlet weak private(set) var emailTextFieldView: OnboardingTextField!
     @IBOutlet weak private(set) var passwordTextFieldView: OnboardingTextField!
     @IBOutlet weak private(set) var signinButton: FullButton!
-    // MARK: Properties
+    // MARK: - Properties
     //
     var viewModel: LoginViewModelType
     private let descriptionViewModel = DescriptionView.Model(title: L10n.Onboarding.Login.Decription.title,
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("failed to inirialder Verification View Controller from coder")
     }
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     //
     override func viewDidLoad() {
         super.viewDidLoad()

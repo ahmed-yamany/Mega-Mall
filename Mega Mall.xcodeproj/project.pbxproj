@@ -44,8 +44,15 @@
 		EE945D7A2AE51B310013DF0B /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE945D762AE51B310013DF0B /* ResetPasswordViewModel.swift */; };
 		EE945D7B2AE51B310013DF0B /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE945D772AE51B310013DF0B /* ResetPasswordViewController.xib */; };
 		EEA0EF6A2AE7DEAE0018383D /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0EF672AE7DEAE0018383D /* LoginViewModelType.swift */; };
+		EEC30B1F2AE946730003F2ED /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = EEC30B1E2AE946730003F2ED /* ViewAnimator */; };
 		EEC988EE2AE90BED00675F6C /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */; };
 		EEC988F02AE9108D00675F6C /* ProfileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */; };
+		EEC988F42AE917DE00675F6C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F22AE917DE00675F6C /* TabBarController.swift */; };
+		EEC988F72AE924A500675F6C /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F62AE924A500675F6C /* TabBarViewModel.swift */; };
+		EEC988FA2AE929D400675F6C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F92AE929D400675F6C /* HomeViewController.swift */; };
+		EEC988FF2AE92A1400675F6C /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988FE2AE92A1400675F6C /* WishListViewController.swift */; };
+		EEC989012AE92A1900675F6C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC989002AE92A1900675F6C /* OrderViewController.swift */; };
+		EEC989032AE92A1F00675F6C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC989022AE92A1F00675F6C /* AccountViewController.swift */; };
 		EECEA2962AE3AC3E009B2FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */; };
 		EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */; };
 		EECEA29F2AE3AC3F009B2FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */; };
@@ -114,6 +121,12 @@
 		EEA0EF672AE7DEAE0018383D /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
 		EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdate.swift; sourceTree = "<group>"; };
+		EEC988F22AE917DE00675F6C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EEC988F62AE924A500675F6C /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		EEC988F92AE929D400675F6C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EEC988FE2AE92A1400675F6C /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		EEC989002AE92A1900675F6C /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		EEC989022AE92A1F00675F6C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		EECEA2952AE3AC3E009B2FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECEA2972AE3AC3E009B2FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EECEA29E2AE3AC3F009B2FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +158,7 @@
 			files = (
 				EEFCC62F2AE418E100213626 /* IQKeyboardManagerSwift in Frameworks */,
 				EE83AD792AE3E94700E40FF1 /* Localizable in Frameworks */,
+				EEC30B1F2AE946730003F2ED /* ViewAnimator in Frameworks */,
 				EE83AD672AE3E40400E40FF1 /* Factory in Frameworks */,
 				EE83AD952AE3FD3800E40FF1 /* Extensions in Frameworks */,
 				EE83AD762AE3E92A00E40FF1 /* MakeConstraints in Frameworks */,
@@ -230,6 +244,11 @@
 			isa = PBXGroup;
 			children = (
 				EE83AD5B2AE3E08D00E40FF1 /* Onboarding */,
+				EEC988F12AE917A900675F6C /* TabBar */,
+				EEC988F82AE929B400675F6C /* Home */,
+				EEC988FB2AE929DA00675F6C /* Wishlist */,
+				EEC988FC2AE929E200675F6C /* Order */,
+				EEC988FD2AE929EA00675F6C /* Account */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -336,6 +355,47 @@
 				EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		EEC988F12AE917A900675F6C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EEC988F22AE917DE00675F6C /* TabBarController.swift */,
+				EEC988F62AE924A500675F6C /* TabBarViewModel.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EEC988F82AE929B400675F6C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EEC988F92AE929D400675F6C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EEC988FB2AE929DA00675F6C /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				EEC988FE2AE92A1400675F6C /* WishListViewController.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		EEC988FC2AE929E200675F6C /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				EEC989002AE92A1900675F6C /* OrderViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		EEC988FD2AE929EA00675F6C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				EEC989022AE92A1F00675F6C /* AccountViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		EECEA2892AE3AC3E009B2FD9 = {
@@ -455,6 +515,7 @@
 				EE83AD782AE3E94700E40FF1 /* Localizable */,
 				EE83AD942AE3FD3800E40FF1 /* Extensions */,
 				EEFCC62E2AE418E100213626 /* IQKeyboardManagerSwift */,
+				EEC30B1E2AE946730003F2ED /* ViewAnimator */,
 			);
 			productName = "Mega Mall";
 			productReference = EE83AD862AE3F33C00E40FF1 /* Mega Mall.app */;
@@ -513,6 +574,7 @@
 				EE83AD772AE3E94700E40FF1 /* XCLocalSwiftPackageReference "Packages/Localizable" */,
 				EE83AD932AE3FD3800E40FF1 /* XCLocalSwiftPackageReference "Packages/Extensions" */,
 				EEFCC62D2AE418E100213626 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				EEC30B1D2AE946730003F2ED /* XCLocalSwiftPackageReference "Packages/ViewAnimator" */,
 			);
 			productRefGroup = EECEA2892AE3AC3E009B2FD9;
 			projectDirPath = "";
@@ -603,8 +665,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC989032AE92A1F00675F6C /* AccountViewController.swift in Sources */,
 				EE83AD6F2AE3E5C900E40FF1 /* DescriptionView.swift in Sources */,
+				EEC988FF2AE92A1400675F6C /* WishListViewController.swift in Sources */,
+				EEC988F42AE917DE00675F6C /* TabBarController.swift in Sources */,
 				EE71DA9C2AE816F100B09801 /* RegisterViewModelType.swift in Sources */,
+				EEC988FA2AE929D400675F6C /* HomeViewController.swift in Sources */,
 				EECF080B2AE82DE900E77E2E /* UpdatePasswordViewController.swift in Sources */,
 				EECF08142AE8394A00E77E2E /* ProfileUpdateViewController.swift in Sources */,
 				EEFCC62C2AE4126200213626 /* FullButton.swift in Sources */,
@@ -633,7 +699,9 @@
 				EE945D672AE50DE10013DF0B /* RegisterViewController.swift in Sources */,
 				EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */,
 				EE83AD6A2AE3E45100E40FF1 /* ViewModel Container.swift in Sources */,
+				EEC988F72AE924A500675F6C /* TabBarViewModel.swift in Sources */,
 				EE83AD622AE3E3A300E40FF1 /* LoginViewController.swift in Sources */,
+				EEC989012AE92A1900675F6C /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,6 +1010,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/Extensions;
 		};
+		EEC30B1D2AE946730003F2ED /* XCLocalSwiftPackageReference "Packages/ViewAnimator" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ViewAnimator;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -980,6 +1052,10 @@
 		EE83AD942AE3FD3800E40FF1 /* Extensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Extensions;
+		};
+		EEC30B1E2AE946730003F2ED /* ViewAnimator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ViewAnimator;
 		};
 		EEFCC62E2AE418E100213626 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
