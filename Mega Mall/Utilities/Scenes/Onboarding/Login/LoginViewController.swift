@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     private let emailViewModel = OnboardingTextField.ViewModel(model:
             .init(label: L10n.Onboarding.Login.Email.label,
                   placeholder: L10n.Onboarding.Login.Email.placeholder))
+    //
     private let passwordViewModel = OnboardingTextField.ViewModel(model:
             .init(label: L10n.Onboarding.Login.Password.label,
                   placeholder: L10n.Onboarding.Login.Password.placeholder,

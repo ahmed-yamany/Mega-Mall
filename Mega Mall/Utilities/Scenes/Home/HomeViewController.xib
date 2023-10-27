@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewControllerViewController" customModule="Mega_Mall" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Mega_Mall" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="vhA-M7-zeI" id="W8S-7G-fhz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,54 +21,40 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGc-bK-92B">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-ff-2XQ" userLabel="container View">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="74"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="I2x-sF-LnG">
-                                    <rect key="frame" x="20" y="20" width="353" height="34"/>
-                                    <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fw-B5-30G" customClass="SearchTextField" customModule="Mega_Mall" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="I2x-sF-LnG" firstAttribute="leading" secondItem="JaB-ff-2XQ" secondAttribute="leading" constant="20" id="JnM-Md-s3l"/>
-                                <constraint firstAttribute="bottom" secondItem="I2x-sF-LnG" secondAttribute="bottom" constant="20" id="OIg-yl-OeS"/>
-                                <constraint firstItem="I2x-sF-LnG" firstAttribute="top" secondItem="JaB-ff-2XQ" secondAttribute="top" constant="20" id="Uot-7y-arC"/>
-                                <constraint firstAttribute="trailing" secondItem="I2x-sF-LnG" secondAttribute="trailing" constant="20" id="WgX-Xf-BlZ"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="JaB-ff-2XQ" firstAttribute="bottom" secondItem="bOZ-HR-7SM" secondAttribute="bottom" id="3gF-IP-7v3"/>
-                        <constraint firstItem="JaB-ff-2XQ" firstAttribute="top" secondItem="bOZ-HR-7SM" secondAttribute="top" id="e6u-fX-7sG"/>
-                        <constraint firstItem="JaB-ff-2XQ" firstAttribute="leading" secondItem="bOZ-HR-7SM" secondAttribute="leading" id="edN-iu-zdg"/>
-                        <constraint firstItem="JaB-ff-2XQ" firstAttribute="trailing" secondItem="bOZ-HR-7SM" secondAttribute="trailing" id="s37-x6-h8Q"/>
-                    </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="bOZ-HR-7SM"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="bcH-8A-FN4"/>
-                </scrollView>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-fy-oU3" customClass="SearchTextField" customModule="Mega_Mall" customModuleProvider="target">
+                    <rect key="frame" x="20" y="79" width="353" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vhA-M7-zeI">
+                    <rect key="frame" x="0.0" y="113" width="393" height="739"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1pZ-sc-JXf">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
             <constraints>
-                <constraint firstItem="JaB-ff-2XQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="1fX-w1-cKf"/>
-                <constraint firstAttribute="trailing" secondItem="yGc-bK-92B" secondAttribute="trailing" id="8SN-rG-sEP"/>
-                <constraint firstItem="yGc-bK-92B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HHi-82-J9r"/>
-                <constraint firstAttribute="bottom" secondItem="yGc-bK-92B" secondAttribute="bottom" id="K4H-aP-swh"/>
-                <constraint firstItem="yGc-bK-92B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iRm-uK-sYf"/>
+                <constraint firstItem="hdP-fy-oU3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2oK-uT-Vam"/>
+                <constraint firstAttribute="bottom" secondItem="vhA-M7-zeI" secondAttribute="bottom" id="5mx-UW-e95"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hdP-fy-oU3" secondAttribute="trailing" constant="20" id="6HY-cE-hWq"/>
+                <constraint firstItem="vhA-M7-zeI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OLk-iS-45X"/>
+                <constraint firstItem="hdP-fy-oU3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Qgc-8f-uFj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vhA-M7-zeI" secondAttribute="trailing" id="eIb-I7-pvk"/>
+                <constraint firstItem="vhA-M7-zeI" firstAttribute="top" secondItem="hdP-fy-oU3" secondAttribute="bottom" id="uOD-8d-yb3"/>
             </constraints>
-            <point key="canvasLocation" x="88" y="21"/>
+            <point key="canvasLocation" x="-153" y="20"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="Mega-Primary-PureWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

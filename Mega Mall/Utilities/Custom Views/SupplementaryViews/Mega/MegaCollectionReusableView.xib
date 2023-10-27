@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MegaCollectionReusableView" customModule="Mega_Mall" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="8ay-bt-nmf" id="vhK-ab-8QB"/>
+                <outlet property="label" destination="Fps-n7-4fo" id="Z8K-2B-NA0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Vae-Td-fPr">
+                    <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fps-n7-4fo" customClass="H3Label" customModule="Mega_Mall" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ay-bt-nmf" customClass="LabelButton" customModule="Mega_Mall" customModuleProvider="target">
+                            <rect key="frame" x="266" y="0.0" width="75" height="44"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="h88-NM-uNk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Vae-Td-fPr" secondAttribute="bottom" id="2Ma-Y2-NMd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vae-Td-fPr" secondAttribute="trailing" id="Rqn-oD-DdJ"/>
+                <constraint firstItem="Vae-Td-fPr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SCk-Tw-pjO"/>
+                <constraint firstItem="Vae-Td-fPr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hmc-DF-pmm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="177.86259541984731" y="-45.070422535211272"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Mega-Primary-NavyBlack">
+            <color red="0.047058823529411764" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

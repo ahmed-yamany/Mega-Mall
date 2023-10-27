@@ -29,7 +29,7 @@ extension OTPTextField {
     /// Configures the OTPTextField with the specified number of slots.
     /// - Parameter slotCount: The number of slots for entering OTP digits.
     public func configure(with slotCount: Int = 4) {
-        guard isConfigured == false else { return }
+        guard !isConfigured else { return }
         isConfigured.toggle()
         configureTextField()
         let labelsStackView = createLabelStackView(with: slotCount)
