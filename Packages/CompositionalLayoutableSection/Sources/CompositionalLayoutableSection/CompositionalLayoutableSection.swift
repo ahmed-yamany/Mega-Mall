@@ -55,6 +55,8 @@ extension CompositionalLayoutableSectionLayout {
     @objc func registerCell(_ collectionView: UICollectionView)
     /// Registers the supplementary view type to be used in the section.
     @objc optional func registerSupplementaryView(_ collectionView: UICollectionView)
+    @available(iOS 13.0, *)
+    @objc optional func registerDecorationView(_ layout: UICollectionViewCompositionalLayout)
 }
 
 /*

@@ -24,17 +24,23 @@ extension CompositionalLayoutProvider {
     public func registerSupplementaryViews(for collectionView: UICollectionView) {
         compositionalLayoutSections.forEach { $0.delegate?.registerSupplementaryView?(collectionView) }
     }
+    /// Registers Decoration Views for all section in the collection View
+    private func registerDecorationViews(for layout: UICollectionViewCompositionalLayout) {
+        compositionalLayoutSections.forEach { $0.delegate?.registerDecorationView?(layout)}
+    }
     /// Retrieves the section at the given index path
-    public func getSection(at indexPath: IndexPath) -> CompositionalLayoutableSection {
+    public func getCompositionalLayoutableSection(at indexPath: IndexPath) -> CompositionalLayoutableSection {
         return self.compositionalLayoutSections[indexPath.section]
     }
     /// Constructs and returns a UICollectionViewCompositionalLayout instance based on the compositional layout sections
     public var collectionViewCompositionalLayout: UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
-            return self.getSection(at: IndexPath(row: 0, section: sectionIndex))
+            let sectionLayout = self.getCompositionalLayoutableSection(at: IndexPath(row: 0, section: sectionIndex))
                 .layout?
                 .sectionLayout(at: sectionIndex, layoutEnvironment: layoutEnvironment)
+            return sectionLayout
         }
+        self.registerDecorationViews(for: layout)
         return layout
     }
 }

@@ -57,5 +57,6 @@
 "onboarding.updateProfile.insight.label" = "Password must be 6 characters or more";
 
 // App
+"app.name" = "Mega Mall";
 "app.seeAll" = "See All";
 "app.search.textField.placeholder" = "Search Product Name";

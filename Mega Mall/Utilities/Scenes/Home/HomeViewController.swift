@@ -4,14 +4,14 @@ import Extensions
 import CompositionalLayoutableSection
 
 class HomeViewController: UIViewController, CompositionalLayoutProvider {
-    // MARK: Outlets
+    // MARK: - Outlets
     //
     @IBOutlet weak var collectionView: UICollectionView!
     // MARK: Properties
-    private let viewModel: HomeViewModelType
+    private let viewModel: HomeViewModel
     var compositionalLayoutSections: [CompositionalLayoutableSection] = []
     //
-    // MARK: Init
+    // MARK: - Init
     init() {
         self.viewModel = HomeViewModel()
         super.init(nibName: nil, bundle: nil)
@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, CompositionalLayoutProvider {
         fatalError("init(coder:) has not been implemented")
     }
     //
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     let delegate = CompositionalLayoutDelegate()
     let datasource = CompositionalLayoutDataSource()
     override func viewDidLoad() {
@@ -34,71 +34,37 @@ class HomeViewController: UIViewController, CompositionalLayoutProvider {
         collectionView.delegate = delegate
         collectionView.dataSource = datasource
         //
-        let section = AddsCollectionViewSection()
-        compositionalLayoutSections.append(section)
-        section.update(collectionView, withItems: Array(repeating: "10", count: 10))
-        //
-        let categoriesSection = CategoriesCollectionViewSection()
-        compositionalLayoutSections.append(categoriesSection)
-        categoriesSection.update(collectionView, withItems: Array(repeating: "10", count: 10))
-        //
-        let productsSection = ProductsCollectionViewSection()
-        compositionalLayoutSections.append(productsSection)
-        productsSection.configure(ownerViewController: self,
-                                  topViewModel: .init(label: "Featured Product", button: L10n.App.seeAll))
-        productsSection.update(collectionView, withItems: Array(repeating: "10", count: 10))
-        //
-        let section2 = OfferCollectionViewSection()
-        compositionalLayoutSections.append(section2)
-        section2.update(collectionView, withItems: Array(repeating: "10", count: 1))
-        //
-        let productsSection1 = ProductsCollectionViewSection()
-        compositionalLayoutSections.append(productsSection1)
-        productsSection1.configure(ownerViewController: self, topViewModel: .init(label: "Best Sellers", button: L10n.App.seeAll))
-        productsSection1.update(collectionView, withItems: Array(repeating: "10", count: 10))
-        //
-        let section3 = OfferCollectionViewSection()
-        compositionalLayoutSections.append(section3)
-        section3.update(collectionView, withItems: Array(repeating: "10", count: 1))
-        //
-        let productsSection2 = ProductsCollectionViewSection()
-        compositionalLayoutSections.append(productsSection2)
-        productsSection2.configure(ownerViewController: self,
-                                   topViewModel: .init(label: "New Arrivals", button: L10n.App.seeAll))
-        productsSection2.update(collectionView, withItems: Array(repeating: "10", count: 10))
-        //
-        let productsSection3 = ProductsCollectionViewSection()
-        compositionalLayoutSections.append(productsSection3)
-        productsSection3.configure(ownerViewController: self,
-                                   topViewModel: .init(label: "Top Rated Product", button: L10n.App.seeAll))
-        productsSection3.update(collectionView, withItems: Array(repeating: "10", count: 10))
-        //
-        let productsSection4 = ProductsCollectionViewSection()
-        compositionalLayoutSections.append(productsSection4)
-        productsSection4.configure(ownerViewController: self,
-                                   topViewModel: .init(label: "Special Offers", button: L10n.App.seeAll))
-        productsSection4.update(collectionView, withItems: Array(repeating: "10", count: 10))
-        //
-        let news = NewsCollectionViewSection()
-        compositionalLayoutSections.append(news)
-        news.configure(ownerViewController: self)
-        news.update(collectionView, withItems: Array(repeating: "10", count: 3))
-        //
-        // this must be called after adding all sections to sections array
-        collectionView.updatecollectionViewCompositionalLayout(with: self)
+        viewModel.getHome().sink { [unowned self] home in
+            for section in home.sections {
+                let collectionViewSection: CompositionalLayoutableSection
+                switch section.type {
+                case .adds:
+                    collectionViewSection = makeAddsCollectionViewSection(from: section)
+                case .categories:
+                    collectionViewSection = makeCategoriesCollectionViewSection(from: section)
+                case .products:
+                    collectionViewSection = makeProductsCollectionViewSection(from: section)
+                case .offers:
+                    collectionViewSection = makeOffersCollectionViewSection(from: section)
+                case .news:
+                    collectionViewSection = makeNewsCollectionViewSection(from: section)
+                }
+                compositionalLayoutSections.append(collectionViewSection)
+            }
+            // this must be called after adding all sections to compositionalLayoutSections array
+            collectionView.updatecollectionViewCompositionalLayout(with: self)
+        }
+        .store(in: &viewModel.cancellableSet)
     }
 }
-//
-// MARK: - Actions
-extension HomeViewController {}
-//
+
 // MARK: - Configurations
 extension HomeViewController {
     private func configureViews() {
         configureNavigationItem()
     }
     private func configureNavigationItem() {
-        navigationItem.addTitleLabel(with: "Mega Mall", color: .megaPrimaryBlueOcean, font: .h2)
+        navigationItem.addTitleLabel(with: L10n.App.name, color: .megaPrimaryBlueOcean, font: .h2)
         congigureLeftBartButtonItems()
     }
     private func congigureLeftBartButtonItems() {
@@ -117,9 +83,78 @@ extension HomeViewController {
         shopingCartView.addGestureRecognizer(shopingCarttapGesture)
     }
 }
-//
+
 // MARK: - Private Handlers
-private extension HomeViewController {}
+private extension HomeViewController {
+    ///
+    private func makeAddsCollectionViewSection(from section: Section) -> CompositionalLayoutableSection {
+        let collectionViewsection = AddsCollectionViewSection()
+        if let adds = section.adds {
+            collectionViewsection.update(collectionView, withItems: adds)
+        } else {
+            Logger.log("could not wrap Adds this may be an error from the backend", category: \.home, level: .fault)
+        }
+        return collectionViewsection
+    }
+    ///
+    private func makeCategoriesCollectionViewSection(from section: Section) -> CompositionalLayoutableSection {
+        let collectionViewsection = CategoriesCollectionViewSection()
+        //
+        if let categories = section.categories {
+            collectionViewsection.update(collectionView, withItems: categories)
+        } else {
+            Logger.log("could not wrap categories this may be an error from the backend", category: \.home, level: .fault)
+        }
+        //
+        if let title = section.title {
+            collectionViewsection.configure(owner: self, topViewModel: .init(label: title, button: L10n.App.seeAll, action: { }))
+        }
+        //
+        return collectionViewsection
+    }
+    ///
+    private func makeProductsCollectionViewSection(from section: Section) -> CompositionalLayoutableSection {
+        let collectionViewsection = ProductsCollectionViewSection()
+        //
+        if let categories = section.products {
+            collectionViewsection.update(collectionView, withItems: categories)
+        } else {
+            Logger.log("could not wrap Products this may be an error from the backend", category: \.home, level: .fault)
+        }
+        //
+        if let title = section.title {
+            collectionViewsection.configure(owner: self, topViewModel: .init(label: title, button: L10n.App.seeAll, action: { }))
+        }
+        //
+        return collectionViewsection
+    }
+    ///
+    private func makeOffersCollectionViewSection(from section: Section) -> CompositionalLayoutableSection {
+        let collectionViewsection = OfferCollectionViewSection()
+        if let offers = section.offers {
+            collectionViewsection.update(collectionView, withItems: offers)
+        } else {
+            Logger.log("could not wrap Offers this may be an error from the backend", category: \.home, level: .fault)
+        }
+        return collectionViewsection
+    }
+    ///
+    private func makeNewsCollectionViewSection(from section: Section) -> CompositionalLayoutableSection {
+        let collectionViewsection = NewsCollectionViewSection()
+        //
+        if let news = section.news {
+            collectionViewsection.update(collectionView, withItems: news)
+        } else {
+            Logger.log("could not wrap News this may be an error from the backend", category: \.home, level: .fault)
+        }
+        //
+        if let title = section.title {
+            collectionViewsection.configure(owner: self, topViewModel: .init(label: title))
+        }
+        //
+        return collectionViewsection
+    }
+}
 
 // MARK: - Actions
 private extension HomeViewController {

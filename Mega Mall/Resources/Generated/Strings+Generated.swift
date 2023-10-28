@@ -11,6 +11,8 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
   internal enum App {
+    /// Mega Mall
+    internal static let name = L10n.tr("Localizable", "app.name", fallback: "Mega Mall")
     /// See All
     internal static let seeAll = L10n.tr("Localizable", "app.seeAll", fallback: "See All")
     internal enum Search {

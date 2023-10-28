@@ -7,6 +7,7 @@ public final class LoggingCategories {
 }
 extension LoggingCategories {
     var onboarding: String { "Onboarding" }
+    var home: String { "Home" }
 }
 /// The Logging protocol defines a standardized way of logging messages in an application or system.
 public protocol Logging {

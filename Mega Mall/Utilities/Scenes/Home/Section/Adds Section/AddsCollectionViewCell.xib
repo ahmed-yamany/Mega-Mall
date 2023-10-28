@@ -18,31 +18,66 @@
                 <rect key="frame" x="0.0" y="0.0" width="332" height="146"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SsD-gC-ObM">
-                        <rect key="frame" x="0.0" y="0.0" width="332" height="146"/>
-                        <color key="backgroundColor" name="Mega-Secondary-RedVelvet"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
-                                <real key="value" value="12"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UxD-ul-NPW">
+                        <rect key="frame" x="132.66666666666663" y="0.0" width="199.33333333333337" height="146"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-WA-0TU">
+                        <rect key="frame" x="0.0" y="0.0" width="199.33333333333334" height="146"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CkZ-0h-4zp">
+                                <rect key="frame" x="15" y="50.666666666666657" width="169.33333333333334" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dap-JK-5yA" customClass="H2Label" customModule="Mega_Mall" customModuleProvider="target">
+                                        <rect key="frame" x="45.333333333333336" y="0.0" width="78.666666666666657" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Mega-Primary-PureWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHH-Oy-yqf" customClass="SmallLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                        <rect key="frame" x="60.333333333333329" y="36.333333333333336" width="48.666666666666671" height="8.6666666666666643"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                        <color key="textColor" name="Mega-Primary-PureWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Mega-Primary-BlueOcean"/>
+                        <constraints>
+                            <constraint firstItem="CkZ-0h-4zp" firstAttribute="centerX" secondItem="hc3-WA-0TU" secondAttribute="centerX" id="8R3-xU-Qdi"/>
+                            <constraint firstItem="CkZ-0h-4zp" firstAttribute="width" secondItem="hc3-WA-0TU" secondAttribute="width" multiplier="0.85" id="ShZ-Q2-w6U"/>
+                            <constraint firstItem="CkZ-0h-4zp" firstAttribute="centerY" secondItem="hc3-WA-0TU" secondAttribute="centerY" id="YgD-tN-N6b"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="SsD-gC-ObM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dEL-a1-1Wl"/>
-                <constraint firstAttribute="bottom" secondItem="SsD-gC-ObM" secondAttribute="bottom" id="lnm-ph-fVh"/>
-                <constraint firstItem="SsD-gC-ObM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vDu-y9-0hU"/>
-                <constraint firstAttribute="trailing" secondItem="SsD-gC-ObM" secondAttribute="trailing" id="yKt-8I-xUh"/>
+                <constraint firstItem="UxD-ul-NPW" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.6" id="03K-MY-FjF"/>
+                <constraint firstAttribute="bottom" secondItem="hc3-WA-0TU" secondAttribute="bottom" id="63i-hy-OER"/>
+                <constraint firstItem="UxD-ul-NPW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7TB-VH-2Da"/>
+                <constraint firstAttribute="trailing" secondItem="UxD-ul-NPW" secondAttribute="trailing" id="U4E-tc-fHr"/>
+                <constraint firstItem="hc3-WA-0TU" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.6" id="h4e-ub-PVs"/>
+                <constraint firstItem="hc3-WA-0TU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="s29-H6-qvi"/>
+                <constraint firstItem="hc3-WA-0TU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vSd-nA-byd"/>
+                <constraint firstAttribute="bottom" secondItem="UxD-ul-NPW" secondAttribute="bottom" id="x7a-6R-NE7"/>
             </constraints>
             <size key="customSize" width="332" height="146"/>
+            <connections>
+                <outlet property="imageView" destination="UxD-ul-NPW" id="9kF-LJ-oLX"/>
+                <outlet property="rectangleView" destination="hc3-WA-0TU" id="Cxg-uB-1La"/>
+                <outlet property="subtitleLabel" destination="hHH-Oy-yqf" id="y2P-l4-nCA"/>
+                <outlet property="titleLabel" destination="dap-JK-5yA" id="lZa-cB-w6l"/>
+            </connections>
             <point key="canvasLocation" x="132.82442748091603" y="53.521126760563384"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="Mega-Secondary-RedVelvet">
-            <color red="0.78823529411764703" green="0.20784313725490197" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Mega-Primary-BlueOcean">
+            <color red="0.21176470588235294" green="0.41176470588235292" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mega-Primary-PureWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

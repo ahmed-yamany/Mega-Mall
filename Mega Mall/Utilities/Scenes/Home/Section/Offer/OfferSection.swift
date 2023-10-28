@@ -10,8 +10,10 @@ import CompositionalLayoutableSection
 
 // MARK: - A custom section for displaying Offer in a collection view.
 class OfferCollectionViewSection: CompositionalLayoutableSection {
-    typealias ResposeType = String
+    typealias ResposeType = Offer
     typealias CellType = OfferCollectionViewCell
+    typealias DecorationViewType = SectionDecorationView
+    //
     var items: [ResposeType] = []
     var viewController: UIViewController?
     override init() {
@@ -35,7 +37,8 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionDataSource {
     /// cell For Item At
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CellType.self, for: indexPath)
-        cell.backgroundColor = .blue
+        let offer = items[indexPath.item]
+        cell.configure(with: offer)
         return cell
     }
 }
@@ -57,8 +60,13 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionLayout {
     /// Defines the layout for the entire section, including groups and supplementary views.
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection(group: groupLayoutInSection())
+        //
         section.contentInsets = .init(top: 20, leading: 0, bottom: 20, trailing: 0)
         section.orthogonalScrollingBehavior = .groupPagingCentered
+        //
+        let sectionBackground = NSCollectionLayoutDecorationItem.background(elementKind: DecorationViewType.identifier)
+        section.decorationItems = [sectionBackground]
+        //
         return section
     }
 }
@@ -67,6 +75,10 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionDelegate {
     /// Registers the cell type with the given collection view.
     func registerCell(_ collectionView: UICollectionView) {
         collectionView.registerFromNib(CellType.self)
+    }
+    /// Registers the Decoration view for the secition
+    func registerDecorationView(_ layout: UICollectionViewCompositionalLayout) {
+        layout.register(DecorationViewType.self, forDecorationViewOfKind: DecorationViewType.identifier)
     }
 }
 

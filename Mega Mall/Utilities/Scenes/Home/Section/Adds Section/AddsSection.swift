@@ -10,7 +10,7 @@ import CompositionalLayoutableSection
 import ViewAnimator
 
 class AddsCollectionViewSection: CompositionalLayoutableSection {
-    typealias ItemsType = String
+    typealias ItemsType = Adds
     typealias CellType = AddsCollectionViewCell
     var items: [ItemsType] = []
     override init() {
@@ -28,12 +28,15 @@ extension AddsCollectionViewSection: CompositionalLayoutableSectionDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CellType.self, for: indexPath)
-        cell.animate(animations: [AnimationType.from(direction: .right, offset: 30)], initialAlpha: 0.0)
+        cell.animate(animations: [AnimationType.from(direction: .right, offset: 60)], initialAlpha: 0.0)
+        let adds = items[indexPath.item]
+        cell.configure(with: adds)
         return cell
     }
 }
 // MARK: - Offers CollectionView Section Layout
 extension AddsCollectionViewSection: CompositionalLayoutableSectionLayout {
+    var spacing: CGFloat { 20 }
     var height: CGFloat { 216 }
     func itemLayoutInGroup() -> NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
@@ -47,7 +50,7 @@ extension AddsCollectionViewSection: CompositionalLayoutableSectionLayout {
     }
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection(group: groupLayoutInSection())
-        section.contentInsets = .init(top: 20, leading: 20, bottom: 20, trailing: 20)
+        section.contentInsets = .init(top: spacing, leading: spacing, bottom: 0, trailing: spacing)
         section.interGroupSpacing = 16
         section.orthogonalScrollingBehavior = .groupPaging
         return section

@@ -15,7 +15,7 @@ open class CompositionalLayoutDelegate: NSObject, UICollectionViewDelegate {
         self.provider = provider
     }
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let section = self.provider?.getSection(at: indexPath)
+        let section = self.provider?.getCompositionalLayoutableSection(at: indexPath)
         section?.delegate?.collectionView?(collectionView, didSelectItemAt: indexPath)
     }
 }

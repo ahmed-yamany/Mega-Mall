@@ -7,13 +7,15 @@
 
 import UIKit
 import CompositionalLayoutableSection
+import ViewAnimator
 
 class CategoriesCollectionViewSection: CompositionalLayoutableSection {
-    typealias ResposeType = String
+    typealias ResposeType = Category
     typealias CellType = CategoriesCollectionViewCell
     typealias TopSupplementaryViewType = MegaCollectionReusableView
     var items: [ResposeType] = []
     var viewController: UIViewController?
+    var topViewModel: MegaCollectionReusableView.ViewModel?
     override init() {
         super.init()
         delegate = self
@@ -21,9 +23,12 @@ class CategoriesCollectionViewSection: CompositionalLayoutableSection {
         layout = self
     }
     private var isConfigured = false
-    public func configure(ownerViewController: UIViewController) {
+    public func configure(owner viewController: UIViewController,
+                          topViewModel: MegaCollectionReusableView.ViewModel?) {
         guard !isConfigured else { return }
-        self.viewController = ownerViewController
+        isConfigured = true
+        self.viewController = viewController
+        self.topViewModel = topViewModel
     }
 }
 // MARK: - Categories CollectionView Section Data Source
@@ -34,6 +39,9 @@ extension CategoriesCollectionViewSection: CompositionalLayoutableSectionDataSou
     /// cell For Item At
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CellType.self, for: indexPath)
+        let category = items[indexPath.item]
+        cell.configure(with: category)
+        cell.animate(animations: [AnimationType.from(direction: .bottom, offset: 60)])
         return cell
     }
     /// view For Supplementary Element Of Kind
@@ -43,13 +51,17 @@ extension CategoriesCollectionViewSection: CompositionalLayoutableSectionDataSou
         let view = collectionView.dequeueReusableSupplementaryView(TopSupplementaryViewType.self,
                                                                    ofKind: TopSupplementaryViewType.identifier,
                                                                    for: indexPath)
-        view.configure(with: .init(label: "Categories", button: L10n.App.seeAll))
+        if let topViewModel {
+            view.configure(with: topViewModel)
+        } else {
+            Logger.log("Failed to configure Categories top View Model", category: \.home, level: .fault)
+        }
         return view
     }
 }
 // MARK: - Categories CollectionView Section Layout
 extension CategoriesCollectionViewSection: CompositionalLayoutableSectionLayout {
-    var spacing: CGFloat { 12 }
+    var spacing: CGFloat { 20 }
     var height: CGFloat { 216 }
     func itemLayoutInGroup() -> NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
@@ -57,13 +69,13 @@ extension CategoriesCollectionViewSection: CompositionalLayoutableSectionLayout 
         return item
     }
     func groupLayoutInSection() -> NSCollectionLayoutGroup {
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(80), heightDimension: .absolute(76))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(68), heightDimension: .absolute(76))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup()])
         return group
     }
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection(group: groupLayoutInSection())
-        section.contentInsets = .init(top: spacing, leading: 20, bottom: 0, trailing: 20)
+        section.contentInsets = .init(top: 0, leading: spacing, bottom: spacing, trailing: spacing)
         section.interGroupSpacing = 16
         section.orthogonalScrollingBehavior = .continuous
         section.boundarySupplementaryItems = [topSupplementaryItem]
@@ -71,7 +83,7 @@ extension CategoriesCollectionViewSection: CompositionalLayoutableSectionLayout 
     }
     ///
     private var topSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
-        let supplementarySize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(44))
+        let supplementarySize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(54))
         return  NSCollectionLayoutBoundarySupplementaryItem(layoutSize: supplementarySize,
                                                             elementKind: TopSupplementaryViewType.identifier,
                                                             alignment: .top)
