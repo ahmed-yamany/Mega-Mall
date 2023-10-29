@@ -94,9 +94,12 @@ extension CategoriesCollectionViewSection: CompositionalLayoutableSectionDelegat
     func registerCell(_ collectionView: UICollectionView) {
         collectionView.registerFromNib(CellType.self)
     }
+    //
     func registerSupplementaryView(_ collectionView: UICollectionView) {
         collectionView.register(TopSupplementaryViewType.self, supplementaryViewOfKind: TopSupplementaryViewType.identifier)
     }
+    //
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        LoginManager.shared.checkLogin()
     }
 }

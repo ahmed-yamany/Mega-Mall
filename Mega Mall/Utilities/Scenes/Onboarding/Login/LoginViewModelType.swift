@@ -16,4 +16,5 @@ protocol LoginViewModelInput {
 protocol LoginViewModelOutput {
     var enableButton: AnyPublisher<Bool, Never> { get }
     var cancellableSet: Set<AnyCancellable> { get set }
+    func performLogin() -> AnyPublisher<Bool, Never>
 }

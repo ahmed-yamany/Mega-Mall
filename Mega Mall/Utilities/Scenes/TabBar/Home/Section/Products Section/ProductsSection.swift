@@ -113,6 +113,7 @@ extension ProductsCollectionViewSection: CompositionalLayoutableSectionDelegate 
     }
     ///
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        LoginManager.shared.checkLogin()
     }
 }
 

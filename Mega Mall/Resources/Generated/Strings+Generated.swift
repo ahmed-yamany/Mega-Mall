@@ -22,6 +22,14 @@ internal enum L10n {
       }
     }
   }
+  internal enum LoginAlert {
+    /// Login Account
+    internal static let header = L10n.tr("Localizable", "loginAlert.header", fallback: "Login Account")
+    /// Please log in/register first to make a transaction
+    internal static let subtitle = L10n.tr("Localizable", "loginAlert.subtitle", fallback: "Please log in/register first to make a transaction")
+    /// You need to log in first
+    internal static let title = L10n.tr("Localizable", "loginAlert.title", fallback: "You need to log in first")
+  }
   internal enum Onboarding {
     /// Change
     internal static let change = L10n.tr("Localizable", "onboarding.change", fallback: "Change")
@@ -31,6 +39,8 @@ internal enum L10n {
     internal static let `continue` = L10n.tr("Localizable", "onboarding.continue", fallback: "Continue")
     /// Forgot Password
     internal static let forgotpassword = L10n.tr("Localizable", "onboarding.forgotpassword", fallback: "Forgot Password")
+    /// Login
+    internal static let login = L10n.tr("Localizable", "onboarding.login", fallback: "Login")
     /// Reset
     internal static let reset = L10n.tr("Localizable", "onboarding.reset", fallback: "Reset")
     /// Save Update

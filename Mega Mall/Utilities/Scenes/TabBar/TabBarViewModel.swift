@@ -16,10 +16,13 @@ enum TabBarItems: Int {
 
 class TabBarViewModel: ObservableObject {
     static let shared = TabBarViewModel()
+    //
     @Published var selectedItem: TabBarItems = .home
     @Published var isLogin: Bool = false
     @Published var animationConfigurations = AnimatableTabBarConfigurations()
+    //
     var cancellableSet: Set<AnyCancellable> = .init()
+    //
     private init() {
         animationConfigurations.animationScope = .image
         animationConfigurations.animatenWhileSelected = true

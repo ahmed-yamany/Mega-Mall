@@ -61,4 +61,8 @@ extension AddsCollectionViewSection: CompositionalLayoutableSectionDelegate {
     func registerCell(_ collectionView: UICollectionView) {
         collectionView.registerFromNib(CellType.self)
     }
+    //
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        LoginManager.shared.checkLogin()
+    }
 }

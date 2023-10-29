@@ -25,10 +25,12 @@ extension MegaNavigationController {
     private func configureViews() {
         configureNavigationBar()
     }
+    //
     private func configureNavigationBar() {
         configureNavigationBarShadow()
         configureNavigationBarBackButton()
     }
+    //
     private func configureNavigationBarShadow() {
         navigationBar.layer.shadowColor = UIColor.megaSecondaryDarkGray.cgColor
         let shadowSize: CGFloat = 0.5
@@ -38,6 +40,7 @@ extension MegaNavigationController {
         navigationBar.layer.shadowOpacity = 0.4
         navigationBar.layer.shadowRadius = 1
     }
+    //
     private func configureNavigationBarBackButton() {
         navigationBar.tintColor = .megaPrimaryNavyBlack
         navigationBar.backIndicatorImage = .megaBack

@@ -19,6 +19,12 @@
 		EE32A9DF2AEAD9D5008F15B0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE32A9DD2AEAD9D5008F15B0 /* HomeViewController.xib */; };
 		EE32A9E32AEADD94008F15B0 /* AddsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE32A9E12AEADD94008F15B0 /* AddsCollectionViewCell.swift */; };
 		EE32A9E42AEADD94008F15B0 /* AddsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE32A9E22AEADD94008F15B0 /* AddsCollectionViewCell.xib */; };
+		EE3D31842AEE6C91003FDBE6 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D31832AEE6C91003FDBE6 /* LoginManager.swift */; };
+		EE4F94AF2AEEC99F0023F87B /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F94AD2AEEC99F0023F87B /* SheetViewController.swift */; };
+		EE4F94B02AEEC99F0023F87B /* SheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4F94AE2AEEC99F0023F87B /* SheetViewController.xib */; };
+		EE4F94B42AEECFA50023F87B /* LoginAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F94B22AEECFA50023F87B /* LoginAlertView.swift */; };
+		EE4F94B52AEECFA50023F87B /* LoginAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4F94B32AEECFA50023F87B /* LoginAlertView.xib */; };
+		EE4F94BC2AEEDB7B0023F87B /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F94BB2AEEDB7B0023F87B /* CategoriesViewController.swift */; };
 		EE707AC82AED684800813309 /* SectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE707AC72AED684800813309 /* SectionDecorationView.swift */; };
 		EE707ACB2AED895900813309 /* NewsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE707ACA2AED895900813309 /* NewsCollectionReusableView.swift */; };
 		EE71DA9A2AE8130A00B09801 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71DA992AE8130A00B09801 /* ResetPassword.swift */; };
@@ -72,7 +78,7 @@
 		EEC33EAD2AEAE40D00350BD8 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC33EAB2AEAE40D00350BD8 /* CategoriesCollectionViewCell.xib */; };
 		EEC988EE2AE90BED00675F6C /* UpdatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */; };
 		EEC988F02AE9108D00675F6C /* ProfileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */; };
-		EEC988F42AE917DE00675F6C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F22AE917DE00675F6C /* TabBarController.swift */; };
+		EEC988F42AE917DE00675F6C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F22AE917DE00675F6C /* TabBarViewController.swift */; };
 		EEC988F72AE924A500675F6C /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988F62AE924A500675F6C /* TabBarViewModel.swift */; };
 		EEC988FF2AE92A1400675F6C /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC988FE2AE92A1400675F6C /* WishListViewController.swift */; };
 		EEC989012AE92A1900675F6C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC989002AE92A1900675F6C /* OrderViewController.swift */; };
@@ -93,6 +99,7 @@
 		EEE0D8B42AEC1E0100187CF8 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE0D8B12AEC1E0100187CF8 /* NewsCollectionViewCell.xib */; };
 		EEE19DF42AE6727100A132E1 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE19DF22AE6727100A132E1 /* OTPTextField.swift */; };
 		EEE19DF72AE689C100A132E1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE19DF62AE689C100A132E1 /* Logger.swift */; };
+		EEE3607F2AEE89D500FAF8EE /* LoginAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE3607D2AEE89D500FAF8EE /* LoginAlertViewController.swift */; };
 		EEE7BE2E2AE7F487006C0460 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7BE2D2AE7F487006C0460 /* Login.swift */; };
 		EEECB3472AE3B51800549C83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEECB3492AE3B51800549C83 /* Localizable.strings */; };
 		EEECB3722AE3BF0900549C83 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EEECB3712AE3BF0900549C83 /* .swiftlint.yml */; };
@@ -125,6 +132,12 @@
 		EE32A9DD2AEAD9D5008F15B0 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		EE32A9E12AEADD94008F15B0 /* AddsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE32A9E22AEADD94008F15B0 /* AddsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddsCollectionViewCell.xib; sourceTree = "<group>"; };
+		EE3D31832AEE6C91003FDBE6 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		EE4F94AD2AEEC99F0023F87B /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		EE4F94AE2AEEC99F0023F87B /* SheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SheetViewController.xib; sourceTree = "<group>"; };
+		EE4F94B22AEECFA50023F87B /* LoginAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertView.swift; sourceTree = "<group>"; };
+		EE4F94B32AEECFA50023F87B /* LoginAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAlertView.xib; sourceTree = "<group>"; };
+		EE4F94BB2AEEDB7B0023F87B /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		EE707AC72AED684800813309 /* SectionDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDecorationView.swift; sourceTree = "<group>"; };
 		EE707ACA2AED895900813309 /* NewsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionReusableView.swift; sourceTree = "<group>"; };
 		EE71DA992AE8130A00B09801 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
@@ -174,7 +187,7 @@
 		EEC33EAB2AEAE40D00350BD8 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		EEC988ED2AE90BED00675F6C /* UpdatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePassword.swift; sourceTree = "<group>"; };
 		EEC988EF2AE9108D00675F6C /* ProfileUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdate.swift; sourceTree = "<group>"; };
-		EEC988F22AE917DE00675F6C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EEC988F22AE917DE00675F6C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EEC988F62AE924A500675F6C /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		EEC988FE2AE92A1400675F6C /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		EEC989002AE92A1900675F6C /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +209,7 @@
 		EEE0D8B12AEC1E0100187CF8 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EEE19DF22AE6727100A132E1 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		EEE19DF62AE689C100A132E1 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		EEE3607D2AEE89D500FAF8EE /* LoginAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertViewController.swift; sourceTree = "<group>"; };
 		EEE7BE202AE7F3F5006C0460 /* Mega MallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mega MallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE7BE2D2AE7F487006C0460 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Login.swift; path = "Mega Mall/Utilities/Scenes/Onboarding/Login.swift"; sourceTree = SOURCE_ROOT; };
 		EEECB3422AE3B17B00549C83 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -256,6 +270,23 @@
 			path = "Adds Section";
 			sourceTree = "<group>";
 		};
+		EE4F94B12AEECEB50023F87B /* SheetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F94AD2AEEC99F0023F87B /* SheetViewController.swift */,
+				EE4F94AE2AEEC99F0023F87B /* SheetViewController.xib */,
+			);
+			path = SheetViewController;
+			sourceTree = "<group>";
+		};
+		EE4F94BA2AEEDB5E0023F87B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F94BB2AEEDB7B0023F87B /* CategoriesViewController.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		EE707AC62AED682E00813309 /* CollectionReusableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +345,7 @@
 		EE83AD482AE3D14A00E40FF1 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE4F94B12AEECEB50023F87B /* SheetViewController */,
 				EE707AC62AED682E00813309 /* CollectionReusableView */,
 				EEA9045B2AEBFCF000C43637 /* SupplementaryViews */,
 				EE83AD492AE3D15A00E40FF1 /* Labels */,
@@ -346,10 +378,8 @@
 			children = (
 				EE83AD5B2AE3E08D00E40FF1 /* Onboarding */,
 				EEC988F12AE917A900675F6C /* TabBar */,
-				EEC988F82AE929B400675F6C /* Home */,
-				EEC988FB2AE929DA00675F6C /* Wishlist */,
-				EEC988FC2AE929E200675F6C /* Order */,
-				EEC988FD2AE929EA00675F6C /* Account */,
+				EEE3607C2AEE89AC00FAF8EE /* LoginAlert */,
+				EE4F94BA2AEEDB5E0023F87B /* Categories */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -504,8 +534,12 @@
 		EEC988F12AE917A900675F6C /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				EEC988F22AE917DE00675F6C /* TabBarController.swift */,
+				EEC988F22AE917DE00675F6C /* TabBarViewController.swift */,
 				EEC988F62AE924A500675F6C /* TabBarViewModel.swift */,
+				EEC988F82AE929B400675F6C /* Home */,
+				EEC988FB2AE929DA00675F6C /* Wishlist */,
+				EEC988FC2AE929E200675F6C /* Order */,
+				EEC988FD2AE929EA00675F6C /* Account */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -609,6 +643,17 @@
 				EECF08122AE8394A00E77E2E /* ProfileUpdateViewController.xib */,
 			);
 			path = ProfileUpdate;
+			sourceTree = "<group>";
+		};
+		EEE3607C2AEE89AC00FAF8EE /* LoginAlert */ = {
+			isa = PBXGroup;
+			children = (
+				EE3D31832AEE6C91003FDBE6 /* LoginManager.swift */,
+				EEE3607D2AEE89D500FAF8EE /* LoginAlertViewController.swift */,
+				EE4F94B22AEECFA50023F87B /* LoginAlertView.swift */,
+				EE4F94B32AEECFA50023F87B /* LoginAlertView.xib */,
+			);
+			path = LoginAlert;
 			sourceTree = "<group>";
 		};
 		EEE7BE212AE7F3F5006C0460 /* Mega MallTests */ = {
@@ -755,6 +800,7 @@
 				EE32A9DF2AEAD9D5008F15B0 /* HomeViewController.xib in Resources */,
 				EEF16C3A2AEBE6B800A1D3A7 /* ProductCollectionViewCell.xib in Resources */,
 				EE83AD642AE3E3A300E40FF1 /* LoginViewController.xib in Resources */,
+				EE4F94B02AEEC99F0023F87B /* SheetViewController.xib in Resources */,
 				EE83AD3A2AE3C16200E40FF1 /* Colors.xcassets in Resources */,
 				EECF08162AE8394A00E77E2E /* ProfileUpdateViewController.xib in Resources */,
 				EEECB3722AE3BF0900549C83 /* .swiftlint.yml in Resources */,
@@ -762,6 +808,7 @@
 				EECF080D2AE82DE900E77E2E /* UpdatePasswordViewController.xib in Resources */,
 				EECEA2A22AE3AC3F009B2FD9 /* LaunchScreen.storyboard in Resources */,
 				EE83AD702AE3E5C900E40FF1 /* DescriptionView.xib in Resources */,
+				EE4F94B52AEECFA50023F87B /* LoginAlertView.xib in Resources */,
 				EE32A9E42AEADD94008F15B0 /* AddsCollectionViewCell.xib in Resources */,
 				EE83AD452AE3CEFB00E40FF1 /* DMSans.ttf in Resources */,
 				EEC33EAD2AEAE40D00350BD8 /* CategoriesCollectionViewCell.xib in Resources */,
@@ -837,9 +884,11 @@
 				EE0C8D802AEAB5120019B7FA /* MegaNavigationController.swift in Sources */,
 				EEC988FF2AE92A1400675F6C /* WishListViewController.swift in Sources */,
 				EEE0D8B22AEC1E0100187CF8 /* NewsCollectionViewCell.swift in Sources */,
+				EE4F94AF2AEEC99F0023F87B /* SheetViewController.swift in Sources */,
 				EEF16C392AEBE6B800A1D3A7 /* ProductCollectionViewCell.swift in Sources */,
 				EEA9046A2AEC11BF00C43637 /* OfferCollectionViewCell.swift in Sources */,
-				EEC988F42AE917DE00675F6C /* TabBarController.swift in Sources */,
+				EEC988F42AE917DE00675F6C /* TabBarViewController.swift in Sources */,
+				EE4F94B42AEECFA50023F87B /* LoginAlertView.swift in Sources */,
 				EE71DA9C2AE816F100B09801 /* RegisterViewModelType.swift in Sources */,
 				EECF080B2AE82DE900E77E2E /* UpdatePasswordViewController.swift in Sources */,
 				EECF08142AE8394A00E77E2E /* ProfileUpdateViewController.swift in Sources */,
@@ -857,6 +906,7 @@
 				EE3061F52AED2FF100F4DC42 /* NewsModel.swift in Sources */,
 				EE83AD532AE3D20D00E40FF1 /* H3Label.swift in Sources */,
 				EEA9045A2AEBF8C600C43637 /* ProductsSection.swift in Sources */,
+				EEE3607F2AEE89D500FAF8EE /* LoginAlertViewController.swift in Sources */,
 				EEC33EA92AEAE3CC00350BD8 /* CategoriesSection.swift in Sources */,
 				EE3061EB2AED2CB300F4DC42 /* HomeModel.swift in Sources */,
 				EEB009592AEA9D350032A287 /* SearchTextField.swift in Sources */,
@@ -876,12 +926,14 @@
 				EECF080C2AE82DE900E77E2E /* UpdatePasswordViewModel.swift in Sources */,
 				EEA904672AEC117A00C43637 /* OfferSection.swift in Sources */,
 				EE945D7A2AE51B310013DF0B /* ResetPasswordViewModel.swift in Sources */,
+				EE4F94BC2AEEDB7B0023F87B /* CategoriesViewController.swift in Sources */,
 				EE945D792AE51B310013DF0B /* ResetPasswordViewController.swift in Sources */,
 				EE945D702AE51A3C0013DF0B /* VerificationViewController.swift in Sources */,
 				EEE19DF72AE689C100A132E1 /* Logger.swift in Sources */,
 				EE945D672AE50DE10013DF0B /* RegisterViewController.swift in Sources */,
 				EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */,
 				EE3061F12AED2F8B00F4DC42 /* ProductModel.swift in Sources */,
+				EE3D31842AEE6C91003FDBE6 /* LoginManager.swift in Sources */,
 				EEB009542AEA9CC50032A287 /* HomeViewModel.swift in Sources */,
 				EEC988F72AE924A500675F6C /* TabBarViewModel.swift in Sources */,
 				EE707ACB2AED895900813309 /* NewsCollectionReusableView.swift in Sources */,

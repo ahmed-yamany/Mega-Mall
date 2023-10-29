@@ -41,8 +41,14 @@ class LoginViewController: UIViewController {
 //
 extension LoginViewController {
     @IBAction private func signinButtonTapped(_ sender: FullButton) {
-        UIApplication.shared.mainWindow?.rootViewController = TabBarController()
-        TabBarViewModel.shared.isLogin = true
+        viewModel.performLogin()
+            .sink { loginIn in
+                if loginIn {
+                    UIApplication.shared.mainWindow?.rootViewController = TabBarViewController()
+                    TabBarViewModel.shared.isLogin = true
+                }
+            }
+            .store(in: &viewModel.cancellableSet)
     }
     @IBAction private func forgotPasswordTapped(_ sender: LabelButton) {
         navigationController?.pushViewController(ResetPasswordViewController(), animated: true)

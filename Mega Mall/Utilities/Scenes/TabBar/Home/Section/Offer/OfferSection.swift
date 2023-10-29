@@ -80,6 +80,10 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionDelegate {
     func registerDecorationView(_ layout: UICollectionViewCompositionalLayout) {
         layout.register(DecorationViewType.self, forDecorationViewOfKind: DecorationViewType.identifier)
     }
+    ///
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        LoginManager.shared.checkLogin()
+    }
 }
 
 // MARK: - Private Handelers

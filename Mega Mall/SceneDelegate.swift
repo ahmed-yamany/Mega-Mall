@@ -10,15 +10,20 @@ import IQKeyboardManagerSwift
 import Extensions
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    @UserDefault<Bool>(key: \.login) var login
+    //
     var window: UIWindow?
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
+        //
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = TabBarController()
+        TabBarViewModel.shared.isLogin = login ?? false
+//        login = false
+        window.rootViewController = TabBarViewController()
         window.makeKeyAndVisible()
         self.window = window
+        //
         IQKeyboardManager.shared.enable = true
     }
     func sceneDidDisconnect(_ scene: UIScene) {

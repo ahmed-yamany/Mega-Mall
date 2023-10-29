@@ -107,7 +107,13 @@ private extension HomeViewController {
         }
         //
         if let title = section.title {
-            collectionViewsection.configure(owner: self, topViewModel: .init(label: title, button: L10n.App.seeAll, action: { }))
+            collectionViewsection.configure(owner: self, topViewModel: .init(label: title,
+                                                                             button: L10n.App.seeAll,
+                                                                             action: {
+                LoginManager.shared.checkLogin(loginHandeler: {
+                    CategoriesViewController().present()
+                })
+            }))
         }
         //
         return collectionViewsection

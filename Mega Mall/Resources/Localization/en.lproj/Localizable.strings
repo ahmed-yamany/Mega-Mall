@@ -14,6 +14,7 @@
 "onboarding.change" = "Change";
 "onboarding.saveUpdates" = "Save Update";
 "onboarding.confirmation" = "Confirmation";
+"onboarding.login" = "Login";
 // Login
 "onboarding.login.decription.title" = "Welcome back to Mega Mall";
 "onboarding.login.decription.subtitle" = "Please enter data to log in";
@@ -60,3 +61,7 @@
 "app.name" = "Mega Mall";
 "app.seeAll" = "See All";
 "app.search.textField.placeholder" = "Search Product Name";
+//
+"loginAlert.header" = "Login Account";
+"loginAlert.title" = "You need to log in first";
+"loginAlert.subtitle" = "Please log in/register first to make a transaction";

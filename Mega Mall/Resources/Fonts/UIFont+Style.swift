@@ -38,7 +38,7 @@ public extension UIFont {
     }
     /// Returns a custom font with a medium weight and a size of 16 points.
     static var h3: UIFont {
-        return .custom(size: 16, weight: .medium)
+        return .custom(size: 16, weight: .semibold)
     }
     /// Returns a custom font with a medium weight and a size of 14 points.
     static var medium: UIFont {

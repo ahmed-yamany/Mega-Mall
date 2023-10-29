@@ -101,6 +101,10 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionDelegate {
         collectionView.register(TopSupplementaryViewType.self, supplementaryViewOfKind: TopSupplementaryViewType.identifier)
         collectionView.register(BottomSupplementaryViewType.self, supplementaryViewOfKind: BottomSupplementaryViewType.identifier)
      }
+    //
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        LoginManager.shared.checkLogin()
+    }
 }
 
 // MARK: - Private Handelers
