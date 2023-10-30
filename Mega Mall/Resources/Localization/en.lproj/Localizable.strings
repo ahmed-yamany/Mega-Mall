@@ -65,3 +65,9 @@
 "loginAlert.header" = "Login Account";
 "loginAlert.title" = "You need to log in first";
 "loginAlert.subtitle" = "Please log in/register first to make a transaction";
+//
+"product.action.header" = "Product Action";
+"product.action.wishlist" = "Add To Wishlist";
+"product.action.share" = "Share Product";
+"product.action.cart" = "Add To Cart";
+

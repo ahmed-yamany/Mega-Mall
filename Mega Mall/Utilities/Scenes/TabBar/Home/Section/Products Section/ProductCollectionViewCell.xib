@@ -74,6 +74,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="mega-ellipsis"/>
+                                                <connections>
+                                                    <action selector="productActionButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eZ7-ZP-9mt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

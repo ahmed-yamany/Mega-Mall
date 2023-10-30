@@ -169,6 +169,18 @@ internal enum L10n {
       }
     }
   }
+  internal enum Product {
+    internal enum Action {
+      /// Add To Cart
+      internal static let cart = L10n.tr("Localizable", "product.action.cart", fallback: "Add To Cart")
+      /// Product Action
+      internal static let header = L10n.tr("Localizable", "product.action.header", fallback: "Product Action")
+      /// Share Product
+      internal static let share = L10n.tr("Localizable", "product.action.share", fallback: "Share Product")
+      /// Add To Wishlist
+      internal static let wishlist = L10n.tr("Localizable", "product.action.wishlist", fallback: "Add To Wishlist")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
