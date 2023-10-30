@@ -9,7 +9,7 @@ import UIKit
 import CompositionalLayoutableSection
 import ViewAnimator
 
-class CategoriesCollectionViewSection: CompositionalLayoutableSection {
+class HomeCategoriesCollectionViewSection: CompositionalLayoutableSection {
     typealias ResposeType = Category
     typealias CellType = CategoriesCollectionViewCell
     typealias TopSupplementaryViewType = MegaCollectionReusableView
@@ -32,7 +32,7 @@ class CategoriesCollectionViewSection: CompositionalLayoutableSection {
     }
 }
 // MARK: - Categories CollectionView Section Data Source
-extension CategoriesCollectionViewSection: CompositionalLayoutableSectionDataSource {
+extension HomeCategoriesCollectionViewSection: CompositionalLayoutableSectionDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -60,16 +60,17 @@ extension CategoriesCollectionViewSection: CompositionalLayoutableSectionDataSou
     }
 }
 // MARK: - Categories CollectionView Section Layout
-extension CategoriesCollectionViewSection: CompositionalLayoutableSectionLayout {
-    var spacing: CGFloat { 20 }
-    var height: CGFloat { 216 }
+extension HomeCategoriesCollectionViewSection: CompositionalLayoutableSectionLayout {
+    var spacing: CGFloat { 20 } // The spacing between items in the section.
+    var width: CGFloat { 68 } // The width of each item in the section.
+    var height: CGFloat { 76 } // The height of each item in the section.
     func itemLayoutInGroup() -> NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         return item
     }
     func groupLayoutInSection() -> NSCollectionLayoutGroup {
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(68), heightDimension: .absolute(76))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(width), heightDimension: .absolute(height))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup()])
         return group
     }
@@ -90,7 +91,7 @@ extension CategoriesCollectionViewSection: CompositionalLayoutableSectionLayout 
     }
 }
 // MARK: - Categories CollectionView Section Delegate
-extension CategoriesCollectionViewSection: CompositionalLayoutableSectionDelegate {
+extension HomeCategoriesCollectionViewSection: CompositionalLayoutableSectionDelegate {
     func registerCell(_ collectionView: UICollectionView) {
         collectionView.registerFromNib(CellType.self)
     }

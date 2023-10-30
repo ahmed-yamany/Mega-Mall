@@ -9,8 +9,9 @@ import UIKit
 
 class SheetViewController: UIViewController {
     // MARK: - Outlets
-    //
+    /// The title label at the top of the sheet.
     @IBOutlet weak private(set) var titleLabel: H3Label!
+    /// The stack view that holds the content within the sheet.
     @IBOutlet weak private(set) var stackView: UIStackView!
     // MARK: - Properties
     //
@@ -19,6 +20,7 @@ class SheetViewController: UIViewController {
             titleLabel.text = title
         }
     }
+    // Initializes a new instance of `SheetViewController`.
     init() {
         super.init(nibName: "SheetViewController", bundle: nil)
     }
@@ -30,18 +32,23 @@ class SheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    //
-    public func present(completion: @escaping () -> Void = {}) {
+    /// Presents the sheet view controller on top of the current view hierarchy.
+    public func presentSheet(completion: @escaping () -> Void = {}) {
+        // Get the top-most view controller in the application's window.
         guard let topMostController =  UIApplication.shared.topMostViewController() else {
-            Logger.log("Failed to get UIWindiow top most controller", category: \.onboarding, level: .fault)
+            Logger.log("Failed to get UIWindow top most controller", category: \.onboarding, level: .fault)
             return
         }
+        //
         if let sheet = sheetPresentationController {
             sheet.detents = [.medium()]
         }
-        //
+        // Present the sheet view controller.
         topMostController.present(self, animated: true, completion: completion)
     }
+    /// Adds a child view to the stack view within the sheet.
+    ///
+    /// - Parameter view: The view to be added to the stack.
     public func addChild(_ view: UIView) {
         stackView.addArrangedSubview(view)
     }
@@ -49,6 +56,7 @@ class SheetViewController: UIViewController {
 // MARK: - Actions
 //
 extension SheetViewController {
+    /// Action method for dismissing the sheet view controller.
     @IBAction func dismissButtonTapped(_ sender: UIButton) {
         dismiss(animated: true)
     }

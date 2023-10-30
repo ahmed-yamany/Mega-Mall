@@ -63,6 +63,7 @@ extension AddsCollectionViewSection: CompositionalLayoutableSectionDelegate {
     }
     //
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selecte")
         LoginManager.shared.checkLogin()
     }
 }

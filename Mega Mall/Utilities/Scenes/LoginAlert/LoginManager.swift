@@ -19,6 +19,6 @@ class LoginManager {
         }
         //
         let viewController = LoginAlertViewController()
-        viewController.present(completion: notLoginHandeler)
+        viewController.presentSheet(completion: notLoginHandeler)
     }
 }

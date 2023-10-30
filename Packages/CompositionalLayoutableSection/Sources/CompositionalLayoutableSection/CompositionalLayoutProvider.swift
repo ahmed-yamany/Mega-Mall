@@ -40,7 +40,9 @@ extension CompositionalLayoutProvider {
                 .sectionLayout(at: sectionIndex, layoutEnvironment: layoutEnvironment)
             return sectionLayout
         }
+        //
         self.registerDecorationViews(for: layout)
+        //
         return layout
     }
 }
