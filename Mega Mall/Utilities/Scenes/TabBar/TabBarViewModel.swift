@@ -20,6 +20,10 @@ class TabBarViewModel: ObservableObject {
     @Published var selectedItem: TabBarItems = .home
     @Published var isLogin: Bool = false
     @Published var animationConfigurations = AnimatableTabBarConfigurations()
+    @Published var cart: [Product] = []
+    @Published var orders: [Order] = []
+    @Published var whishies: [Whish] = []
+    @Published var notifications: [Notification] = [.init(isRead: true)]
     //
     var cancellableSet: Set<AnyCancellable> = .init()
     //

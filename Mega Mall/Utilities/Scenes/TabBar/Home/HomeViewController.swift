@@ -60,19 +60,12 @@ extension HomeViewController {
     }
     //
     private func configureLeftBartButtonItems() {
-        let notificationView = UIImageView(image: .megaNotification.withRenderingMode(.alwaysOriginal))
-        let shopingCartView = UIImageView(image: .megaShopingCart.withRenderingMode(.alwaysOriginal))
-        ///
-        let notificationItem = UIBarButtonItem(customView: notificationView)
-        let shopingCartItem = UIBarButtonItem(customView: shopingCartView)
-        ///
-        navigationItem.rightBarButtonItems = [shopingCartItem, notificationItem]
-        ///
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(notificationViewAction))
-        let shopingCarttapGesture = UITapGestureRecognizer(target: self, action: #selector(shopingCartViewAction))
-        ///
-        notificationView.addGestureRecognizer(tapGesture)
-        shopingCartView.addGestureRecognizer(shopingCarttapGesture)
+        guard let navigationController = navigationController as? MegaNavigationController else {
+            Logger.log("Home Navigation Controller must be of type Mega", category: \.home, level: .fault)
+            return
+        }
+        navigationController.addShopingCartItem()
+        navigationController.addNotificationItem()
     }
 }
 
@@ -156,14 +149,6 @@ private extension HomeViewController {
 
 // MARK: - Actions
 private extension HomeViewController {
-    @objc private func notificationViewAction(_ sender: UITapGestureRecognizer) {
-        sender.view?.animate(animations: [AnimationType.rotate(angle: -30)])
-    }
-    //
-    @objc private func shopingCartViewAction(_ sender: UITapGestureRecognizer) {
-        sender.view?.animate(animations: [AnimationType.rotate(angle: -30)])
-    }
-    //
     func seeAllCategoriesButtonAction() {
         LoginManager.shared.checkLogin(loginHandeler: {
             AllCategoriesViewController().presentSheet()

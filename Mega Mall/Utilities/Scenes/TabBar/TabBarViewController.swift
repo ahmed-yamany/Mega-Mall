@@ -61,7 +61,7 @@ private extension TabBarViewController {
         configureTabBar()
         setupViewControllers()
     }
-    //
+    ///
     func configureTabBar() {
         tabBar.tintColor = .megaPrimaryBlueOcean
         tabBar.unselectedItemTintColor = .megaPrimaryNavyBlack
@@ -73,25 +73,38 @@ private extension TabBarViewController {
         ///
         tabBar.backgroundColor = .megaPrimaryPureWhite
     }
-    //
+    ///
     func setupViewControllers() {
+        setupHomeVC()
+        setupWhlistVC()
+        setupOrderVC()
+        viewControllers = [homeVC, wishlistVC, orderVC, accountVC]
+    }
+    ///
+    func setupHomeVC() {
         homeVC.tabBarItem = UITabBarItem(title: "HOME",
                                          image: .tabbarHome.withRenderingMode(.alwaysOriginal),
                                          selectedImage: .tabbarHomeSelected.withRenderingMode(.alwaysOriginal))
         homeVC.tabBarItem.tag = TabBarItems.home.rawValue
-        ///
+    }
+    ///
+    func setupWhlistVC() {
         wishlistVC.tabBarItem = UITabBarItem(title: "WISHLIST",
                                              image: .tabbarWishlist.withRenderingMode(.alwaysOriginal),
                                              selectedImage: .tabbarWishlistSelected.withRenderingMode(.alwaysOriginal))
         wishlistVC.tabBarItem.tag = TabBarItems.wishlist.rawValue
-        ///
+    }
+    ///
+    func setupOrderVC() {
         orderVC.tabBarItem = UITabBarItem(title: "ORDER",
                                           image: .tabbarOrder.withRenderingMode(.alwaysOriginal),
                                           selectedImage: .tabbarOrderSelected.withRenderingMode(.alwaysOriginal))
-        orderVC.tabBarItem.badgeValue = ""
         orderVC.tabBarItem.tag = TabBarItems.order.rawValue
-        ///
-        viewControllers = [homeVC, wishlistVC, orderVC, accountVC]
+        //
+        viewModel.$orders
+            .sink { orders in
+                self.orderVC.tabBarItem.badgeValue = !orders.isEmpty ? "" : nil
+            }.store(in: &viewModel.cancellableSet)
     }
 }
 // MARK: - Private Handlers

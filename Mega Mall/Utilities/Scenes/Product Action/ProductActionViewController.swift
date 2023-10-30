@@ -10,7 +10,9 @@ import UIKit
 class ProductActionViewController: SheetViewController {
     // MARK: Views
     let productActionView = ProductActionView()
+    let product: Product
     init(product: Product) {
+        self.product = product
         super.init()
     }
     required init?(coder: NSCoder) {
@@ -43,7 +45,7 @@ private extension ProductActionViewController {
         dismiss(animated: true)
     }
     func addToCartAction() {
-        print("product added to cart")
+        TabBarViewModel.shared.cart.append(product)
         dismiss(animated: true)
     }
 }
