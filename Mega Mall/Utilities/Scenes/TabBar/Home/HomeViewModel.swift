@@ -64,6 +64,7 @@ class HomeViewModel {
         let newsSection = Section(type: .news, title: "Latest News", news: news)
         //
         let home = Home(sections: [
+            newsSection,
             addsSection,
             categoriesSection,
             featuredProductsSection,
@@ -72,8 +73,7 @@ class HomeViewModel {
             anotherOffersSection,
             newArivalProductsSection,
             topRatedProductsSection,
-            specialProductsSection,
-            newsSection
+            specialProductsSection
         ])
         return Just(home).eraseToAnyPublisher()
     }

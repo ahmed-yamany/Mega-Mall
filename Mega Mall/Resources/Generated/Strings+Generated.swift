@@ -10,6 +10,10 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum News {
+    /// News
+    internal static let title = L10n.tr("Localizable", "News.title", fallback: "News")
+  }
   internal enum App {
     /// Mega Mall
     internal static let name = L10n.tr("Localizable", "app.name", fallback: "Mega Mall")

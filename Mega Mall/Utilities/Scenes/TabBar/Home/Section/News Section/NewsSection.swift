@@ -19,6 +19,7 @@ class NewsCollectionViewSection: CompositionalLayoutableSection {
     var items: [ItemsType] = []
     var viewController: UIViewController?
     var topViewModel: MegaCollectionReusableView.ViewModel?
+    var addButtomView: Bool = true
     override init() {
         super.init()
         delegate = self
@@ -27,10 +28,12 @@ class NewsCollectionViewSection: CompositionalLayoutableSection {
     }
     private var isConfigured = false
     public func configure(owner viewController: UIViewController,
-                          topViewModel: MegaCollectionReusableView.ViewModel) {
+                          topViewModel: MegaCollectionReusableView.ViewModel? = nil,
+                          addButtomView: Bool = true ) {
         guard !isConfigured else { return }
         self.viewController = viewController
         self.topViewModel = topViewModel
+        self.addButtomView = addButtomView
     }
 }
 // MARK: - News CollectionView Section Data Source
@@ -81,9 +84,21 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionLayout {
     /// Defines the layout for the entire section, including groups and supplementary views.
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection(group: groupLayoutInSection())
+        ///
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
         section.interGroupSpacing = 16
-        section.boundarySupplementaryItems = [topSupplementaryItem, bottomSupplementaryItem]
+        ///
+        var supplementaryItems: [NSCollectionLayoutBoundarySupplementaryItem] = []
+        ///
+        if topViewModel != nil{
+            supplementaryItems.append(topSupplementaryItem)
+        }
+        ///
+        if addButtomView {
+            supplementaryItems.append(bottomSupplementaryItem)
+        }
+        ///
+        section.boundarySupplementaryItems = supplementaryItems
         return section
     }
 }
@@ -139,6 +154,13 @@ extension NewsCollectionViewSection {
         let view = collectionView.dequeueReusableSupplementaryView(BottomSupplementaryViewType.self,
                                                                    ofKind: BottomSupplementaryViewType.identifier,
                                                                    for: indexPath)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(bottomViewTapAction(_:)))
+        view.addGestureRecognizer(tapGesture)
         return view
+    }
+    @objc private func bottomViewTapAction(_ sender: Any) {
+        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
+            viewController?.navigationController?.pushViewController(AllNewsViewController(), animated: true)
+        })
     }
 }

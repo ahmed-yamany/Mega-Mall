@@ -70,4 +70,5 @@
 "product.action.wishlist" = "Add To Wishlist";
 "product.action.share" = "Share Product";
 "product.action.cart" = "Add To Cart";
-
+//
+"News.title" = "News";

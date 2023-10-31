@@ -77,6 +77,9 @@
 		EEA904672AEC117A00C43637 /* OfferSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA904662AEC117A00C43637 /* OfferSection.swift */; };
 		EEA9046A2AEC11BF00C43637 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA904682AEC11BF00C43637 /* OfferCollectionViewCell.swift */; };
 		EEA9046B2AEC11BF00C43637 /* OfferCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA904692AEC11BF00C43637 /* OfferCollectionViewCell.xib */; };
+		EEAF38242AF1378000F588AF /* AllNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF38202AF1378000F588AF /* AllNewsViewController.swift */; };
+		EEAF38252AF1378000F588AF /* AllNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF38212AF1378000F588AF /* AllNewsViewModel.swift */; };
+		EEAF38262AF1378000F588AF /* AllNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEAF38222AF1378000F588AF /* AllNewsViewController.xib */; };
 		EEB009532AEA9CC50032A287 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0094F2AEA9CC50032A287 /* HomeViewController.swift */; };
 		EEB009542AEA9CC50032A287 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB009502AEA9CC50032A287 /* HomeViewModel.swift */; };
 		EEB009592AEA9D350032A287 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB009572AEA9D350032A287 /* SearchTextField.swift */; };
@@ -195,6 +198,9 @@
 		EEA904662AEC117A00C43637 /* OfferSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSection.swift; sourceTree = "<group>"; };
 		EEA904682AEC11BF00C43637 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		EEA904692AEC11BF00C43637 /* OfferCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCollectionViewCell.xib; sourceTree = "<group>"; };
+		EEAF38202AF1378000F588AF /* AllNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsViewController.swift; sourceTree = "<group>"; };
+		EEAF38212AF1378000F588AF /* AllNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsViewModel.swift; sourceTree = "<group>"; };
+		EEAF38222AF1378000F588AF /* AllNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNewsViewController.xib; sourceTree = "<group>"; };
 		EEB0094F2AEA9CC50032A287 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EEB009502AEA9CC50032A287 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EEB009572AEA9D350032A287 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
@@ -400,6 +406,7 @@
 				EE4F94BA2AEEDB5E0023F87B /* All Categories */,
 				EE972A5D2AF00E3100F5E9A6 /* Product Action */,
 				EE972A682AF0224000F5E9A6 /* Notifications */,
+				EEAF380E2AF12F2700F588AF /* All News */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -547,6 +554,16 @@
 				EEE0D8B12AEC1E0100187CF8 /* NewsCollectionViewCell.xib */,
 			);
 			path = "News Section";
+			sourceTree = "<group>";
+		};
+		EEAF380E2AF12F2700F588AF /* All News */ = {
+			isa = PBXGroup;
+			children = (
+				EEAF38212AF1378000F588AF /* AllNewsViewModel.swift */,
+				EEAF38202AF1378000F588AF /* AllNewsViewController.swift */,
+				EEAF38222AF1378000F588AF /* AllNewsViewController.xib */,
+			);
+			path = "All News";
 			sourceTree = "<group>";
 		};
 		EEC33EA72AEAE3BB00350BD8 /* Categories Section */ = {
@@ -839,6 +856,7 @@
 				EE83AD922AE3FC3D00E40FF1 /* OnboardingTextField.xib in Resources */,
 				EE32A9DF2AEAD9D5008F15B0 /* HomeViewController.xib in Resources */,
 				EEF16C3A2AEBE6B800A1D3A7 /* ProductCollectionViewCell.xib in Resources */,
+				EEAF38262AF1378000F588AF /* AllNewsViewController.xib in Resources */,
 				EE83AD642AE3E3A300E40FF1 /* LoginViewController.xib in Resources */,
 				EE972A632AF00E8500F5E9A6 /* ProductActionView.xib in Resources */,
 				EE4F94B02AEEC99F0023F87B /* SheetViewController.xib in Resources */,
@@ -978,9 +996,11 @@
 				EE945D702AE51A3C0013DF0B /* VerificationViewController.swift in Sources */,
 				EEE19DF72AE689C100A132E1 /* Logger.swift in Sources */,
 				EE945D672AE50DE10013DF0B /* RegisterViewController.swift in Sources */,
+				EEAF38242AF1378000F588AF /* AllNewsViewController.swift in Sources */,
 				EE83AD572AE3D23B00E40FF1 /* RegularLabel.swift in Sources */,
 				EE3061F12AED2F8B00F4DC42 /* ProductModel.swift in Sources */,
 				EE3D31842AEE6C91003FDBE6 /* LoginManager.swift in Sources */,
+				EEAF38252AF1378000F588AF /* AllNewsViewModel.swift in Sources */,
 				EEB009542AEA9CC50032A287 /* HomeViewModel.swift in Sources */,
 				EEC988F72AE924A500675F6C /* TabBarViewModel.swift in Sources */,
 				EE707ACB2AED895900813309 /* NewsCollectionReusableView.swift in Sources */,

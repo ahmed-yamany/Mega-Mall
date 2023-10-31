@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllNewsViewControllerViewController" customModule="Mega_Mall" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="9wM-9i-Rxv" id="VO8-H5-IJR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0hA-CZ-Dka" customClass="SearchTextField" customModule="Mega_Mall" customModuleProvider="target">
+                    <rect key="frame" x="20" y="79" width="353" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9wM-9i-Rxv">
+                    <rect key="frame" x="0.0" y="133" width="393" height="719"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kHd-nT-qIb">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
+            <constraints>
+                <constraint firstItem="0hA-CZ-Dka" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="G51-RH-r7h"/>
+                <constraint firstItem="9wM-9i-Rxv" firstAttribute="top" secondItem="0hA-CZ-Dka" secondAttribute="bottom" constant="20" id="c8y-Sg-KAD"/>
+                <constraint firstItem="0hA-CZ-Dka" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="dZ6-t8-JTy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9wM-9i-Rxv" secondAttribute="trailing" id="nE7-oS-7dd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0hA-CZ-Dka" secondAttribute="trailing" constant="20" id="p11-u7-cge"/>
+                <constraint firstAttribute="bottom" secondItem="9wM-9i-Rxv" secondAttribute="bottom" id="tFG-VZ-JQX"/>
+                <constraint firstItem="9wM-9i-Rxv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="z7C-F7-Dwv"/>
+            </constraints>
+            <point key="canvasLocation" x="25.190839694656489" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Mega-Primary-PureWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

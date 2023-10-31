@@ -9,7 +9,7 @@ import UIKit
 import MakeConstraints
 
 class NewsCollectionReusableView: UICollectionReusableView {
-    let button = UIButton()
+    let label = UILabel()
     // MARK: Init
     //
     override init(frame: CGRect) {
@@ -24,16 +24,18 @@ class NewsCollectionReusableView: UICollectionReusableView {
 
 private extension NewsCollectionReusableView {
     func configureViews() {
-        addSubview(button)
-        button.fillXSuperView()
-        button.centerYInSuperview()
-        button.heightConstraints(44)
-        button.layerCornerRadius = 8
-        button.layerBorderWidth = 1
-        button.layerBorderColor = .megaPrimaryNavyBlack
-        button.configuration = nil
-        button.setTitle("See All News", for: .normal)
-        button.setTitleColor(.megaPrimaryNavyBlack, for: .normal)
-        button.titleLabel?.font = .medium
+        addSubview(label)
+        label.fillXSuperView()
+        label.centerYInSuperview()
+        label.heightConstraints(44)
+        ///
+        label.layerCornerRadius = 8
+        label.layerBorderWidth = 1
+        label.layerBorderColor = .megaPrimaryNavyBlack
+        ///
+        label.text = "See All News"
+        label.textColor = .megaPrimaryNavyBlack
+        label.textAlignment = .center
+        label.font = .medium
     }
 }
