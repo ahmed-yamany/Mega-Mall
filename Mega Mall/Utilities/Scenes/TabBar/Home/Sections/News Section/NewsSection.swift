@@ -47,7 +47,7 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionDataSource {
         let cell = collectionView.dequeueReusableCell(CellType.self, for: indexPath)
         let news = items[indexPath.item]
         cell.configure(with: news)
-        cell.animate(animations: [AnimationType.from(direction: .bottom, offset: 60)])
+        cell.animate(animations: [AnimationType.from(direction: .left, offset: 60)], initialAlpha: 0)
         return cell
     }
     // view For Supplementary Element Of Kind
@@ -90,7 +90,7 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionLayout {
         ///
         var supplementaryItems: [NSCollectionLayoutBoundarySupplementaryItem] = []
         ///
-        if topViewModel != nil{
+        if topViewModel != nil {
             supplementaryItems.append(topSupplementaryItem)
         }
         ///
@@ -118,7 +118,12 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionDelegate {
      }
     //
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        LoginManager.shared.checkLogin()
+        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
+            let news = items[indexPath.item]
+            let viewModel = DetailNewsViewModel(news: news)
+            let detailNewsVC = DetailNewsViewController(viewModel: viewModel)
+            viewController?.navigationController?.pushViewController(detailNewsVC, animated: true)
+        })
     }
 }
 

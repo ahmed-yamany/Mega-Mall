@@ -31,6 +31,7 @@ class TabBarViewController: AnimatableTabBarController {
         configurations = viewModel.animationConfigurations
         subscribeSelectedItem()
         subscribeIsLogin()
+        subscribeTabBarIsHidden()
         lastItem = tabBar.selectedItem
     }
     //
@@ -142,6 +143,16 @@ private extension TabBarViewController {
         viewModel.$selectedItem
             .map { $0.rawValue }
             .assign(to: \.selectedIndex, on: self)
+            .store(in: &viewModel.cancellableSet)
+    }
+    ///
+    func subscribeTabBarIsHidden() {
+        viewModel.$tabBarIsHidden
+            .map {
+                self.tabBar.animate(animations: [AnimationType.from(direction: .bottom, offset: 100)])
+                return $0
+            }
+            .assign(to: \.isHidden, on: tabBar)
             .store(in: &viewModel.cancellableSet)
     }
     ///

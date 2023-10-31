@@ -13,6 +13,10 @@ internal enum L10n {
   internal enum News {
     /// News
     internal static let title = L10n.tr("Localizable", "News.title", fallback: "News")
+    internal enum Detail {
+      /// Detail news
+      internal static let title = L10n.tr("Localizable", "News.detail.title", fallback: "Detail news")
+    }
   }
   internal enum App {
     /// Mega Mall
