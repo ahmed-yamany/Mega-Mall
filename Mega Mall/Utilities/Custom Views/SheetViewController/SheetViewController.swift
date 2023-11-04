@@ -40,9 +40,7 @@ class SheetViewController: UIViewController {
             return
         }
         //
-        if let sheet = sheetPresentationController {
-            sheet.detents = [.medium()]
-        }
+        modalPresentationStyle = .overFullScreen
         // Present the sheet view controller.
         topMostController.present(self, animated: true, completion: completion)
     }

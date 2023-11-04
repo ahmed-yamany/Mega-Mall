@@ -5,7 +5,7 @@ class RegisterViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak private(set) var descriptionView: DescriptionView!
     @IBOutlet weak private(set) var emailTextFieldView: OnboardingTextField!
-    @IBOutlet weak private(set) var continueButton: FullButton!
+    @IBOutlet weak private(set) var continueButton: PrimaryButton!
     //
     // MARK: Properties
     private(set) var viewModel: RegisterViewModelType
@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
 //
 // MARK: - Actions
 extension RegisterViewController {
-    @IBAction func continueButtonTapped(_ sender: FullButton) {
+    @IBAction func continueButtonTapped(_ sender: PrimaryButton) {
         let verificationViewModel = VerificationViewModel(email: viewModel.emailViewModel.text, type: .register)
         navigationController?.pushViewController(VerificationViewController(viewModel: verificationViewModel), animated: true)
     }

@@ -6,7 +6,7 @@ class UpdatePasswordViewController: UIViewController {
     @IBOutlet weak var descriptionView: DescriptionView!
     @IBOutlet weak var passwordTextFieldView: OnboardingTextField!
     @IBOutlet weak var confirmPasswordTextFieldView: OnboardingTextField!
-    @IBOutlet weak var updateButton: FullButton!
+    @IBOutlet weak var updateButton: PrimaryButton!
     // MARK: Properties
     //
     private let viewModel: UpdatePasswordViewModel

@@ -38,18 +38,18 @@ extension AddsCollectionViewSection: CompositionalLayoutableSectionDataSource {
 extension AddsCollectionViewSection: CompositionalLayoutableSectionLayout {
     var spacing: CGFloat { 20 }
     var height: CGFloat { 216 }
-    func itemLayoutInGroup() -> NSCollectionLayoutItem {
+    var itemLayoutInGroup: NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         return item
     }
-    func groupLayoutInSection() -> NSCollectionLayoutGroup {
+    var groupLayoutInSection: NSCollectionLayoutGroup {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.85), heightDimension: .absolute(150))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup()])
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup])
         return group
     }
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let section = NSCollectionLayoutSection(group: groupLayoutInSection())
+        let section = NSCollectionLayoutSection(group: groupLayoutInSection)
         section.contentInsets = .init(top: spacing, leading: spacing, bottom: 0, trailing: spacing)
         section.interGroupSpacing = 16
         section.orthogonalScrollingBehavior = .groupPaging

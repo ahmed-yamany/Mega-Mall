@@ -87,10 +87,14 @@ extension MegaNavigationController {
         TabBarViewModel.shared.$cart
             .map { !$0.isEmpty }
             .map { notEmpty -> UIImage in
-                notEmpty ? .megaShoppingCartNotEmpty : .megaShopingCart
+                if notEmpty {
+                    // animate shoping cart when not empty
+                    self.shopingCartView.animate(animations: [AnimationType.from(direction: .right, offset: 10)])
+                }
+                return notEmpty ? .megaShoppingCartNotEmpty : .megaShopingCart
             }
             .assign(to: \.image, on: shopingCartView)
-           .store(in: &TabBarViewModel.shared.cancellableSet)
+            .store(in: &TabBarViewModel.shared.cancellableSet)
     }
 }
 

@@ -1,7 +1,9 @@
 import UIKit
 import ViewAnimator
 import Extensions
+import LocationProxy
 import CompositionalLayoutableSection
+import Combine
 
 class HomeViewController: UIViewController, CompositionalLayoutProvider {
     // MARK: - Outlets
@@ -94,9 +96,7 @@ private extension HomeViewController {
         }
         ///
         if let title = section.title {
-            collectionViewsection.configure(owner: self, topViewModel: .init(label: title,
-                                                                             button: L10n.App.seeAll,
-                                                                             action: seeAllCategoriesButtonAction))
+            collectionViewsection.configure(owner: self, topViewModel: .init(label: title))
         }
         ///
         return collectionViewsection
@@ -129,7 +129,7 @@ private extension HomeViewController {
         ///
         return collectionViewsection
     }
-    //
+    ///
     private func makeNewsSection(from section: Section) -> CompositionalLayoutableSection {
         let collectionViewsection = NewsCollectionViewSection()
         ///
@@ -140,7 +140,10 @@ private extension HomeViewController {
         }
         ///
         if let title = section.title {
-            collectionViewsection.configure(owner: self, topViewModel: .init(label: title))
+            collectionViewsection.configure(owner: self,
+                                            topViewModel: .init(label: title),
+                                            bottomViewModel: .init(title: "See All News", target: self,
+                                                                   action: #selector(newsSectionBottomViewAction(_:))))
         }
         ///
         return collectionViewsection
@@ -149,9 +152,10 @@ private extension HomeViewController {
 
 // MARK: - Actions
 private extension HomeViewController {
-    func seeAllCategoriesButtonAction() {
-        LoginManager.shared.checkLogin(loginHandeler: {
-            AllCategoriesViewController().presentSheet()
+    @objc private func newsSectionBottomViewAction(_ sender: Any) {
+        print("here")
+        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
+            navigationController?.pushViewController(AllNewsViewController(), animated: true)
         })
     }
 }

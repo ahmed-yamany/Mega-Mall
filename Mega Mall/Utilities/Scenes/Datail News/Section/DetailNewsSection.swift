@@ -47,21 +47,21 @@ extension DetailNewsCollectionViewSection: CompositionalLayoutableSectionDataSou
 extension DetailNewsCollectionViewSection: CompositionalLayoutableSectionLayout {
     var spacing: CGFloat { 20 } // The spacing between items in the section.
     /// - Returns: The layout for an item within the group.
-    func itemLayoutInGroup() -> NSCollectionLayoutItem {
+    var itemLayoutInGroup: NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         return item
     }
     ///  - Returns: The layout for a group within the section.
-    func groupLayoutInSection() -> NSCollectionLayoutGroup {
+    var groupLayoutInSection: NSCollectionLayoutGroup {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup()])
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup])
         group.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: 0, trailing: spacing)
         return group
     }
     /// Defines the layout for the entire section, including groups and supplementary views.
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let section = NSCollectionLayoutSection(group: groupLayoutInSection())
+        let section = NSCollectionLayoutSection(group: groupLayoutInSection)
         section.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: 0, bottom: 0, trailing: 0)
         return section
     }

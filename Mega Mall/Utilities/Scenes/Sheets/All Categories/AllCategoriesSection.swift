@@ -49,25 +49,25 @@ extension AllCategoriesCollectionViewSection: CompositionalLayoutableSectionLayo
     var width: CGFloat { 68 + spacing } // The width of each item in the section.
     var height: CGFloat { 76 } // The height of each item in the section.
     /// - Returns: The layout for an item within the group.
-    func itemLayoutInGroup() -> NSCollectionLayoutItem {
+    var itemLayoutInGroup: NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(width), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         return item
     }
     ///  - Returns: The layout for a group within the section.
-    func groupLayoutInSection() -> NSCollectionLayoutGroup {
+    var groupLayoutInSection: NSCollectionLayoutGroup {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(height))
         let group: NSCollectionLayoutGroup
         if #available(iOS 16.0, *) {
-            group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: itemLayoutInGroup(), count: 4)
+            group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: itemLayoutInGroup, count: 4)
         } else {
-            group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: itemLayoutInGroup(), count: 4)
+            group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: itemLayoutInGroup, count: 4)
         }
         return group
     }
     /// Defines the layout for the entire section, including groups and supplementary views.
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let section = NSCollectionLayoutSection(group: groupLayoutInSection())
+        let section = NSCollectionLayoutSection(group: groupLayoutInSection)
         section.interGroupSpacing = 16
         return section
     }
@@ -78,11 +78,6 @@ extension AllCategoriesCollectionViewSection: CompositionalLayoutableSectionDele
     func registerCell(_ collectionView: UICollectionView) {
         collectionView.registerFromNib(CellType.self)
     }
-    /*
-     ///
-     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-     }
-     */
 }
 
 // MARK: - Private Handelers

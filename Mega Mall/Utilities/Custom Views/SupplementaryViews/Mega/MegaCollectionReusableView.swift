@@ -37,6 +37,7 @@ class MegaCollectionReusableView: UICollectionReusableView {
         addSubview(view)
         view.frame = bounds
         // swiftlint:enable all
+        label.text = ""
     }
     @IBAction func buttonTapped(_ sender: LabelButton) {
         viewModel?.action?()

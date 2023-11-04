@@ -6,7 +6,7 @@ class VerificationViewController: UIViewController {
     //
     @IBOutlet weak private(set) var descriptionView: DescriptionView!
     @IBOutlet weak private(set) var otpTextfField: OTPTextField!
-    @IBOutlet weak private(set) var continueButton: FullButton!
+    @IBOutlet weak private(set) var continueButton: PrimaryButton!
     // MARK: - Properties
     private(set) var viewModel: VerificationViewModel
     // MARK: - Init
@@ -30,7 +30,7 @@ class VerificationViewController: UIViewController {
 //
 // MARK: - Actions
 extension VerificationViewController {
-    @IBAction func continueButtonTapped(_ sender: FullButton) {
+    @IBAction func continueButtonTapped(_ sender: PrimaryButton) {
         let viewController = viewModel.verificationType == .register ?
         ProfileUpdateViewController() : UpdatePasswordViewController()
         navigationController?.pushViewController(viewController, animated: true)

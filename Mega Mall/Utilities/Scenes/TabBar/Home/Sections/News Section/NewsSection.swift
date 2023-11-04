@@ -14,12 +14,12 @@ class NewsCollectionViewSection: CompositionalLayoutableSection {
     typealias ItemsType = News
     typealias CellType = NewsCollectionViewCell
     typealias TopSupplementaryViewType = MegaCollectionReusableView
-    typealias BottomSupplementaryViewType = NewsCollectionReusableView
+    typealias BottomSupplementaryViewType = ButtonCollectionReusableView
     //
     var items: [ItemsType] = []
     var viewController: UIViewController?
     var topViewModel: MegaCollectionReusableView.ViewModel?
-    var addButtomView: Bool = true
+    var bottomViewModel: ButtonCollectionReusableView.ViewModel?
     override init() {
         super.init()
         delegate = self
@@ -29,11 +29,12 @@ class NewsCollectionViewSection: CompositionalLayoutableSection {
     private var isConfigured = false
     public func configure(owner viewController: UIViewController,
                           topViewModel: MegaCollectionReusableView.ViewModel? = nil,
-                          addButtomView: Bool = true ) {
+                          bottomViewModel: ButtonCollectionReusableView.ViewModel? = nil ) {
         guard !isConfigured else { return }
+        isConfigured = true
         self.viewController = viewController
         self.topViewModel = topViewModel
-        self.addButtomView = addButtomView
+        self.bottomViewModel = bottomViewModel
     }
 }
 // MARK: - News CollectionView Section Data Source
@@ -70,20 +71,20 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionLayout {
     var spacing: CGFloat { 20 } // The spacing between items in the section.
     var height: CGFloat { 120 } // The height of each item in the section.
     /// - Returns: The layout for an item within the group.
-    func itemLayoutInGroup() -> NSCollectionLayoutItem {
+    var itemLayoutInGroup: NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         return item
     }
     ///  - Returns: The layout for a group within the section.
-    func groupLayoutInSection() -> NSCollectionLayoutGroup {
+    var groupLayoutInSection: NSCollectionLayoutGroup {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(height))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup()])
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup])
         return group
     }
     /// Defines the layout for the entire section, including groups and supplementary views.
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let section = NSCollectionLayoutSection(group: groupLayoutInSection())
+        let section = NSCollectionLayoutSection(group: groupLayoutInSection)
         ///
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
         section.interGroupSpacing = 16
@@ -94,7 +95,7 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionLayout {
             supplementaryItems.append(topSupplementaryItem)
         }
         ///
-        if addButtomView {
+        if bottomViewModel != nil {
             supplementaryItems.append(bottomSupplementaryItem)
         }
         ///
@@ -159,13 +160,9 @@ extension NewsCollectionViewSection {
         let view = collectionView.dequeueReusableSupplementaryView(BottomSupplementaryViewType.self,
                                                                    ofKind: BottomSupplementaryViewType.identifier,
                                                                    for: indexPath)
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(bottomViewTapAction(_:)))
-        view.addGestureRecognizer(tapGesture)
+        if let bottomViewModel {
+            view.configure(with: bottomViewModel)
+        }
         return view
-    }
-    @objc private func bottomViewTapAction(_ sender: Any) {
-        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
-            viewController?.navigationController?.pushViewController(AllNewsViewController(), animated: true)
-        })
     }
 }

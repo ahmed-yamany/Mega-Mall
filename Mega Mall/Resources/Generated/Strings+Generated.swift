@@ -30,6 +30,12 @@ internal enum L10n {
       }
     }
   }
+  internal enum Category {
+    /// Gadget
+    internal static let subtitle = L10n.tr("Localizable", "category.subtitle", fallback: "Gadget")
+    /// Category
+    internal static let title = L10n.tr("Localizable", "category.title", fallback: "Category")
+  }
   internal enum LoginAlert {
     /// Login Account
     internal static let header = L10n.tr("Localizable", "loginAlert.header", fallback: "Login Account")
@@ -39,6 +45,8 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "loginAlert.title", fallback: "You need to log in first")
   }
   internal enum Onboarding {
+    /// Apply
+    internal static let apply = L10n.tr("Localizable", "onboarding.apply", fallback: "Apply")
     /// Change
     internal static let change = L10n.tr("Localizable", "onboarding.change", fallback: "Change")
     /// Confirmation

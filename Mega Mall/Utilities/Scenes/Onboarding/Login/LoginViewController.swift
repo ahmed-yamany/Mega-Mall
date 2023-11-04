@@ -7,7 +7,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak private(set) var descriptionView: DescriptionView!
     @IBOutlet weak private(set) var emailTextFieldView: OnboardingTextField!
     @IBOutlet weak private(set) var passwordTextFieldView: OnboardingTextField!
-    @IBOutlet weak private(set) var signinButton: FullButton!
+    @IBOutlet weak private(set) var signinButton: PrimaryButton!
     // MARK: - Properties
     //
     var viewModel: LoginViewModelType
@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
 // MARK: - Actions
 //
 extension LoginViewController {
-    @IBAction private func signinButtonTapped(_ sender: FullButton) {
+    @IBAction private func signinButtonTapped(_ sender: PrimaryButton) {
         viewModel.performLogin()
             .sink { loginIn in
                 if loginIn {

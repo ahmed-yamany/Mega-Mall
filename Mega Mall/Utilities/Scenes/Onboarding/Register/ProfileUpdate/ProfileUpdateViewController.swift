@@ -6,7 +6,7 @@ class ProfileUpdateViewController: UIViewController {
     @IBOutlet weak var fullNameTextFieldView: OnboardingTextField!
     @IBOutlet weak var passwordTextFieldView: OnboardingTextField!
     @IBOutlet weak var referalCodeTextFieldView: OnboardingTextField!
-    @IBOutlet weak var confirmationButton: FullButton!
+    @IBOutlet weak var confirmationButton: PrimaryButton!
     // MARK: Properties
     private let viewModel: ProfileUpdateViewModel
     private let fullNameViewModel = OnboardingTextField.ViewModel(model:

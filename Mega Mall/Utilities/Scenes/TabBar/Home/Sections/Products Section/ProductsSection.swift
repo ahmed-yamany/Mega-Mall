@@ -14,11 +14,14 @@ class ProductsCollectionViewSection: CompositionalLayoutableSection {
     typealias ItemsType = Product
     typealias CellType = ProductCollectionViewCell
     typealias TopSupplementaryViewType = MegaCollectionReusableView
+    typealias BottomSupplementaryViewType = ButtonCollectionReusableView
     typealias DecorationViewType = SectionDecorationView
     //
     var items: [ItemsType] = []
     var viewController: UIViewController?
     var topViewModel: MegaCollectionReusableView.ViewModel?
+    var bottomViewModel: ButtonCollectionReusableView.ViewModel?
+
     override init() {
         super.init()
         delegate = self
@@ -27,10 +30,13 @@ class ProductsCollectionViewSection: CompositionalLayoutableSection {
     }
     private var isConfigured = false
     public func configure(owner viewController: UIViewController,
-                          topViewModel: MegaCollectionReusableView.ViewModel) {
+                          topViewModel: MegaCollectionReusableView.ViewModel?=nil,
+                          bottomViewModel: ButtonCollectionReusableView.ViewModel? = nil) {
         guard !isConfigured else { return }
+        isConfigured = true
         self.viewController = viewController
         self.topViewModel = topViewModel
+        self.bottomViewModel = bottomViewModel
     }
 }
 // MARK: - Products CollectionView Section Data Source
@@ -52,12 +58,15 @@ extension ProductsCollectionViewSection: CompositionalLayoutableSectionDataSourc
     func collectionView(_ collectionView: UICollectionView,
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
-        let view = collectionView.dequeueReusableSupplementaryView(TopSupplementaryViewType.self,
-                                                                   ofKind: TopSupplementaryViewType.identifier,
-                                                                   for: indexPath)
-        if let topViewModel {
-            view.configure(with: topViewModel)
+        ///
+        let view: UICollectionReusableView
+        ///
+        if kind == TopSupplementaryViewType.identifier {
+           view = dequeueTopView(collectionView, at: indexPath)
+        } else {
+            view = dequeueBottomView(collectionView, at: indexPath)
         }
+        ///
         return view
     }
 }
@@ -67,27 +76,36 @@ extension ProductsCollectionViewSection: CompositionalLayoutableSectionLayout {
     var width: CGFloat { 156 } // The width of each item in the section.
     var height: CGFloat { 242 } // The height of each item in the section.
     /// - Returns: The layout for an item within the group.
-    func itemLayoutInGroup() -> NSCollectionLayoutItem {
+    @objc var itemLayoutInGroup: NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         return item
     }
     /// - Returns: The layout for a group within the section.
-    func groupLayoutInSection() -> NSCollectionLayoutGroup {
+    var groupLayoutInSection: NSCollectionLayoutGroup {
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(width), heightDimension: .absolute(height))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemLayoutInGroup()])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemLayoutInGroup])
         return group
     }
     /// Defines the layout for the entire section, including groups and supplementary views.
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let section = NSCollectionLayoutSection(group: groupLayoutInSection())
+        let section = NSCollectionLayoutSection(group: groupLayoutInSection)
         //
         section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: spacing, trailing: spacing)
         section.interGroupSpacing = spacing
         //
-        section.boundarySupplementaryItems = [topSupplementaryItem]
-        //
+        var supplementaryItems: [NSCollectionLayoutBoundarySupplementaryItem] = []
+        ///
+        if topViewModel != nil {
+            supplementaryItems.append(topSupplementaryItem)
+        }
+        ///
+        if bottomViewModel != nil {
+            supplementaryItems.append(bottomSupplementaryItem)
+        }
+        section.boundarySupplementaryItems = supplementaryItems
+        ///
         let sectionBackground = NSCollectionLayoutDecorationItem.background(elementKind: DecorationViewType.identifier)
         section.decorationItems = [sectionBackground]
         //
@@ -106,6 +124,8 @@ extension ProductsCollectionViewSection: CompositionalLayoutableSectionDelegate 
      */
     func registerSupplementaryView(_ collectionView: UICollectionView) {
         collectionView.register(TopSupplementaryViewType.self, supplementaryViewOfKind: TopSupplementaryViewType.identifier)
+        collectionView.register(BottomSupplementaryViewType.self, supplementaryViewOfKind: BottomSupplementaryViewType.identifier)
+
     }
     /// Registers the Decoration view for the secition
     func registerDecorationView(_ layout: UICollectionViewCompositionalLayout) {
@@ -117,12 +137,40 @@ extension ProductsCollectionViewSection: CompositionalLayoutableSectionDelegate 
     }
 }
 
-// MARK: - Private Handelers
+// MARK: - Handelers
 extension ProductsCollectionViewSection {
-    private var topSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
+    var topSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
         let supplementarySize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(44))
         return  NSCollectionLayoutBoundarySupplementaryItem(layoutSize: supplementarySize,
                                                             elementKind: TopSupplementaryViewType.identifier,
                                                             alignment: .top)
+    }
+    ///
+    var bottomSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
+        let supplementarySize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(100))
+        let item = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: supplementarySize,
+                                                               elementKind: BottomSupplementaryViewType.identifier,
+                                                               alignment: .bottom)
+        return item
+    }
+    ///
+    private func dequeueTopView(_ collectionView: UICollectionView, at indexPath: IndexPath) -> UICollectionReusableView {
+        let view = collectionView.dequeueReusableSupplementaryView(TopSupplementaryViewType.self,
+                                                                   ofKind: TopSupplementaryViewType.identifier,
+                                                                   for: indexPath)
+        if let topViewModel {
+            view.configure(with: topViewModel)
+        }
+        return view
+    }
+    ///
+    private func dequeueBottomView(_ collectionView: UICollectionView, at indexPath: IndexPath) -> UICollectionReusableView {
+        let view = collectionView.dequeueReusableSupplementaryView(BottomSupplementaryViewType.self,
+                                                                   ofKind: BottomSupplementaryViewType.identifier,
+                                                                   for: indexPath)
+        if let bottomViewModel {
+            view.configure(with: bottomViewModel)
+        }
+        return view
     }
 }

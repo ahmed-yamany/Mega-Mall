@@ -31,7 +31,7 @@ class LoginAlertView: UIView {
         // swiftlint:enable all
     }
     //
-    @IBAction func loginButtonTapped(_ sender: FullButton) {
+    @IBAction func loginButtonTapped(_ sender: PrimaryButton) {
         viewModel?.buttonAction()
     }
 }

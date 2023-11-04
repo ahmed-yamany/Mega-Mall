@@ -44,7 +44,10 @@ class DetailNewsViewController: UICollectionViewController, CompositionalLayoutP
         // i just mocking it by giving the current news
         let allNewsSection = NewsCollectionViewSection()
         allNewsSection.update(collectionView, withItems: [viewModel.news, viewModel.news])
-        allNewsSection.configure(owner: self, topViewModel: .init(label: "Other News"))
+        allNewsSection.configure(owner: self,
+                                 topViewModel: .init(label: "Other News"),
+                                 bottomViewModel: .init(title: "See All News", target: self,
+                                                        action: #selector(newsSectionBottomViewAction(_:))))
         compositionalLayoutSections.append(allNewsSection)
         //
         collectionView.updatecollectionViewCompositionalLayout(with: self)
@@ -52,11 +55,18 @@ class DetailNewsViewController: UICollectionViewController, CompositionalLayoutP
 }
 //
 // MARK: - Actions
-extension DetailNewsViewController {}
-//
+private extension DetailNewsViewController {
+    @objc private func newsSectionBottomViewAction(_ sender: Any) {
+        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
+            navigationController?.pushViewController(AllNewsViewController(), animated: true)
+        })
+    }
+}//
 // MARK: - Configurations
 extension DetailNewsViewController {
     private func configureViews() {
+        view.backgroundColor = .megaPrimaryPureWhite
+        collectionView.backgroundColor = .megaPrimaryPureWhite
         navigationItem.addTitleLabel(with: L10n.News.Detail.title, color: .megaPrimaryNavyBlack, font: .h3)
         let image = UIImage(systemName: "arrowshape.turn.up.forward")?.withTintColor(.megaPrimaryNavyBlack)
         let item = UIBarButtonItem(image: image, style: .done, target: nil, action: nil)

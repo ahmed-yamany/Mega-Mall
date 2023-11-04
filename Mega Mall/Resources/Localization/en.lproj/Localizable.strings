@@ -15,6 +15,7 @@
 "onboarding.saveUpdates" = "Save Update";
 "onboarding.confirmation" = "Confirmation";
 "onboarding.login" = "Login";
+"onboarding.apply" = "Apply";
 // Login
 "onboarding.login.decription.title" = "Welcome back to Mega Mall";
 "onboarding.login.decription.subtitle" = "Please enter data to log in";
@@ -73,3 +74,6 @@
 //
 "News.title" = "News";
 "News.detail.title" = "Detail news";
+//
+"category.title" = "Category";
+"category.subtitle" = "Gadget";

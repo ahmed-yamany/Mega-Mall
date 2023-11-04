@@ -22,11 +22,7 @@ public extension CompositionalLayoutableSectionDataSource {
 }
 //
 @available(iOS 13.0, *)
-public protocol CompositionalLayoutableSectionLayout {
-    /// Returns the layout for an item in the section.
-    func itemLayoutInGroup() -> NSCollectionLayoutItem
-    /// Returns the layout for the group of items in the section.
-    func groupLayoutInSection() -> NSCollectionLayoutGroup
+@objc public protocol CompositionalLayoutableSectionLayout {
     /// Returns the layout for the section.
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
 }

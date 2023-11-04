@@ -30,6 +30,7 @@ class AllCategoriesViewController: SheetViewController, CompositionalLayoutProvi
         viewModel.getCategories().sink { [unowned self] categories in
             let collectionViewSection = AllCategoriesCollectionViewSection()
             collectionViewSection.update(collectionView, withItems: categories)
+            collectionViewSection.configure(owner: self)
             compositionalLayoutSections.append(collectionViewSection)
             collectionView.updatecollectionViewCompositionalLayout(with: self)
         }.store(in: &viewModel.cancellableSet)

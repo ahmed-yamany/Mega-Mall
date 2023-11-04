@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Ahmed Yamany on 27/04/2023.
+  
+*/
+
+"title" = "Location Access Disabled.";
+"message" = "In order to have the best experience you need to enable your location services.";
+"cancel" = "Cancel";
+"open" = "Open Settings";
