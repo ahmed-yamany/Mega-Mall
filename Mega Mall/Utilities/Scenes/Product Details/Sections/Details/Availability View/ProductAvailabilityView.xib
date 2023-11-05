@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductAvailabilityView" customModule="Mega_Mall" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="2be-ZM-ihV" id="l0q-Fm-KdI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="156"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vae-Td-fPr">
+                    <rect key="frame" x="0.0" y="0.0" width="335" height="156"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tersedia : 250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2be-ZM-ihV" customClass="SmallLabel" customModule="Mega_Mall" customModuleProvider="target">
+                            <rect key="frame" x="113.66666666666669" y="61" width="108" height="59"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="2" leading="12" bottom="2" trailing="12"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Vae-Td-fPr" secondAttribute="bottom" id="2Ma-Y2-NMd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vae-Td-fPr" secondAttribute="trailing" id="Rqn-oD-DdJ"/>
+                <constraint firstItem="Vae-Td-fPr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SCk-Tw-pjO"/>
+                <constraint firstItem="Vae-Td-fPr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hmc-DF-pmm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="110.68702290076335" y="89.436619718309871"/>
+        </view>
+    </objects>
+</document>

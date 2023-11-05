@@ -48,4 +48,3 @@ class FilterDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
         tableView.reloadData()
     }
 }
-

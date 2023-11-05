@@ -186,6 +186,8 @@ internal enum L10n {
     }
   }
   internal enum Product {
+    /// Description Product
+    internal static let description = L10n.tr("Localizable", "product.description", fallback: "Description Product")
     internal enum Action {
       /// Add To Cart
       internal static let cart = L10n.tr("Localizable", "product.action.cart", fallback: "Add To Cart")

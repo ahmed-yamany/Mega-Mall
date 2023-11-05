@@ -50,7 +50,7 @@ class DetailNewsViewController: UICollectionViewController, CompositionalLayoutP
                                                         action: #selector(newsSectionBottomViewAction(_:))))
         compositionalLayoutSections.append(allNewsSection)
         //
-        collectionView.updatecollectionViewCompositionalLayout(with: self)
+        collectionView.updatecollectionViewCompositionalLayout(for: self)
     }
 }
 //

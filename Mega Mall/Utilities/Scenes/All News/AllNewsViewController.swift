@@ -36,7 +36,7 @@ class AllNewsViewController: UIViewController, CompositionalLayoutProvider {
             seciton.update(collectionView, withItems: news)
             seciton.configure(owner: self)
             compositionalLayoutSections.append(seciton)
-            collectionView.updatecollectionViewCompositionalLayout(with: self)
+            collectionView.updatecollectionViewCompositionalLayout(for: self)
         }.store(in: &viewModel.cancellableSet)
     }
 }

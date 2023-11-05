@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ReviewsCollectionViewCell" customModule="Mega_Mall" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="454" height="153"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="454" height="153"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WWY-Hu-9he">
+                        <rect key="frame" x="0.0" y="0.0" width="454" height="153"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yamany" translatesAutoresizingMaskIntoConstraints="NO" id="mo6-hm-kvz">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="8im-gJ-LEd"/>
+                                    <constraint firstAttribute="height" constant="40" id="W3Y-Gl-T2Y"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yjq-kb-raW">
+                                <rect key="frame" x="56" y="0.0" width="398" height="57.666666666666664"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fhI-uf-AUY">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20.333333333333332"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32h-mN-cH5" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNX-y2-FWe" customClass="RegularLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                <rect key="frame" x="356.66666666666669" y="0.0" width="41.333333333333314" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Mega-Secondary-DarkGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv4-bd-uZM" customClass="RegularLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28.333333333333336" width="398" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noN-yO-pGq">
+                                        <rect key="frame" x="0.0" y="56.666666666666664" width="398" height="1"/>
+                                        <color key="backgroundColor" name="Mega-Secondary-SoftGray"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="KRf-zm-4uM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WWY-Hu-9he" secondAttribute="trailing" id="1Wf-XW-pM1"/>
+                <constraint firstItem="WWY-Hu-9he" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EMa-Hu-m4A"/>
+                <constraint firstItem="WWY-Hu-9he" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cdh-Up-uNW"/>
+                <constraint firstAttribute="bottom" secondItem="WWY-Hu-9he" secondAttribute="bottom" id="fZj-HM-N41"/>
+            </constraints>
+            <size key="customSize" width="454" height="153"/>
+            <connections>
+                <outlet property="dateLabel" destination="YNX-y2-FWe" id="knB-kl-PzH"/>
+                <outlet property="imageView" destination="mo6-hm-kvz" id="pKf-Ty-JP6"/>
+                <outlet property="nameLabel" destination="32h-mN-cH5" id="VLQ-Eb-VjT"/>
+                <outlet property="textLabel" destination="Pv4-bd-uZM" id="zGE-0J-pfP"/>
+            </connections>
+            <point key="canvasLocation" x="360.30534351145036" y="55.985915492957751"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="yamany" width="750" height="1000"/>
+        <namedColor name="Mega-Primary-NavyBlack">
+            <color red="0.047058823529411764" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mega-Secondary-DarkGray">
+            <color red="0.51372549019607838" green="0.52156862745098043" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mega-Secondary-SoftGray">
+            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

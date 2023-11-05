@@ -1,7 +1,6 @@
 import UIKit
 import ViewAnimator
 import Extensions
-import LocationProxy
 import CompositionalLayoutableSection
 import Combine
 
@@ -44,7 +43,7 @@ class HomeViewController: UIViewController, CompositionalLayoutProvider {
                 compositionalLayoutSections.append(collectionViewSection)
             }
             // this must be called after adding all sections to compositionalLayoutSections array
-            collectionView.updatecollectionViewCompositionalLayout(with: self)
+            collectionView.updatecollectionViewCompositionalLayout(for: self)
         }
         .store(in: &viewModel.cancellableSet)
     }

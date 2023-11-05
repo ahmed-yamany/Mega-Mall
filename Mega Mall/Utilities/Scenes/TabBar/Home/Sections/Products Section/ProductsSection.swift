@@ -133,7 +133,12 @@ extension ProductsCollectionViewSection: CompositionalLayoutableSectionDelegate 
     }
     ///
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        LoginManager.shared.checkLogin()
+        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
+            let product = items[indexPath.item]
+            let productDetailViewModel = ProductDetailsViewModel(product: product)
+            let productDetailViewController = ProductDetailsViewController(viewModel: productDetailViewModel)
+            viewController?.navigationController?.pushViewController(productDetailViewController, animated: true)
+        })
     }
 }
 

@@ -77,3 +77,5 @@
 //
 "category.title" = "Category";
 "category.subtitle" = "Gadget";
+//
+"product.description" = "Description Product";
