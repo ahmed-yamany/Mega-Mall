@@ -49,6 +49,7 @@ class ProductDetailsViewController: UICollectionViewController, CompositionalLay
         ///
         let section = ProductDetailCollectionViewSection()
         section.update(collectionView, withItems: [viewModel.product])
+        section.configure(owner: self)
         compositionalLayoutSections.append(section)
         ///
         let reviewsSection = ReviewsCollectionViewSection()
@@ -60,7 +61,7 @@ class ProductDetailsViewController: UICollectionViewController, CompositionalLay
         productsSection.configure(owner: self, topViewModel: .init(label: "Featured Product", button: "See All", action: {}))
         compositionalLayoutSections.append(productsSection)
         ///
-        collectionView.updatecollectionViewCompositionalLayout(for: self)
+        collectionView.updateCollectionViewCompositionalLayout(for: self)
     }
     ///
     override func viewWillDisappear(_ animated: Bool) {

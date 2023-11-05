@@ -1,22 +1,21 @@
 //
-//  ProductDetail.swift
+//  StoreDetail.swift
 //  Mega Mall
 //
-//  Created by Ahmed Yamany on 04/11/2023.
+//  Created by Ahmed Yamany on 05/11/2023.
 //
 
 import UIKit
 import CompositionalLayoutableSection
 
-// MARK: - A custom section for displaying ProductDetail in a collection view.
-class ProductDetailCollectionViewSection: CompositionalLayoutableSection {
-    typealias ItemsType = Product
-    typealias CellType = ProductDetailCollectionViewCell
-    // typealias TopSupplementaryViewType = UICollectionReusableView
-    // typealias DecorationViewType = UICollectionReusableView
-    //
+// MARK: - A custom section for displaying StoreDetail in a collection view.
+class StoreDetailCollectionViewSection: CompositionalLayoutableSection {
+    typealias ItemsType = Store
+    typealias CellType = StoreDetailCollectionViewCell
+    ///
     var items: [ItemsType] = []
     var viewController: UIViewController!
+    ///
     override init() {
         super.init()
         delegate = self
@@ -31,8 +30,8 @@ class ProductDetailCollectionViewSection: CompositionalLayoutableSection {
         self.viewController = viewController
     }
 }
-// MARK: - ProductDetail CollectionView Section Data Source
-extension ProductDetailCollectionViewSection: CompositionalLayoutableSectionDataSource {
+// MARK: - StoreDetail CollectionView Section Data Source
+extension StoreDetailCollectionViewSection: CompositionalLayoutableSectionDataSource {
     // number Of Items In Section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
@@ -40,17 +39,14 @@ extension ProductDetailCollectionViewSection: CompositionalLayoutableSectionData
     /// cell For Item At
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CellType.self, for: indexPath)
-        let product = items[indexPath.item]
-        cell.configure(with: product)
-        ///
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(storeViewAction))
-        cell.storeView.addGestureRecognizer(tapGesture)
+        let store = items[indexPath.item]
+        cell.configure(with: store)
         return cell
     }
 }
-// MARK: - ProductDetail CollectionView Section Layout
-extension ProductDetailCollectionViewSection: CompositionalLayoutableSectionLayout {
-    var spacing: CGFloat { 20 }
+// MARK: - StoreDetail CollectionView Section Layout
+extension StoreDetailCollectionViewSection: CompositionalLayoutableSectionLayout {
+    var spacing: CGFloat { 20 } // The spacing between items in the section.
     /// - Returns: The layout for an item within the group.
     var itemLayoutInGroup: NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
@@ -61,43 +57,24 @@ extension ProductDetailCollectionViewSection: CompositionalLayoutableSectionLayo
     var groupLayoutInSection: NSCollectionLayoutGroup {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [itemLayoutInGroup])
+        // group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: 0)
         return group
     }
     /// Defines the layout for the entire section, including groups and supplementary views.
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection(group: groupLayoutInSection)
-        section.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: 0, trailing: spacing)
+        section.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
         return section
     }
 }
-// MARK: - ProductDetail CollectionView Section Delegate
-extension ProductDetailCollectionViewSection: CompositionalLayoutableSectionDelegate {
+// MARK: - StoreDetail CollectionView Section Delegate
+extension StoreDetailCollectionViewSection: CompositionalLayoutableSectionDelegate {
     /// Registers the cell type with the given collection view.
     func registerCell(_ collectionView: UICollectionView) {
         collectionView.registerFromNib(CellType.self)
     }
-    /*
-     ///
-     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-     }
-     */
 }
 
 // MARK: - Private Handelers
-private extension ProductDetailCollectionViewSection {
-    @objc func storeViewAction() {
-        guard let store = items.first?.store else {
-            Logger.log("filed to get product model", category: \.default, level: .fault)
-            return
-        }
-        ///
-        let viewModel = StoreViewModel(store: store)
-        let storeViewController = StoreViewController(viewModel: viewModel)
-        ///
-        guard let navigationController =  self.viewController.navigationController else {
-            Logger.log("failed to get navigationController ", category: \.default, level: .fault)
-            return
-        }
-        navigationController.pushViewController(storeViewController, animated: true)
-    }
+extension StoreDetailCollectionViewSection {
 }

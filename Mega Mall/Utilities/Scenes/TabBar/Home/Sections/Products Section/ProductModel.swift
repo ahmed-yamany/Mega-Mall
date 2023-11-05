@@ -15,11 +15,11 @@ struct Product: Codable, Identifiable, Equatable {
     let review: Double
     let reviewCount: Int
     let availableCount: Int
+    // swiftlint: disable all
     var store: Store {
-        .init(image: "yamany", name: "Shop Larson Electronic", subtitle: "Official Store")
+        .init(image: "yamany", name: "Shop Larson Electronic", subtitle: "Official Store", rate: 4.5)
     }
     var description: String {
-        // swiftlint: disable all
         """
 The speaker unit contains a diaphragm that is precision-grown from NAC Audio bio-cellulose, making it stiffer, lighter and stronger than regular PET speaker units, and allowing the sound-producing diaphragm to vibrate without the levels of distortion found in other speakers. The speaker unit contains a diaphragm that is precision-grown from NAC Audio bio-cellulose, making it stiffer, lighter and stronger than regular PET speaker units, and allowing the sound-producing diaphragm to vibrate without the levels of distortion found in other speakers
 """.replacingOccurrences(of: ".", with: ".\n\n")

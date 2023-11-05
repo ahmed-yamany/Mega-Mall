@@ -43,7 +43,7 @@ class HomeViewController: UIViewController, CompositionalLayoutProvider {
                 compositionalLayoutSections.append(collectionViewSection)
             }
             // this must be called after adding all sections to compositionalLayoutSections array
-            collectionView.updatecollectionViewCompositionalLayout(for: self)
+            collectionView.updateCollectionViewCompositionalLayout(for: self)
         }
         .store(in: &viewModel.cancellableSet)
     }

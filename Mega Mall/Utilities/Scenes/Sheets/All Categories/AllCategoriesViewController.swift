@@ -32,7 +32,7 @@ class AllCategoriesViewController: SheetViewController, CompositionalLayoutProvi
             collectionViewSection.update(collectionView, withItems: categories)
             collectionViewSection.configure(owner: self)
             compositionalLayoutSections.append(collectionViewSection)
-            collectionView.updatecollectionViewCompositionalLayout(for: self)
+            collectionView.updateCollectionViewCompositionalLayout(for: self)
         }.store(in: &viewModel.cancellableSet)
     }
 }

@@ -79,3 +79,7 @@
 "category.subtitle" = "Gadget";
 //
 "product.description" = "Description Product";
+//
+"store.followers" = "Followers";
+"store.product" = "Product";
+"store.join" = "Join";

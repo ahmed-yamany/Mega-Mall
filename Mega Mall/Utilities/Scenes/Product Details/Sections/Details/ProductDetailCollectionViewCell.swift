@@ -40,7 +40,9 @@ class ProductDetailCollectionViewCell: UICollectionViewCell, CompositionalLayout
         reviewLabel.text = "\(product.review)"
         reviewCountLabel.text = "\(product.reviewCount) Reviews"
         availabilityView.configure(with: .init(availableCount: product.availableCount))
+        ///
         storeView.configure(with: product.store)
+        ///
         descriptionLabel.text = product.description
     }
 }
@@ -52,6 +54,6 @@ private extension ProductDetailCollectionViewCell {
         section.update(imagesCollectionView, withItems: [UIImage(named: product.image),
                                                          UIImage(named: product.image)])
         compositionalLayoutSections.append(section)
-        imagesCollectionView.updatecollectionViewCompositionalLayout(for: self)
+        imagesCollectionView.updateCollectionViewCompositionalLayout(for: self)
     }
 }

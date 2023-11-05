@@ -15,7 +15,7 @@ class TabBarViewController: AnimatableTabBarController {
     // MARK: - View Controllers
     //
     let homeVC = MegaNavigationController(rootViewController: HomeViewController())
-    let wishlistVC = WishListViewController()
+    let wishlistVC = MegaNavigationController(rootViewController: WishListViewController())
     let orderVC = OrderViewController()
     let accountVC = AccountViewController()
     // MARK: - Properties

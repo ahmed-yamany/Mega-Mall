@@ -38,7 +38,7 @@ extension UICollectionView {
         // Then call this method
         collectionView.updateCollectionViewCompositionalLayout(with: layoutProvider)
      */
-    public func updatecollectionViewCompositionalLayout(for provider: CompositionalLayoutProvider) {
+    public func updateCollectionViewCompositionalLayout(for provider: CompositionalLayoutProvider) {
         // Register cells and supplementary views defined by the provider
         provider.registerCells(for: self)
         provider.registerSupplementaryViews(for: self)

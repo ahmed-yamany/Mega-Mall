@@ -37,7 +37,7 @@ private extension ProductActionViewController {
 // MARK: Actions
 private extension ProductActionViewController {
     func addToWishlistAction() {
-        print("product added to wishlist")
+        TabBarViewModel.shared.whishies.append(product)
         dismiss(animated: true)
     }
     func shareAction() {

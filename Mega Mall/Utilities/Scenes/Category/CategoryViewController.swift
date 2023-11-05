@@ -50,7 +50,7 @@ class CategoryViewController: UIViewController, CompositionalLayoutProvider {
                                             bottomViewModel: .init(title: "Filter & Sorting",
                                                                    target: self, action: #selector(filterButtonAction)))
             //
-            collectionView.updatecollectionViewCompositionalLayout(for: self)
+            collectionView.updateCollectionViewCompositionalLayout(for: self)
         }.store(in: &viewModel.cancellableSet)
     }
 }

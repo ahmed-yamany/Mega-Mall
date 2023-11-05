@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StoreDetailCollectionViewCell" customModule="Mega_Mall" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="374"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="374"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="a36-so-1iW">
+                        <rect key="frame" x="0.0" y="0.0" width="413" height="374"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yv2-pO-Wxv">
+                                <rect key="frame" x="0.0" y="0.0" width="413" height="273.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yamany" translatesAutoresizingMaskIntoConstraints="NO" id="CQC-Ht-ZoU">
+                                        <rect key="frame" x="0.0" y="114.33333333333331" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="dfW-bD-1i4"/>
+                                            <constraint firstAttribute="height" constant="45" id="o3R-4i-X41"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2ee-xa-ezX">
+                                        <rect key="frame" x="65" y="101.66666666666669" width="348" height="70.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="735-qg-xQy">
+                                                <rect key="frame" x="0.0" y="0.0" width="284" height="70.333333333333329"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbC-nI-6Kq" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="heM-Om-deL">
+                                                        <rect key="frame" x="0.0" y="20.333333333333329" width="284" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-iE-iGA" customClass="RegularLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="14.666666666666655" width="41.333333333333336" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.shield.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Oqc-dS-ydv">
+                                                                <rect key="frame" x="45.333333333333329" y="15.999999999999996" width="20" height="18.333333333333332"/>
+                                                                <color key="tintColor" name="Mega-Primary-BlueOcean"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="9GH-6i-CAZ"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="Wd9-RI-fhg"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nff-Xc-JIQ">
+                                                                <rect key="frame" x="69.333333333333357" y="0.0" width="214.66666666666663" height="50"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o6T-MX-mo3">
+                                                <rect key="frame" x="304" y="28.333333333333325" width="44" height="13.333333333333332"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="M0K-OU-u1z">
+                                                        <rect key="frame" x="2.6666666666666856" y="0.0" width="38.666666666666664" height="13.333333333333334"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qte-dh-l7f">
+                                                                <rect key="frame" x="0.0" y="1.333333333333325" width="10" height="9.6666666666666661"/>
+                                                                <color key="tintColor" name="Mega-Primary-OrangeFresh"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="10" id="ABp-7e-MPl"/>
+                                                                    <constraint firstAttribute="width" constant="10" id="geP-OT-ZSd"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av5-Nt-uqn" customClass="RegularLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                                <rect key="frame" x="10.000000000000002" y="0.0" width="28.666666666666671" height="13.333333333333334"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="IF6-dP-VEh"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CKP-hb-IXO">
+                                <rect key="frame" x="0.0" y="289.33333333333331" width="413" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mega-tag" translatesAutoresizingMaskIntoConstraints="NO" id="qw0-df-GyX">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="9vP-vv-y7r"/>
+                                            <constraint firstAttribute="height" constant="20" id="vjp-zx-4E9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEx-Eo-Yl4" customClass="RegularLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="0.0" width="381" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zxg-Gx-b8o">
+                                <rect key="frame" x="0.0" y="325.33333333333331" width="413" height="48.666666666666686"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xek-a9-h5f">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.33333333333334" height="48.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sno-Iw-LLP" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                <rect key="frame" x="45.666666666666657" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Mega-Secondary-DarkGray"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="store.followers"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imm-nF-qwc" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                <rect key="frame" x="45.666666666666657" y="28.333333333333371" width="41.333333333333343" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fL7-ss-cYR">
+                                        <rect key="frame" x="140.33333333333331" y="0.0" width="132.33333333333331" height="48.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOr-53-Z1s" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                <rect key="frame" x="45.666666666666657" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Mega-Secondary-DarkGray"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="store.product"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY7-gY-imD" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                <rect key="frame" x="45.666666666666657" y="28.333333333333371" width="41.333333333333343" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fus-gg-ff6">
+                                        <rect key="frame" x="280.66666666666669" y="0.0" width="132.33333333333331" height="48.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-Ht-F1U" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                <rect key="frame" x="45.666666666666629" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Mega-Secondary-DarkGray"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="store.join"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kam-Ql-f6V" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
+                                                <rect key="frame" x="45.666666666666629" y="28.333333333333371" width="41.333333333333343" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Mega-Primary-NavyBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="a36-so-1iW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7VD-BP-y19"/>
+                <constraint firstAttribute="bottom" secondItem="a36-so-1iW" secondAttribute="bottom" id="D0U-AS-SBp"/>
+                <constraint firstItem="a36-so-1iW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pmB-fa-wiy"/>
+                <constraint firstAttribute="trailing" secondItem="a36-so-1iW" secondAttribute="trailing" id="rj0-6V-obd"/>
+            </constraints>
+            <size key="customSize" width="413" height="374"/>
+            <connections>
+                <outlet property="followersLabel" destination="imm-nF-qwc" id="xgC-Q4-www"/>
+                <outlet property="imageView" destination="CQC-Ht-ZoU" id="dVP-MH-4On"/>
+                <outlet property="joinDateLabel" destination="kam-Ql-f6V" id="y7z-mX-M12"/>
+                <outlet property="locationLabel" destination="jEx-Eo-Yl4" id="7c3-SA-say"/>
+                <outlet property="nameLabel" destination="TbC-nI-6Kq" id="ISm-sC-CVo"/>
+                <outlet property="productLabel" destination="GY7-gY-imD" id="t5y-JN-UqB"/>
+                <outlet property="rateLabel" destination="av5-Nt-uqn" id="fFb-Ao-fPx"/>
+                <outlet property="verifyLabel" destination="HS1-iE-iGA" id="hSO-DB-RNp"/>
+            </connections>
+            <point key="canvasLocation" x="329.00763358778624" y="133.80281690140845"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark.shield.fill" catalog="system" width="128" height="119"/>
+        <image name="mega-tag" width="20" height="20"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="yamany" width="750" height="1000"/>
+        <namedColor name="Mega-Primary-BlueOcean">
+            <color red="0.21176470588235294" green="0.41176470588235292" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mega-Primary-NavyBlack">
+            <color red="0.047058823529411764" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mega-Primary-OrangeFresh">
+            <color red="1" green="0.75686274509803919" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mega-Secondary-DarkGray">
+            <color red="0.51372549019607838" green="0.52156862745098043" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

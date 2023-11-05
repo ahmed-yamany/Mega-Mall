@@ -199,6 +199,14 @@ internal enum L10n {
       internal static let wishlist = L10n.tr("Localizable", "product.action.wishlist", fallback: "Add To Wishlist")
     }
   }
+  internal enum Store {
+    /// Followers
+    internal static let followers = L10n.tr("Localizable", "store.followers", fallback: "Followers")
+    /// Join
+    internal static let join = L10n.tr("Localizable", "store.join", fallback: "Join")
+    /// Product
+    internal static let product = L10n.tr("Localizable", "store.product", fallback: "Product")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
