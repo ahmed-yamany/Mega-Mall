@@ -83,3 +83,7 @@
 "store.followers" = "Followers";
 "store.product" = "Product";
 "store.join" = "Join";
+//
+"account.logout.title" = "Do you realy want to logout ?";
+"account.logout.button" = "Yes Logout";
+"account.logout.cancel" = "No Cancel";

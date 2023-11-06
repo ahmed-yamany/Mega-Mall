@@ -18,6 +18,16 @@ internal enum L10n {
       internal static let title = L10n.tr("Localizable", "News.detail.title", fallback: "Detail news")
     }
   }
+  internal enum Account {
+    internal enum Logout {
+      /// Yes Logout
+      internal static let button = L10n.tr("Localizable", "account.logout.button", fallback: "Yes Logout")
+      /// No Cancel
+      internal static let cancel = L10n.tr("Localizable", "account.logout.cancel", fallback: "No Cancel")
+      /// Do you realy want to logout ?
+      internal static let title = L10n.tr("Localizable", "account.logout.title", fallback: "Do you realy want to logout ?")
+    }
+  }
   internal enum App {
     /// Mega Mall
     internal static let name = L10n.tr("Localizable", "app.name", fallback: "Mega Mall")

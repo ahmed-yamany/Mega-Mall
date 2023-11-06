@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountViewController" customModule="Mega_Mall" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="QnN-sw-NCO" id="YUx-x4-Elr"/>
+                <outlet property="userProfileImage" destination="EQt-9P-Dad" id="ZEa-6w-Qqj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yamany" translatesAutoresizingMaskIntoConstraints="NO" id="EQt-9P-Dad">
+                    <rect key="frame" x="121.66666666666669" y="71" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="0Wz-dX-eZ2"/>
+                        <constraint firstAttribute="width" constant="150" id="2BX-p2-4gK"/>
+                    </constraints>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QnN-sw-NCO">
+                    <rect key="frame" x="0.0" y="233" width="393" height="585"/>
+                    <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vio-k7-p18">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQS-xO-iWb">
+                    <rect key="frame" x="238.66666666666666" y="188" width="24.999999999999972" height="25"/>
+                    <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="mg9-zY-B3d"/>
+                        <constraint firstAttribute="width" constant="25" id="taw-2M-Nxd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="tintColor" name="Mega-Primary-BlueOcean"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="plus" catalog="system"/>
+                    <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                            <real key="value" value="12.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="updateProfileImageButtonDidTapped:" destination="-1" eventType="touchUpInside" id="WgY-it-pFo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
+            <constraints>
+                <constraint firstItem="MQS-xO-iWb" firstAttribute="bottom" secondItem="EQt-9P-Dad" secondAttribute="bottom" constant="-8" id="2xN-bL-buW"/>
+                <constraint firstItem="QnN-sw-NCO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="746-Vh-vz3"/>
+                <constraint firstItem="EQt-9P-Dad" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="9E1-RR-pz9"/>
+                <constraint firstItem="MQS-xO-iWb" firstAttribute="trailing" secondItem="EQt-9P-Dad" secondAttribute="trailing" constant="-8" id="EfE-Zu-6AT"/>
+                <constraint firstItem="EQt-9P-Dad" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d4d-ol-38W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QnN-sw-NCO" secondAttribute="trailing" id="fFn-0f-X67"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QnN-sw-NCO" secondAttribute="bottom" id="pJw-rC-0kg"/>
+                <constraint firstItem="QnN-sw-NCO" firstAttribute="top" secondItem="EQt-9P-Dad" secondAttribute="bottom" constant="12" id="yBB-lH-KsK"/>
+            </constraints>
+            <point key="canvasLocation" x="62" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="yamany" width="750" height="1000"/>
+        <namedColor name="Mega-Primary-BlueOcean">
+            <color red="0.21176470588235294" green="0.41176470588235292" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mega-Primary-PureWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

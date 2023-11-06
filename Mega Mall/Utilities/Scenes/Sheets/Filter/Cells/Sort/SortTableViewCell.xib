@@ -46,6 +46,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
             <connections>
                 <outlet property="selectedImageView" destination="NU1-DA-pyj" id="eeV-QM-FOJ"/>
                 <outlet property="titleLabel" destination="78R-IL-d8E" id="tfh-rD-U1X"/>
@@ -57,6 +58,9 @@
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="Mega-Primary-NavyBlack">
             <color red="0.047058823529411764" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mega-Primary-PureWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Mega-Secondary-EarthGreen">
             <color red="0.22745098039215686" green="0.60784313725490191" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -19,7 +19,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         TabBarViewModel.shared.isLogin = login ?? false
-//        login = false
         window.rootViewController = TabBarViewController()
         window.makeKeyAndVisible()
         self.window = window

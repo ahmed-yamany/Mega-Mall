@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 import ViewAnimator
+import Extensions
 
 enum TabBarItems: Int {
     case home = 0
@@ -16,7 +17,9 @@ enum TabBarItems: Int {
 
 class TabBarViewModel: ObservableObject {
     static let shared = TabBarViewModel()
-    //
+    ///
+    @UserDefault<Bool>(key: \.login) var login
+    ///
     @Published var selectedItem: TabBarItems = .home
     @Published var tabBarIsHidden: Bool = false
     @Published var isLogin: Bool = false
@@ -31,5 +34,14 @@ class TabBarViewModel: ObservableObject {
     private init() {
         animationConfigurations.animationScope = .image
         animationConfigurations.animatenWhileSelected = true
+    }
+    ///
+    func logout() {
+        selectedItem = .home
+        isLogin = false
+        login = false
+        cart.removeAll()
+        whishies.removeAll()
+        notifications.removeAll()
     }
 }

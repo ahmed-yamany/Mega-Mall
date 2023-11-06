@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <g id="cogwheel" transform="translate(0.5 0.5)">
+    <circle id="Ellipse_67" data-name="Ellipse 67" cx="2.5" cy="2.5" r="2.5" transform="translate(5.5 5.5)" fill="none" stroke="#1e1e1e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_2050" data-name="Path 2050" d="M15.5,9V7l-2.177-.363a5.463,5.463,0,0,0-.6-1.437l1.283-1.8L12.6,1.99,10.8,3.272a5.463,5.463,0,0,0-1.437-.6L9,.5H7L6.637,2.677a5.463,5.463,0,0,0-1.437.6L3.4,1.99,1.99,3.4,3.272,5.2a5.463,5.463,0,0,0-.6,1.437L.5,7V9l2.177.363a5.463,5.463,0,0,0,.6,1.437L1.99,12.6,3.4,14.01l1.8-1.282a5.463,5.463,0,0,0,1.437.6L7,15.5H9l.363-2.177a5.463,5.463,0,0,0,1.437-.6l1.8,1.283L14.01,12.6l-1.282-1.8a5.463,5.463,0,0,0,.6-1.437Z" fill="none" stroke="#1e1e1e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
