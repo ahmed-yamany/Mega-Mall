@@ -11,7 +11,7 @@ import Factory
 import ViewAnimator
 import MakeConstraints
 
-class TabBarViewController: AnimatableTabBarController {
+class TabBarViewController: UITabBarSelectionController {
     // MARK: - View Controllers
     //
     let homeVC = MegaNavigationController(rootViewController: HomeViewController())
@@ -20,15 +20,22 @@ class TabBarViewController: AnimatableTabBarController {
     let accountVC = MegaNavigationController(rootViewController: AccountViewController())
     // MARK: - Properties
     //
-    let viewModel = TabBarViewModel.shared
+    let viewModel: TabBarViewModel
     // stores the last selected item to back to whenever wanted
     private var lastItem: UITabBarItem?
+    //
+    init(viewModel: TabBarViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
     // MARK: - Lifecycle
     //
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
-        configurations = viewModel.animationConfigurations
         subscribeSelectedItem()
         subscribeIsLogin()
         subscribeTabBarIsHidden()
@@ -39,17 +46,16 @@ class TabBarViewController: AnimatableTabBarController {
         super.tabBar(tabBar, didSelect: item)
         handelWhenUserTappedAccount(item)
     }
-    // animates a specific tab bar item.
-    override func animate(_ view: UIView, at item: UITabBarItem) {
+    override func tabBarDidSelect(_ tabBar: UITabBar, item: UITabBarItem, imageView: UIImageView) {
         switch item.tag {
         case TabBarItems.wishlist.rawValue:
-            view.animate(animations: [AnimationType.zoom(scale: 1.4)])
+            imageView.animate(animations: [AnimationType.zoom(scale: 1.4)])
         case TabBarItems.order.rawValue:
-            view.animate(animations: [AnimationType.rotate(angle: -30)])
+            imageView.animate(animations: [AnimationType.rotate(angle: -30)])
         case TabBarItems.account.rawValue:
-            view.animate(animations: [AnimationType.zoom(scale: 0.7)])
+            imageView.animate(animations: [AnimationType.zoom(scale: 0.7)])
         case TabBarItems.home.rawValue:
-            view.animate(animations: [AnimationType.vector(.init(dx: 1.4, dy: 1.4))])
+            imageView.animate(animations: [AnimationType.vector(.init(dx: 1.4, dy: 1.4))])
         default: break
         }
     }

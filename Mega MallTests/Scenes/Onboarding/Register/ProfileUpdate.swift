@@ -18,6 +18,7 @@ final class ProfileUpdate: XCTestCase {
         viewController = nil
     }
     func test_outletsConnected() {
+        XCTAssertNotNil(viewController.viewModel)
         XCTAssertNotNil(viewController.descriptionView)
         XCTAssertNotNil(viewController.fullNameTextFieldView)
         XCTAssertNotNil(viewController.passwordTextFieldView)

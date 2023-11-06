@@ -62,6 +62,8 @@
 		EE83AD912AE3FC3D00E40FF1 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD8F2AE3FC3D00E40FF1 /* OnboardingTextField.swift */; };
 		EE83AD922AE3FC3D00E40FF1 /* OnboardingTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */; };
 		EE83AD952AE3FD3800E40FF1 /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD942AE3FD3800E40FF1 /* Extensions */; };
+		EE8A53022AF97D220029191A /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A53012AF97D220029191A /* UserDefaultsKeys.swift */; };
+		EE8A53042AF97D5A0029191A /* LoggingCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A53032AF97D5A0029191A /* LoggingCategories.swift */; };
 		EE8C1BB92AF3E71000AA5094 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C1BB62AF3E71000AA5094 /* FilterViewController.swift */; };
 		EE8C1BBA2AF3E71000AA5094 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C1BB72AF3E71000AA5094 /* FilterViewModel.swift */; };
 		EE8C1BBD2AF3E93E00AA5094 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C1BBB2AF3E93E00AA5094 /* FilterView.swift */; };
@@ -91,6 +93,7 @@
 		EE972A632AF00E8500F5E9A6 /* ProductActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE972A612AF00E8500F5E9A6 /* ProductActionView.xib */; };
 		EE972A652AF01EAF00F5E9A6 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE972A642AF01EAF00F5E9A6 /* OrderModel.swift */; };
 		EE972A6A2AF0225000F5E9A6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE972A692AF0225000F5E9A6 /* Notification.swift */; };
+		EE980DFC2AF9346500BADE2D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE980DFB2AF9346500BADE2D /* Coordinator.swift */; };
 		EEA0EF6A2AE7DEAE0018383D /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0EF672AE7DEAE0018383D /* LoginViewModelType.swift */; };
 		EEA5A5572AF6D9E300FCCD88 /* ProductDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5A5542AF6D9E300FCCD88 /* ProductDetailCollectionViewCell.swift */; };
 		EEA5A5582AF6D9E300FCCD88 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5A5552AF6D9E300FCCD88 /* ProductDetail.swift */; };
@@ -161,8 +164,6 @@
 		EEE0D8B22AEC1E0100187CF8 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE0D8AF2AEC1E0100187CF8 /* NewsCollectionViewCell.swift */; };
 		EEE0D8B32AEC1E0100187CF8 /* NewsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE0D8B02AEC1E0100187CF8 /* NewsSection.swift */; };
 		EEE0D8B42AEC1E0100187CF8 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE0D8B12AEC1E0100187CF8 /* NewsCollectionViewCell.xib */; };
-		EEE19DF42AE6727100A132E1 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE19DF22AE6727100A132E1 /* OTPTextField.swift */; };
-		EEE19DF72AE689C100A132E1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE19DF62AE689C100A132E1 /* Logger.swift */; };
 		EEE3607F2AEE89D500FAF8EE /* LoginAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE3607D2AEE89D500FAF8EE /* LoginAlertViewController.swift */; };
 		EEE7BE2E2AE7F487006C0460 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE7BE2D2AE7F487006C0460 /* Login.swift */; };
 		EEECB3472AE3B51800549C83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEECB3492AE3B51800549C83 /* Localizable.strings */; };
@@ -245,6 +246,8 @@
 		EE83AD8A2AE3F7C600E40FF1 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		EE83AD8F2AE3FC3D00E40FF1 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
 		EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingTextField.xib; sourceTree = "<group>"; };
+		EE8A53012AF97D220029191A /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		EE8A53032AF97D5A0029191A /* LoggingCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingCategories.swift; sourceTree = "<group>"; };
 		EE8C1BB62AF3E71000AA5094 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		EE8C1BB72AF3E71000AA5094 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		EE8C1BBB2AF3E93E00AA5094 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
@@ -274,6 +277,7 @@
 		EE972A612AF00E8500F5E9A6 /* ProductActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductActionView.xib; sourceTree = "<group>"; };
 		EE972A642AF01EAF00F5E9A6 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		EE972A692AF0225000F5E9A6 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		EE980DFB2AF9346500BADE2D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EEA0EF672AE7DEAE0018383D /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		EEA5A5542AF6D9E300FCCD88 /* ProductDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		EEA5A5552AF6D9E300FCCD88 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
@@ -344,8 +348,6 @@
 		EEE0D8AF2AEC1E0100187CF8 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EEE0D8B02AEC1E0100187CF8 /* NewsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSection.swift; sourceTree = "<group>"; };
 		EEE0D8B12AEC1E0100187CF8 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
-		EEE19DF22AE6727100A132E1 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
-		EEE19DF62AE689C100A132E1 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EEE3607D2AEE89D500FAF8EE /* LoginAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertViewController.swift; sourceTree = "<group>"; };
 		EEE7BE202AE7F3F5006C0460 /* Mega MallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mega MallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE7BE2D2AE7F487006C0460 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Login.swift; path = "Mega Mall/Utilities/Scenes/Onboarding/Login.swift"; sourceTree = SOURCE_ROOT; };
@@ -531,7 +533,6 @@
 				EE4F94B12AEECEB50023F87B /* SheetViewController */,
 				EE707AC62AED682E00813309 /* CollectionReusableView */,
 				EEA9045B2AEBFCF000C43637 /* SupplementaryViews */,
-				EEE19DF22AE6727100A132E1 /* OTPTextField.swift */,
 				EEB009572AEA9D350032A287 /* SearchTextField.swift */,
 				EE0C8D7F2AEAB5120019B7FA /* MegaNavigationController.swift */,
 				EE8EF6782AF689EE0042CD0E /* CustomSegmentControl.swift */,
@@ -555,6 +556,7 @@
 		EE83AD5A2AE3D56E00E40FF1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EE980DFB2AF9346500BADE2D /* Coordinator.swift */,
 				EE83AD5B2AE3E08D00E40FF1 /* Onboarding */,
 				EEC988F12AE917A900675F6C /* TabBar */,
 				EE95008E2AF2921E00DB97B7 /* Sheets */,
@@ -634,6 +636,15 @@
 				EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */,
 			);
 			path = "Onboarding TextField";
+			sourceTree = "<group>";
+		};
+		EE8A52FF2AF97D0D0029191A /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				EE8A53012AF97D220029191A /* UserDefaultsKeys.swift */,
+				EE8A53032AF97D5A0029191A /* LoggingCategories.swift */,
+			);
+			path = Extenstions;
 			sourceTree = "<group>";
 		};
 		EE8C1BAE2AF3E6E500AA5094 /* Filter */ = {
@@ -734,6 +745,13 @@
 				EE972A692AF0225000F5E9A6 /* Notification.swift */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		EE980DFD2AF9407500BADE2D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		EEA5A5532AF6D9D100FCCD88 /* Sections */ = {
@@ -1022,7 +1040,7 @@
 		EECEA2C52AE3ADE8009B2FD9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				EEE19DF62AE689C100A132E1 /* Logger.swift */,
+				EE8A52FF2AF97D0D0029191A /* Extenstions */,
 				EE83AD482AE3D14A00E40FF1 /* Custom Views */,
 				EE83AD5A2AE3D56E00E40FF1 /* Scenes */,
 			);
@@ -1052,8 +1070,8 @@
 		EECF080E2AE838ED00E77E2E /* ProfileUpdate */ = {
 			isa = PBXGroup;
 			children = (
-				EECF08102AE8394A00E77E2E /* ProfileUpdateViewController.swift */,
 				EECF08112AE8394A00E77E2E /* ProfileUpdateViewModel.swift */,
+				EECF08102AE8394A00E77E2E /* ProfileUpdateViewController.swift */,
 				EECF08122AE8394A00E77E2E /* ProfileUpdateViewController.xib */,
 			);
 			path = ProfileUpdate;
@@ -1082,6 +1100,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE7BE2C2AE7F47A006C0460 /* Onboarding */,
+				EE980DFD2AF9407500BADE2D /* TabBar */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1408,13 +1427,13 @@
 				EE3061F32AED2FD600F4DC42 /* OfferModel.swift in Sources */,
 				EE945D682AE50DE10013DF0B /* RegisterViewModel.swift in Sources */,
 				EEB009532AEA9CC50032A287 /* HomeViewController.swift in Sources */,
+				EE8A53022AF97D220029191A /* UserDefaultsKeys.swift in Sources */,
 				EEFC0A532AF92B4500670BF6 /* LogoutView.swift in Sources */,
 				EE83AD432AE3C4A900E40FF1 /* UIFont+Style.swift in Sources */,
 				EEA0EF6A2AE7DEAE0018383D /* LoginViewModelType.swift in Sources */,
 				EEAF382C2AF1487E00F588AF /* DetailNewsViewModelType.swift in Sources */,
 				EEB35C6F2AF7C9EF001A7371 /* StoreDetailCollectionViewCell.swift in Sources */,
 				EE707AC82AED684800813309 /* SectionDecorationView.swift in Sources */,
-				EEE19DF42AE6727100A132E1 /* OTPTextField.swift in Sources */,
 				EEC8E7E12AF71C0400A7C1AD /* Store.swift in Sources */,
 				EEC8E7FB2AF7387800A7C1AD /* WishlistButton.swift in Sources */,
 				EE8C1BBD2AF3E93E00AA5094 /* FilterView.swift in Sources */,
@@ -1422,13 +1441,14 @@
 				EECEA2982AE3AC3E009B2FD9 /* SceneDelegate.swift in Sources */,
 				EECF080C2AE82DE900E77E2E /* UpdatePasswordViewModel.swift in Sources */,
 				EE8C1BB92AF3E71000AA5094 /* FilterViewController.swift in Sources */,
+				EE8A53042AF97D5A0029191A /* LoggingCategories.swift in Sources */,
 				EEA904672AEC117A00C43637 /* OfferSection.swift in Sources */,
+				EE980DFC2AF9346500BADE2D /* Coordinator.swift in Sources */,
 				EE945D7A2AE51B310013DF0B /* ResetPasswordViewModel.swift in Sources */,
 				EEC8E7EA2AF72B3700A7C1AD /* Review.swift in Sources */,
 				EE4F94BC2AEEDB7B0023F87B /* AllCategoriesViewController.swift in Sources */,
 				EE945D792AE51B310013DF0B /* ResetPasswordViewController.swift in Sources */,
 				EE945D702AE51A3C0013DF0B /* VerificationViewController.swift in Sources */,
-				EEE19DF72AE689C100A132E1 /* Logger.swift in Sources */,
 				EEAF382E2AF1487E00F588AF /* DetailNewsViewModel.swift in Sources */,
 				EE945D672AE50DE10013DF0B /* RegisterViewController.swift in Sources */,
 				EEAF38242AF1378000F588AF /* AllNewsViewController.swift in Sources */,

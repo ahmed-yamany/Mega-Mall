@@ -34,7 +34,7 @@ extension LoginAlertViewController {
             UIApplication
                 .shared
                 .mainWindow?
-                .rootViewController = MegaNavigationController(rootViewController: LoginViewController())
+                .rootViewController = Coordinator.shared.login()
         })
     }
 }

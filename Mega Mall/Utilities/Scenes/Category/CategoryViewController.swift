@@ -1,5 +1,6 @@
 import UIKit
 import CompositionalLayoutableSection
+import Extensions
 
 class CategoryViewController: UIViewController, CompositionalLayoutProvider {
     // MARK: - Outlets

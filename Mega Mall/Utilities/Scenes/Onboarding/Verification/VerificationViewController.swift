@@ -1,12 +1,13 @@
 import UIKit
 import Factory
+import Extensions
 
 class VerificationViewController: UIViewController {
     // MARK: Outlets
-    //
     @IBOutlet weak private(set) var descriptionView: DescriptionView!
     @IBOutlet weak private(set) var otpTextfField: OTPTextField!
     @IBOutlet weak private(set) var continueButton: PrimaryButton!
+    //
     // MARK: - Properties
     private(set) var viewModel: VerificationViewModel
     // MARK: - Init
@@ -14,25 +15,42 @@ class VerificationViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
+    ///
     required init?(coder: NSCoder) {
         fatalError("failed to inirialder Verification View Controller from coder")
     }
     // MARK: - Lifecycle
+    //
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    ///
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
+        ///
         subscribeToOTPCode()
+    }
+}
+extension VerificationViewController: OTPTextFieldDataSource {
+    func createDigitLabel() -> UILabel {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font =  .h3
+        label.text = "_"
+        label.backgroundColor = .megaSecondarySoftGray
+        label.layerCornerRadius = 8
+        return label
     }
 }
 //
 // MARK: - Actions
 extension VerificationViewController {
     @IBAction func continueButtonTapped(_ sender: PrimaryButton) {
-        let viewController = viewModel.verificationType == .register ?
-        ProfileUpdateViewController() : UpdatePasswordViewController()
+        let viewController = switch viewModel.verificationType {
+                             case .register: Coordinator.shared.profileUpdate()
+                             case .forgotPassword: Coordinator.shared.updatePassword() }
+        ///
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -44,7 +62,10 @@ extension VerificationViewController {
         descriptionView.configure(with: .init(title: L10n.Onboarding.Verification.Decription.title,
                                               subtitle: descriptionViewSubtitle,
                                               buttonTitle: L10n.Onboarding.change))
-        otpTextfField.configure(with: viewModel.codeCount)
+        ///
+        otpTextfField.dataSource = self
+        let otpViewModel = OTPTextField.ViewModel(slotCount: viewModel.codeCount)
+        otpTextfField.configure(with: otpViewModel)
     }
 }
 //

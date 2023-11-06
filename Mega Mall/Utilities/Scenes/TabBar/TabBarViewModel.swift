@@ -23,7 +23,6 @@ class TabBarViewModel: ObservableObject {
     @Published var selectedItem: TabBarItems = .home
     @Published var tabBarIsHidden: Bool = false
     @Published var isLogin: Bool = false
-    @Published var animationConfigurations = AnimatableTabBarConfigurations()
     @Published var cart: [Product] = []
     @Published var orders: [Order] = []
     @Published var whishies: [Product] = []
@@ -32,8 +31,6 @@ class TabBarViewModel: ObservableObject {
     var cancellableSet: Set<AnyCancellable> = .init()
     //
     private init() {
-        animationConfigurations.animationScope = .image
-        animationConfigurations.animatenWhileSelected = true
     }
     ///
     func logout() {

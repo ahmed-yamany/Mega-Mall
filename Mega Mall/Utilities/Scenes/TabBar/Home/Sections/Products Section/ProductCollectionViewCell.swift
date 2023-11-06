@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Extensions
 
 class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!

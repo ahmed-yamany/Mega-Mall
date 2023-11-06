@@ -2,13 +2,11 @@ import Foundation
 import os
 // swiftlint:disable all
 public final class LoggingCategories {
-    static let shared = LoggingCategories()
-    var `default`: String { "Default" }
+    public static let shared = LoggingCategories()
+    public var `default`: String { "Default" }
 }
-extension LoggingCategories {
-    var onboarding: String { "Onboarding" }
-    var home: String { "Home" }
-}
+
+@available(iOS 14.0, *)
 /// The Logging protocol defines a standardized way of logging messages in an application or system.
 public protocol Logging {
     func log(_ message: String,
@@ -18,8 +16,9 @@ public protocol Logging {
              function: StaticString,
              line: UInt)
 }
-class SystemLogger: Logging {
-    func log(_ message: String,
+@available(iOS 14.0, *)
+public class SystemLogger: Logging {
+    public func log(_ message: String,
              category: KeyPath<LoggingCategories, String>,
              level: OSLogType,
              file: StaticString,
@@ -27,16 +26,18 @@ class SystemLogger: Logging {
              line: UInt) {
         let logMessage = "\(file) - \(function) - \(line): \(message)"
         let categoryString = LoggingCategories.shared[keyPath: category]
-        os.Logger(subsystem: "com.Lepgo.Logger", category: categoryString).log(level: level, "\(logMessage)")        
+        let bundleID = Bundle.main.bundleIdentifier ?? ""
+        os.Logger(subsystem: "\(bundleID).Logger", category: categoryString).log(level: level, "\(logMessage)")
     }
 }
-final class Logger {
+@available(iOS 14.0, *)
+public final class Logger {
     private static let loggers: [Logging] = {
         // if in testing return empty array of logging
         if NSClassFromString("XCTest") != nil { return [] }
         return [ SystemLogger() ]
     }()
-    static func log(_ message: String,
+    public static func log(_ message: String,
                     category: KeyPath<LoggingCategories, String>,
                     level: OSLogType,
                     file: StaticString = #fileID,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Extensions
 
 class SheetViewController: UIViewController {
     // MARK: - Outlets

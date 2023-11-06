@@ -15,7 +15,7 @@ class OnboardingTextField: UIView {
     //
     @IBOutlet weak private(set) var label: MediumLabel!
     @IBOutlet weak private(set) var textfield: UITextField!
-    weak private(set) var viewModel: ViewModel?
+    weak private(set) var viewModel: ViewModel!
     // MARK: Init
     //
     override init(frame: CGRect) {

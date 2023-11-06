@@ -1,38 +1,21 @@
 import UIKit
 
 class UpdatePasswordViewController: UIViewController {
-    // MARK: Outlets
-    //
+    // MARK: - Outlets
     @IBOutlet weak var descriptionView: DescriptionView!
     @IBOutlet weak var passwordTextFieldView: OnboardingTextField!
     @IBOutlet weak var confirmPasswordTextFieldView: OnboardingTextField!
     @IBOutlet weak var updateButton: PrimaryButton!
-    // MARK: Properties
-    //
-    private let viewModel: UpdatePasswordViewModel
-    private let passwordViewModel = OnboardingTextField.ViewModel(model:
-            .init(label: L10n.Onboarding.UpdatePassword.Password.label,
-                  placeholder: L10n.Onboarding.UpdatePassword.Password.placeholder,
-                  securedTextField: true))
-    private let confirmPasswordViewModel = OnboardingTextField.ViewModel(model:
-            .init(label: L10n.Onboarding.UpdatePassword.ConfirmPassword.label,
-                  placeholder: L10n.Onboarding.UpdatePassword.ConfirmPassword.placeholder,
-                  securedTextField: true))
-    // MARK: Init
-    //
-    init() {
-        viewModel = UpdatePasswordViewModel(passwordViewModel: passwordViewModel,
-                                            confirmPasswordViewModel: confirmPasswordViewModel)
-        super.init(nibName: nil, bundle: nil)
-    }
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    // MARK: Lifecycle
-    //
+    // MARK: - Properties
+    private(set) var viewModel: UpdatePasswordViewModel!
+    private lazy var descriptionViewModel = createDescriptionViewModel()
+    private lazy var passwordViewModel = createPasswordViewModel()
+    private lazy var confirmPasswordViewModel = createConfirmPasswordViewModel()
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = UpdatePasswordViewModel(passwordViewModel: passwordViewModel,
+                                            confirmPasswordViewModel: confirmPasswordViewModel)
         configureViews()
     }
 }
@@ -43,10 +26,11 @@ extension UpdatePasswordViewController {}
 // MARK: - Configurations
 extension UpdatePasswordViewController {
     private func configureViews() {
-        descriptionView.configure(with: .init(title: L10n.Onboarding.UpdatePassword.Decription.title,
-                                              subtitle: L10n.Onboarding.UpdatePassword.Decription.subtitle))
+        descriptionView.configure(with: descriptionViewModel)
+        //
         passwordTextFieldView.configure(with: passwordViewModel)
         confirmPasswordTextFieldView.configure(with: confirmPasswordViewModel)
+        //
         viewModel.enableButton
             .assign(to: \.isEnabled, on: updateButton)
             .store(in: &viewModel.cancellableSet)
@@ -54,4 +38,22 @@ extension UpdatePasswordViewController {
 }
 //
 // MARK: - Private Handlers
-private extension UpdatePasswordViewController {}
+private extension UpdatePasswordViewController {
+    func createDescriptionViewModel() -> DescriptionView.Model {
+        let title = L10n.Onboarding.UpdatePassword.Decription.title
+        let subtitle = L10n.Onboarding.UpdatePassword.Decription.subtitle
+        return .init(title: title, subtitle: subtitle)
+    }
+    //
+    func createPasswordViewModel() -> OnboardingTextField.ViewModel {
+        let title = L10n.Onboarding.UpdatePassword.Password.label
+        let placeholder = L10n.Onboarding.UpdatePassword.Password.placeholder
+        return OnboardingTextField.ViewModel(model: .init(label: title, placeholder: placeholder, securedTextField: true))
+    }
+    //
+    func createConfirmPasswordViewModel() -> OnboardingTextField.ViewModel {
+        let title = L10n.Onboarding.UpdatePassword.ConfirmPassword.label
+        let placeholder = L10n.Onboarding.UpdatePassword.ConfirmPassword.placeholder
+        return OnboardingTextField.ViewModel(model: .init(label: title, placeholder: placeholder, securedTextField: true))
+    }
+}

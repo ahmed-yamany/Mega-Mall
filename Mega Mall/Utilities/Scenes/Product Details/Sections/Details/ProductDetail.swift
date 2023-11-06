@@ -7,6 +7,7 @@
 
 import UIKit
 import CompositionalLayoutableSection
+import Extensions
 
 // MARK: - A custom section for displaying ProductDetail in a collection view.
 class ProductDetailCollectionViewSection: CompositionalLayoutableSection {

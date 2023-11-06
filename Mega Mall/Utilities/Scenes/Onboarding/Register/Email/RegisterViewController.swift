@@ -1,5 +1,5 @@
 import UIKit
-import Factory
+import Extensions
 
 class RegisterViewController: UIViewController {
     // MARK: Outlets
@@ -8,22 +8,14 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak private(set) var continueButton: PrimaryButton!
     //
     // MARK: Properties
-    private(set) var viewModel: RegisterViewModelType
-    var emailViewModel: OnboardingTextField.ViewModel = .init(model:
-            .init(label: L10n.Onboarding.Register.Email.label,
-                  placeholder: L10n.Onboarding.Register.Email.placeholder))
-    // MARK: - Init
-    init() {
-        self.viewModel = RegisterViewModel(emailViewModel: emailViewModel)
-        super.init(nibName: nil, bundle: nil)
-    }
-    required init?(coder: NSCoder) {
-        fatalError("failed to inirialder Verification View Controller from coder")
-    }
+    private(set) var viewModel: RegisterViewModelType!
+    private lazy var descriptionViewModel = createDescriptionView()
+    private lazy var emailViewModel = createEmailViewModel()
     //
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = RegisterViewModel(emailViewModel: emailViewModel)
         configureViews()
     }
 }
@@ -31,18 +23,18 @@ class RegisterViewController: UIViewController {
 // MARK: - Actions
 extension RegisterViewController {
     @IBAction func continueButtonTapped(_ sender: PrimaryButton) {
-        let verificationViewModel = VerificationViewModel(email: viewModel.emailViewModel.text, type: .register)
-        navigationController?.pushViewController(VerificationViewController(viewModel: verificationViewModel), animated: true)
+        navigateToVerification()
     }
 }
 //
 // MARK: - Configurations
 extension RegisterViewController {
     private func configureViews() {
-        descriptionView.configure(with: .init(title: L10n.Onboarding.Register.Email.Decription.title,
-                                              subtitle: L10n.Onboarding.Register.Email.Decription.subtitle))
+        descriptionView.configure(with: descriptionViewModel)
+        //
         emailTextFieldView.configure(with: viewModel.emailViewModel)
         emailTextFieldView.textfield.keyboardType = .emailAddress
+        //
         viewModel.enableButton
             .assign(to: \.isEnabled, on: continueButton)
             .store(in: &viewModel.cancellableSet)
@@ -50,4 +42,26 @@ extension RegisterViewController {
 }
 //
 // MARK: - Private Handlers
-private extension RegisterViewController {}
+private extension RegisterViewController {
+    func createDescriptionView() -> DescriptionView.Model {
+        let title = L10n.Onboarding.Register.Email.Decription.title
+        let subtitle = L10n.Onboarding.Register.Email.Decription.subtitle
+        return .init(title: title, subtitle: subtitle)
+    }
+    //
+    func createEmailViewModel() -> OnboardingTextField.ViewModel {
+        let title = L10n.Onboarding.Register.Email.label
+        let placeholder = L10n.Onboarding.Register.Email.placeholder
+        return .init(model: .init(label: title, placeholder: placeholder))
+    }
+    //
+    func navigateToVerification() {
+        if let navigationController {
+            let verificationVM = VerificationViewModel(email: viewModel.emailViewModel.text, type: .register)
+            let verificationVC = Coordinator.shared.verification(verificationVM)
+            navigationController.pushViewController(verificationVC, animated: true)
+        } else {
+            Logger.log("Failed to wrap navigation View", category: \.default, level: .fault)
+        }
+    }
+}

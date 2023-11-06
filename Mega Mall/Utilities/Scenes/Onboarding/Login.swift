@@ -9,7 +9,7 @@ import XCTest
 @testable import Mega_Mall
 
 final class Login: XCTestCase {
-    var viewController: LoginViewController?
+    var viewController: LoginViewController!
     override func setUpWithError() throws {
         viewController = LoginViewController()
         viewController?.loadViewIfNeeded()
@@ -18,12 +18,19 @@ final class Login: XCTestCase {
         viewController = nil
     }
     func test_outletsConnected() {
+        XCTAssertNotNil(viewController?.viewModel)
         XCTAssertNotNil(viewController?.descriptionView)
+        //
         XCTAssertNotNil(viewController?.emailTextFieldView)
+        XCTAssertNotNil(viewController?.emailTextFieldView.viewModel)
         XCTAssertNotNil(viewController?.passwordTextFieldView)
+        XCTAssertNotNil(viewController?.passwordTextFieldView.viewModel)
+        //
         XCTAssertNotNil(viewController?.signinButton)
+        //
         XCTAssertNotNil(viewController?.emailTextFieldView.label)
         XCTAssertNotNil(viewController?.emailTextFieldView.textfield)
+        //
         XCTAssertNotNil(viewController?.passwordTextFieldView.label)
         XCTAssertNotNil(viewController?.passwordTextFieldView.textfield)
     }
@@ -37,12 +44,14 @@ final class Login: XCTestCase {
         // Then
         XCTAssertNotNil(viewController?.emailTextFieldView.viewModel?.text)
         XCTAssertNotNil(viewController?.passwordTextFieldView.viewModel?.text)
+        //
         if let isEmpty = viewController?.emailTextFieldView.viewModel?.text.isEmpty {
             XCTAssertFalse(isEmpty)
         }
         if let isEmpty = viewController?.passwordTextFieldView.viewModel?.text.isEmpty {
             XCTAssertFalse(isEmpty)
         }
+        //
         XCTAssertEqual(viewController?.emailTextFieldView.viewModel?.text, "ahmed")
         XCTAssertEqual(viewController?.passwordTextFieldView.viewModel?.text, "ahmed")
     }

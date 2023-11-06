@@ -18,6 +18,7 @@ final class UpdatePassword: XCTestCase {
         viewController = nil
     }
     func test_outletsConnected() {
+        XCTAssertNotNil(viewController.viewModel)
         XCTAssertNotNil(viewController.descriptionView)
         XCTAssertNotNil(viewController.passwordTextFieldView)
         XCTAssertNotNil(viewController.confirmPasswordTextFieldView)
