@@ -92,8 +92,7 @@ private extension ProductDetailCollectionViewSection {
             return
         }
         ///
-        let viewModel = StoreViewModel(store: store)
-        let storeViewController = StoreViewController(viewModel: viewModel)
+        let storeViewController = Coordinator.shared.store(store)
         ///
         guard let navigationController =  self.viewController.navigationController else {
             Logger.log("failed to get navigationController ", category: \.default, level: .fault)

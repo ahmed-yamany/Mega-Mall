@@ -8,6 +8,7 @@
 import UIKit
 import CompositionalLayoutableSection
 import ViewAnimator
+import Extensions
 
 // MARK: - A custom section for displaying News in a collection view.
 class NewsCollectionViewSection: CompositionalLayoutableSection {
@@ -121,10 +122,16 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
             let news = items[indexPath.item]
-            let viewModel = DetailNewsViewModel(news: news)
-            let detailNewsVC = DetailNewsViewController(viewModel: viewModel)
-            viewController?.navigationController?.pushViewController(detailNewsVC, animated: true)
+            navigateTo(news)
         })
+    }
+    func navigateTo(_ news: News) {
+        let detailNewsVC = Coordinator.shared.newsDetail(news)
+        if let navigationController = viewController?.navigationController {
+            navigationController.pushViewController(detailNewsVC, animated: true)
+        } else {
+            Logger.log("Failed to get navigationController", category: \.default, level: .fault)
+        }
     }
 }
 

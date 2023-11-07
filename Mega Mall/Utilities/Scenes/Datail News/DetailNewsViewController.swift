@@ -4,12 +4,10 @@ import CompositionalLayoutableSection
 
 class DetailNewsViewController: UICollectionViewController, CompositionalLayoutProvider {
     // MARK: - Properties
-    private let viewModel: DetailNewsViewModelType
-    ///
+    private(set) var viewModel: DetailNewsViewModelType
     var compositionalLayoutSections: [CompositionalLayoutableSection] = []
-    //
-    lazy var delegate = CompositionalLayoutDelegate(provider: self)
-    lazy var dataSource = CompositionalLayoutDataSource(provider: self)
+    private(set) lazy var delegate = CompositionalLayoutDelegate(provider: self)
+    private(set) lazy var dataSource = CompositionalLayoutDataSource(provider: self)
     //
     // MARK: - Init
     init(viewModel: DetailNewsViewModelType) {
@@ -58,7 +56,12 @@ class DetailNewsViewController: UICollectionViewController, CompositionalLayoutP
 private extension DetailNewsViewController {
     @objc private func newsSectionBottomViewAction(_ sender: Any) {
         LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
-            navigationController?.pushViewController(AllNewsViewController(), animated: true)
+            if let navigationController {
+                let allNewsVC = Coordinator.shared.allNews()
+                navigationController.pushViewController(allNewsVC, animated: true)
+            } else {
+                Logger.log("Failed to wrap navigationController", category: \.default, level: .fault)
+            }
         })
     }
 }//
@@ -67,6 +70,9 @@ extension DetailNewsViewController {
     private func configureViews() {
         view.backgroundColor = .megaPrimaryPureWhite
         collectionView.backgroundColor = .megaPrimaryPureWhite
+        configureNavigationItem()
+    }
+    private func configureNavigationItem() {
         navigationItem.addTitleLabel(with: L10n.News.Detail.title, color: .megaPrimaryNavyBlack, font: .h3)
         let image = UIImage(systemName: "arrowshape.turn.up.forward")?.withTintColor(.megaPrimaryNavyBlack)
         let item = UIBarButtonItem(image: image, style: .done, target: nil, action: nil)

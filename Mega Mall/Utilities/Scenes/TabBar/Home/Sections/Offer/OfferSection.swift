@@ -15,7 +15,7 @@ class OfferCollectionViewSection: CompositionalLayoutableSection {
     typealias DecorationViewType = SectionDecorationView
     //
     var items: [ResposeType] = []
-    var viewController: UIViewController?
+    var viewController: UIViewController!
     override init() {
         super.init()
         delegate = self

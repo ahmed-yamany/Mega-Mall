@@ -75,3 +75,37 @@ extension Coordinator {
             .shared
     }
 }
+// MARK: - Home
+extension Coordinator {
+    var category: ParameterFactory<Category, UIViewController> {
+        self { category in
+            let categoryViewModel = CategoryViewModel(category: category)
+            return CategoryViewController(viewModel: categoryViewModel)
+        }
+    }
+    //
+    var product: ParameterFactory<Product, UIViewController> {
+        self { product in
+            let productDetailViewModel = ProductDetailsViewModel(product: product)
+            return ProductDetailsViewController(viewModel: productDetailViewModel)
+        }
+    }
+    //
+    var newsDetail: ParameterFactory<News, UIViewController> {
+        self { news in
+            let viewModel = DetailNewsViewModel(news: news)
+            return DetailNewsViewController(viewModel: viewModel)
+        }
+    }
+    //
+    var allNews: Factory<UIViewController> {
+        self { AllNewsViewController() }
+    }
+    //
+    var store: ParameterFactory<Store, UIViewController> {
+        self { store in
+            let viewModel = StoreViewModel(store: store)
+            return StoreViewController(viewModel: viewModel)
+        }
+    }
+}

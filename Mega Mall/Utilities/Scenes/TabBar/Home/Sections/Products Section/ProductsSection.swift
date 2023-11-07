@@ -8,6 +8,7 @@
 import UIKit
 import CompositionalLayoutableSection
 import ViewAnimator
+import Extensions
 
 // A custom section for displaying Products in a collection view.
 class ProductsCollectionViewSection: CompositionalLayoutableSection {
@@ -18,16 +19,17 @@ class ProductsCollectionViewSection: CompositionalLayoutableSection {
     typealias DecorationViewType = SectionDecorationView
     //
     var items: [ItemsType] = []
-    var viewController: UIViewController?
+    var viewController: UIViewController!
     var topViewModel: MegaCollectionReusableView.ViewModel?
     var bottomViewModel: ButtonCollectionReusableView.ViewModel?
-
+    //
     override init() {
         super.init()
         delegate = self
         dataSource = self
         layout = self
     }
+    //
     private var isConfigured = false
     public func configure(owner viewController: UIViewController,
                           topViewModel: MegaCollectionReusableView.ViewModel?=nil,
@@ -135,10 +137,18 @@ extension ProductsCollectionViewSection: CompositionalLayoutableSectionDelegate 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
             let product = items[indexPath.item]
-            let productDetailViewModel = ProductDetailsViewModel(product: product)
-            let productDetailViewController = ProductDetailsViewController(viewModel: productDetailViewModel)
-            viewController?.navigationController?.pushViewController(productDetailViewController, animated: true)
+            navigateTo(product)
         })
+    }
+    //
+    func navigateTo(_ product: Product) {
+        let productDetailVC = Coordinator.shared.product(product)
+        ///
+        if let navigationController = viewController.navigationController {
+            navigationController.pushViewController(productDetailVC, animated: true)
+        } else {
+            Logger.log("Failed to get navigationController", category: \.default, level: .fault)
+        }
     }
 }
 

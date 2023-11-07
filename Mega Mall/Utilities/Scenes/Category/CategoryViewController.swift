@@ -7,12 +7,12 @@ class CategoryViewController: UIViewController, CompositionalLayoutProvider {
     //
     @IBOutlet weak var collectionView: UICollectionView!
     // MARK: Properties
-    private let viewModel: CategoryViewModel
+    private(set) var viewModel: CategoryViewModel
     ///
     var compositionalLayoutSections: [CompositionalLayoutableSection] = []
     ///
-    lazy var delegte = CompositionalLayoutDelegate(provider: self)
-    lazy var dataSource = CompositionalLayoutDataSource(provider: self)
+    private(set) lazy var delegte = CompositionalLayoutDelegate(provider: self)
+    private(set) lazy var dataSource = CompositionalLayoutDataSource(provider: self)
     //
     // MARK: - Init
     init(viewModel: CategoryViewModel) {
@@ -49,7 +49,8 @@ class CategoryViewController: UIViewController, CompositionalLayoutProvider {
             collectionViewsection.update(collectionView, withItems: products)
             collectionViewsection.configure(owner: self,
                                             bottomViewModel: .init(title: "Filter & Sorting",
-                                                                   target: self, action: #selector(filterButtonAction)))
+                                                                   target: self,
+                                                                   action: #selector(filterButtonAction)))
             //
             collectionView.updateCollectionViewCompositionalLayout(for: self)
         }.store(in: &viewModel.cancellableSet)
