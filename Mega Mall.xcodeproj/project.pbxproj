@@ -64,6 +64,8 @@
 		EE83AD952AE3FD3800E40FF1 /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD942AE3FD3800E40FF1 /* Extensions */; };
 		EE8A53022AF97D220029191A /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A53012AF97D220029191A /* UserDefaultsKeys.swift */; };
 		EE8A53042AF97D5A0029191A /* LoggingCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A53032AF97D5A0029191A /* LoggingCategories.swift */; };
+		EE8A53062AF9BDAF0029191A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A53052AF9BDAF0029191A /* TabBarViewController.swift */; };
+		EE8A53092AF9D7780029191A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A53082AF9D7780029191A /* Home.swift */; };
 		EE8C1BB92AF3E71000AA5094 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C1BB62AF3E71000AA5094 /* FilterViewController.swift */; };
 		EE8C1BBA2AF3E71000AA5094 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C1BB72AF3E71000AA5094 /* FilterViewModel.swift */; };
 		EE8C1BBD2AF3E93E00AA5094 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C1BBB2AF3E93E00AA5094 /* FilterView.swift */; };
@@ -248,6 +250,8 @@
 		EE83AD902AE3FC3D00E40FF1 /* OnboardingTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingTextField.xib; sourceTree = "<group>"; };
 		EE8A53012AF97D220029191A /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		EE8A53032AF97D5A0029191A /* LoggingCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingCategories.swift; sourceTree = "<group>"; };
+		EE8A53052AF9BDAF0029191A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		EE8A53082AF9D7780029191A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EE8C1BB62AF3E71000AA5094 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		EE8C1BB72AF3E71000AA5094 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		EE8C1BBB2AF3E93E00AA5094 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
@@ -647,6 +651,14 @@
 			path = Extenstions;
 			sourceTree = "<group>";
 		};
+		EE8A53072AF9D65C0029191A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE8A53082AF9D7780029191A /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		EE8C1BAE2AF3E6E500AA5094 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +762,8 @@
 		EE980DFD2AF9407500BADE2D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				EE8A53052AF9BDAF0029191A /* TabBarViewController.swift */,
+				EE8A53072AF9D65C0029191A /* Home */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -1489,7 +1503,9 @@
 				EECF08012AE8217600E77E2E /* Verification.swift in Sources */,
 				EE71DA9F2AE818B400B09801 /* Register.swift in Sources */,
 				EEE7BE2E2AE7F487006C0460 /* Login.swift in Sources */,
+				EE8A53062AF9BDAF0029191A /* TabBarViewController.swift in Sources */,
 				EEC988F02AE9108D00675F6C /* ProfileUpdate.swift in Sources */,
+				EE8A53092AF9D7780029191A /* Home.swift in Sources */,
 				EE71DA9A2AE8130A00B09801 /* ResetPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,42 +8,47 @@
 import UIKit
 import MakeConstraints
 import ViewAnimator
+import Extensions
 
 class MegaNavigationController: UINavigationController {
     // MARK: - Views
     //
     let notificationView = UIImageView(image: .megaNotification.withRenderingMode(.alwaysOriginal))
     let shopingCartView = UIImageView(image: .megaShopingCart.withRenderingMode(.alwaysOriginal))
-    ///
+    //
     lazy var notificationItem = UIBarButtonItem(customView: notificationView)
     lazy var shopingCartItem = UIBarButtonItem(customView: shopingCartView)
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        //
         configureViews()
-        //
         subscribeToNotificaitons()
         subscribeToShopingCart()
     }
-    ///
+    //
     public func addNotificationItem() {
-        if visibleViewController?.navigationItem.rightBarButtonItems == nil {
-            visibleViewController?.navigationItem.rightBarButtonItems = []
-        }
+        initializerightBarButtonItems()
         visibleViewController?.navigationItem.rightBarButtonItems?.append(notificationItem)
         let notificationsTapGesture = UITapGestureRecognizer(target: self, action: #selector(notificationViewAction))
         notificationView.addGestureRecognizer(notificationsTapGesture)
     }
-    ///
+    //
     public func addShopingCartItem() {
-        if visibleViewController?.navigationItem.rightBarButtonItems == nil {
-            visibleViewController?.navigationItem.rightBarButtonItems = []
-        }
+        initializerightBarButtonItems()
         visibleViewController?.navigationItem.rightBarButtonItems?.append(shopingCartItem)
         let shopingCartTapGesture = UITapGestureRecognizer(target: self, action: #selector(shopingCartViewAction))
         shopingCartView.addGestureRecognizer(shopingCartTapGesture)
+    }
+    //
+    private func initializerightBarButtonItems() {
+        guard let visibleViewController else {
+            Logger.log("Failed to wrap visibleViewController", category: \.default, level: .fault)
+            return
+        }
+        if visibleViewController.navigationItem.rightBarButtonItems == nil {
+            visibleViewController.navigationItem.rightBarButtonItems = []
+        }
     }
 }
 // MARK: - Configurations
@@ -72,32 +77,34 @@ extension MegaNavigationController {
         navigationBar.backIndicatorImage = .megaBack
         navigationBar.backIndicatorTransitionMaskImage = .megaBack
     }
-    ///
+}
+// MARK: - Private Handlers
+private extension MegaNavigationController {
     private func subscribeToNotificaitons() {
         TabBarViewModel.shared.$notifications
-            .map { $0.hasUnreadNotification() }
-            .map { hasUnreadNotification -> UIImage in
-                hasUnreadNotification ? .megaNotificationUnRead : .megaNotification
+            .map { notifications -> UIImage in
+                notifications.hasUnreadNotification() ? .megaNotificationUnRead : .megaNotification
             }
             .assign(to: \.image, on: notificationView)
-           .store(in: &TabBarViewModel.shared.cancellableSet)
+            .store(in: &TabBarViewModel.shared.cancellableSet)
     }
-    ///
+    //
     private func subscribeToShopingCart() {
         TabBarViewModel.shared.$cart
-            .map { !$0.isEmpty }
-            .map { notEmpty -> UIImage in
-                if notEmpty {
+            .map { cart -> Bool in
+                cart.isEmpty
+            }
+            .map { isEmpty -> UIImage in
+                if !isEmpty {
                     // animate shoping cart when not empty
                     self.shopingCartView.animate(animations: [AnimationType.from(direction: .right, offset: 10)])
                 }
-                return notEmpty ? .megaShoppingCartNotEmpty : .megaShopingCart
+                return isEmpty ? .megaShopingCart : .megaShoppingCartNotEmpty
             }
             .assign(to: \.image, on: shopingCartView)
             .store(in: &TabBarViewModel.shared.cancellableSet)
     }
 }
-
 // MARK: - UINavigationControllerDelegate
 extension MegaNavigationController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController,

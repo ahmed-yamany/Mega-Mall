@@ -37,14 +37,14 @@ extension AddsCollectionViewSection: CompositionalLayoutableSectionDataSource {
 // MARK: - Offers CollectionView Section Layout
 extension AddsCollectionViewSection: CompositionalLayoutableSectionLayout {
     var spacing: CGFloat { 20 }
-    var height: CGFloat { 216 }
+    var height: CGFloat { 150 }
     var itemLayoutInGroup: NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         return item
     }
     var groupLayoutInSection: NSCollectionLayoutGroup {
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.85), heightDimension: .absolute(150))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.85), heightDimension: .absolute(height))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup])
         return group
     }
@@ -63,7 +63,6 @@ extension AddsCollectionViewSection: CompositionalLayoutableSectionDelegate {
     }
     //
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("selecte")
         LoginManager.shared.checkLogin()
     }
 }

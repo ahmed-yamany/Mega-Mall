@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Mega_Mall" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="vhA-M7-zeI" id="W8S-7G-fhz"/>
+                <outlet property="searchTextField" destination="hdP-fy-oU3" id="gSr-MK-xdB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

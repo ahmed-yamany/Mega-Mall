@@ -26,7 +26,7 @@ class TabBarViewModel: ObservableObject {
     @Published var cart: [Product] = []
     @Published var orders: [Order] = []
     @Published var whishies: [Product] = []
-    @Published var notifications: [Notification] = [.init(isRead: true)]
+    @Published var notifications: [Notification] = [.init(isRead: false)]
     //
     var cancellableSet: Set<AnyCancellable> = .init()
     //
@@ -38,6 +38,7 @@ class TabBarViewModel: ObservableObject {
         isLogin = false
         login = false
         cart.removeAll()
+        orders.removeAll()
         whishies.removeAll()
         notifications.removeAll()
     }

@@ -40,6 +40,7 @@ extension Coordinator {
     //
     var updatePassword: Factory<UIViewController> {
         self { UpdatePasswordViewController() }
+            .shared
     }
     //
     var register: Factory<UIViewController> {
@@ -49,5 +50,28 @@ extension Coordinator {
     //
     var profileUpdate: Factory<UIViewController> {
         self { ProfileUpdateViewController() }
+            .shared
+    }
+}
+// MARK: - TabBar
+extension Coordinator {
+    var home: Factory<UINavigationController> {
+        self { MegaNavigationController(rootViewController: HomeViewController()) }
+            .shared
+    }
+    //
+    var wishlist: Factory<UINavigationController> {
+        self { MegaNavigationController(rootViewController: WishListViewController()) }
+            .shared
+    }
+    //
+    var order: Factory<UINavigationController> {
+        self { MegaNavigationController(rootViewController: OrderViewController()) }
+            .shared
+    }
+    //
+    var account: Factory<UINavigationController> {
+        self { MegaNavigationController(rootViewController: AccountViewController()) }
+            .shared
     }
 }

@@ -2,7 +2,7 @@ import Foundation
 import Combine
 
 // MARK: HomeViewModel
-//
+// here i am mocking home, beacause the viewModel is responsible for getting data from network or local storage
 class HomeViewModel {
     // swiftlint: disable all
     var cancellableSet: Set<AnyCancellable> = []
