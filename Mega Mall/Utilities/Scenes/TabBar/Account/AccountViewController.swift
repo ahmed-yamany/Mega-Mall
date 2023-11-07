@@ -28,9 +28,11 @@ class AccountViewController: UIViewController, CompositionalLayoutProvider {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        if TabBarViewModel.shared.isLogin {
-            configureViews()
-        }
+        configureViews()
+        TabBarViewModel.shared.$isLogin
+            .map { !$0 }
+            .assign(to: \.isHidden, on: view)
+            .store(in: &TabBarViewModel.shared.cancellableSet)
     }
 }
 // MARK: - Configurations

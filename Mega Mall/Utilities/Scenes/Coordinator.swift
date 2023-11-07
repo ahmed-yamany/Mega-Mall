@@ -25,32 +25,26 @@ extension Coordinator {
 extension Coordinator {
     var login: Factory<UINavigationController> {
         self { MegaNavigationController(rootViewController: LoginViewController()) }
-            .shared
     }
     //
     var verification: ParameterFactory<VerificationViewModel, UIViewController> {
         self { VerificationViewController(viewModel: $0) }
-            .shared
     }
     //
     var forgotPassword: Factory<UIViewController> {
         self { ResetPasswordViewController() }
-            .shared
     }
     //
     var updatePassword: Factory<UIViewController> {
         self { UpdatePasswordViewController() }
-            .shared
     }
     //
     var register: Factory<UIViewController> {
         self { RegisterViewController() }
-            .shared
     }
     //
     var profileUpdate: Factory<UIViewController> {
         self { ProfileUpdateViewController() }
-            .shared
     }
 }
 // MARK: - TabBar
