@@ -26,12 +26,9 @@ class FilterView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNib()
-        configureViews()
     }
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        loadNib()
-        configureViews()
+        fatalError()
     }
     /// Loads the view from a nib file and adds it as a subview to the FilterView view.
     private func loadNib() {
@@ -58,16 +55,7 @@ extension FilterView {
     /// - Parameter viewModel: The ViewModel containing the data to be displayed.
     func configure(with viewModel: FilterViewModel) {
         self.viewModel = viewModel
-        segmentControl.$selectedButtonIndex.sink { [unowned self] selectedIndex in
-            if selectedIndex == 0 {
-                tableView.delegate = filterDelegate
-                tableView.dataSource = filterDelegate
-            } else {
-                tableView.delegate = sortDelegate
-                tableView.dataSource = sortDelegate
-            }
-            tableView.reloadData()
-        }.store(in: &viewModel.cancellableSet)
+        configureViews()
     }
 }
 // MARK: - Configure Views
@@ -77,9 +65,28 @@ private extension FilterView {
         configureSegmentControl()
     }
     func configureSegmentControl() {
-        segmentControl.configure(buttonTitles: ["Filter", "Sorting"],
-                                 tintColor: .megaPrimaryBlueOcean,
-                                 fontSelected: .medium,
-                                 fontUnselected: .medium)
+        segmentControl.delegate = self
+        segmentControl.configure(buttonTitles: ["Filter", "Sorting"])
+    }
+}
+
+extension FilterView: SegmentControlDelegate {
+    func segmentControl(_ segmentControl: CustomSegmetedControl, updateSelected button: UIButton) {
+        button.setTitleColor(.megaPrimaryNavyBlack, for: .normal)
+        button.titleLabel?.font = .medium
+    }
+    func segmentControl(_ segmentControl: CustomSegmetedControl, updateUnSelected button: UIButton) {
+        button.setTitleColor(.megaPrimaryNavyBlack, for: .normal)
+        button.titleLabel?.font = .regular
+    }
+    func segmentControl(_ segmentControl: CustomSegmetedControl, didSelectSegmentAt index: Int) {
+        if index == 0 {
+            tableView.delegate = filterDelegate
+            tableView.dataSource = filterDelegate
+        } else {
+            tableView.delegate = sortDelegate
+            tableView.dataSource = sortDelegate
+        }
+        tableView.reloadData()
     }
 }

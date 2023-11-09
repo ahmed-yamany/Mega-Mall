@@ -27,7 +27,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vhA-M7-zeI">
-                    <rect key="frame" x="0.0" y="113" width="393" height="739"/>
+                    <rect key="frame" x="0.0" y="133" width="393" height="719"/>
                     <color key="backgroundColor" name="Mega-Primary-PureWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1pZ-sc-JXf">
                         <size key="itemSize" width="128" height="128"/>
@@ -44,9 +44,9 @@
                 <constraint firstAttribute="bottom" secondItem="vhA-M7-zeI" secondAttribute="bottom" id="5mx-UW-e95"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hdP-fy-oU3" secondAttribute="trailing" constant="20" id="6HY-cE-hWq"/>
                 <constraint firstItem="vhA-M7-zeI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OLk-iS-45X"/>
+                <constraint firstItem="vhA-M7-zeI" firstAttribute="top" secondItem="hdP-fy-oU3" secondAttribute="bottom" constant="20" id="Ovx-RM-7oN"/>
                 <constraint firstItem="hdP-fy-oU3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Qgc-8f-uFj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vhA-M7-zeI" secondAttribute="trailing" id="eIb-I7-pvk"/>
-                <constraint firstItem="vhA-M7-zeI" firstAttribute="top" secondItem="hdP-fy-oU3" secondAttribute="bottom" id="uOD-8d-yb3"/>
             </constraints>
             <point key="canvasLocation" x="-153" y="20"/>
         </view>

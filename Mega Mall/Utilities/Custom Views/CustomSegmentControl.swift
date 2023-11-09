@@ -8,106 +8,84 @@
 import UIKit
 import Combine
 
-final class CustomSegmetedControl: UIView {
-    private var verticalContainer: UIView = UIView()
+
+@objc public protocol SegmentControlDelegate: NSObjectProtocol {
+    /// Notifies the delegate when a selected button is updated.
+    @objc optional func segmentControl(_ segmentControl: CustomSegmetedControl, updateSelected button: UIButton)
+    /// Notifies the delegate when an unselected button is updated.
+    @objc optional func segmentControl(_ segmentControl: CustomSegmetedControl, updateUnSelected button: UIButton)
+    /// Notifies the delegate when a segment is selected at a specific index.
+    @objc optional func segmentControl(_ segmentControl: CustomSegmetedControl, didSelectSegmentAt index: Int)
+}
+
+/// A custom segmented control that allows switching between segments with visual customization options.
+open class CustomSegmetedControl: UIView {
+    /// The container for holding the buttons.
     private var buttonsContainer: UIStackView = UIStackView()
-    ///
+    /// The array of buttons in the segmented control.
     private var buttons: [UIButton] = []
+    /// The titles for each segment in the segmented control.
     private var buttonTitles: [String] = []
-    ///
+    /// The view representing the selection indicator.
     private var barView: UIView = UIView()
+    /// The leading constraint for the selection indicator's position.
     private var barViewLeadingConstraint: NSLayoutConstraint = NSLayoutConstraint()
-    ///
-    @Published var selectedButtonIndex: Int = 0
-    ///
-    private var elementsTintColor: UIColor = UIColor()
-    private var fontSelected: UIFont = UIFont()
-    private var fontUnselected: UIFont = UIFont()
-    ///
+    /// The index of the currently selected button.
+    private(set) var selectedButtonIndex: Int = 0
+    /// The delegate for handling segmented control events.
+    open weak var delegate: SegmentControlDelegate?
+    //
     /// Creates the custom segmented control with segments having the given titles.
     /// - Parameters:
     ///   - buttonTitles: The titles of the segmented control will have.
-    ///   - tintColor: The color of the bar and segments.
-    ///   - fontSelected: The font of the selected segmented.
-    ///   - fontUnselected: The font of the unselected segmented.
-    public func configure(buttonTitles: [String],
-                          tintColor: UIColor = .systemPurple,
-                          fontSelected: UIFont = .preferredFont(forTextStyle: .body,
-                                                                compatibleWith: .init(legibilityWeight: .bold)),
-                          fontUnselected: UIFont = .preferredFont(forTextStyle: .body)) {
+    public func configure(buttonTitles: [String]) {
         guard !buttonTitles.isEmpty else { return }
         self.buttonTitles = buttonTitles
-        self.fontSelected = fontSelected
-        self.fontUnselected = fontUnselected
-        self.tintColor = tintColor
-        configure()
+        configureUI()
     }
     ///
-    private func configure() {
-        addViews()
-        prepareVContainer()
+    private func configureUI() {
         prepareButtons()
         prepareButtonsContainer()
         prepareBarView()
     }
-    ///
-    private func addViews() {
-        addSubview(verticalContainer)
-    }
-    ///
-    private func prepareVContainer() {
-        verticalContainer.translatesAutoresizingMaskIntoConstraints = false
-        verticalContainer.addSubview(buttonsContainer)
-        verticalContainer.addSubview(barView)
-        ///
-        NSLayoutConstraint.activate([
-            verticalContainer.topAnchor.constraint(equalTo: topAnchor),
-            verticalContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            verticalContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
-            verticalContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
-            //
-            // CustomSegmetedControl UIView constrains to adapt to the height of their subviews
-            topAnchor.constraint(equalTo: buttonsContainer.topAnchor),
-            bottomAnchor.constraint(equalTo: barView.bottomAnchor)
-        ])
-    }
-    //
-    // Creates the buttons from the buttonTitles array
+
+//     Creates the buttons from the buttonTitles array
     private func prepareButtons() {
         buttons = buttonTitles.map { title in
-            let button: UIButton = UIButton(type: .system)
-            button.setTitle(title, for: .normal)
-            button.tintColor = .black
-            button.titleLabel?.font = fontUnselected
-            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+            let button: UIButton = createButton(title: title)
+            buttonsContainer.addArrangedSubview(button)
             return button
         }
-        buttons[0].setTitleColor(tintColor, for: .normal)
-        buttons[0].titleLabel?.font = fontSelected
+        delegate?.segmentControl?(self, updateSelected: buttons[0])
+        delegate?.segmentControl?(self, didSelectSegmentAt: 0)
     }
+    private func createButton(title: String) -> UIButton {
+        let button = UIButton(type: .system)
+        delegate?.segmentControl?(self, updateUnSelected: button)
+        button.setTitle(title, for: .normal)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        return button
+    }
+
     //
     // Add the buttons in a horizontal container
     private func prepareButtonsContainer() {
-        buttonsContainer.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(barView)
+        addSubview(buttonsContainer)
+        buttonsContainer.fillSuperview()
+        //
         buttonsContainer.axis = .horizontal
         buttonsContainer.distribution = .fillEqually
         buttonsContainer.spacing = 8
-        ///
-        buttons.forEach {
-            buttonsContainer.addArrangedSubview($0)
-        }
-        ///
-        NSLayoutConstraint.activate([
-            buttonsContainer.topAnchor.constraint(equalTo: verticalContainer.topAnchor),
-            buttonsContainer.leadingAnchor.constraint(equalTo: verticalContainer.leadingAnchor),
-            buttonsContainer.trailingAnchor.constraint(equalTo: verticalContainer.trailingAnchor)
-        ])
+        // add button to buttonsContainer
+        buttons.forEach { buttonsContainer.addArrangedSubview($0) }
     }
     ///
     private func prepareBarView() {
         let firstButton = buttons[0]
         barView.translatesAutoresizingMaskIntoConstraints = false
-        barView.backgroundColor = tintColor
+        updateBarView(barView, for: firstButton)
         barViewLeadingConstraint = barView.leadingAnchor.constraint(equalTo: firstButton.leadingAnchor)
         ///
         NSLayoutConstraint.activate([
@@ -122,26 +100,24 @@ final class CustomSegmetedControl: UIView {
     @objc private func buttonAction(sender: UIButton) {
         guard let buttonIndex = buttons.firstIndex(of: sender) else { return }
         selectedButtonIndex = buttonIndex
-        prepareButtonsUI()
-        animateBarViewPosition()
+        self.delegate?.segmentControl?(self, didSelectSegmentAt: buttonIndex)
+        updateButtonAppearance(at: buttonIndex)
+        animateBarViewPosition(to: buttonIndex)
     }
     //
-    // Change the color and font when a button is pressed
-    private func prepareButtonsUI() {
-        let selectedButton = buttons[selectedButtonIndex]
+    private func updateButtonAppearance(at index: Int) {
+        let selectedButton = buttons[index]
         buttons.forEach { button in
             if button == selectedButton {
-                button.setTitleColor(tintColor, for: .normal)
-                button.titleLabel?.font = fontSelected
+                self.delegate?.segmentControl?(self, updateSelected: button)
             } else {
-                button.setTitleColor(.black, for: .normal)
-                button.titleLabel?.font = fontUnselected
+                self.delegate?.segmentControl?(self, updateUnSelected: button)
             }
         }
     }
     //
     // Change and animate the barView position
-    private func animateBarViewPosition() {
+    private func animateBarViewPosition(to selectedButtonIndex: Int) {
         let selectedButton = buttons[selectedButtonIndex]
         barViewLeadingConstraint.isActive = false
         barViewLeadingConstraint = barView.leadingAnchor.constraint(equalTo: selectedButton.leadingAnchor)
@@ -149,5 +125,9 @@ final class CustomSegmetedControl: UIView {
         UIView.animate(withDuration: 0.3) {
             self.layoutIfNeeded()
         }
+    }
+    func updateBarView(_ barView: UIView, for button: UIButton) {
+        barView.backgroundColor = .megaPrimaryBlueOcean
+        barView.layer.cornerRadius = 8
     }
 }

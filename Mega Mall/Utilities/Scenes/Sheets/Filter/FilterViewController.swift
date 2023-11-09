@@ -2,7 +2,7 @@ import UIKit
 
 class FilterViewController: SheetViewController {
     // MARK: Views
-    let filterView = FilterView()
+    var filterView: FilterView!
     //
     // MARK: - Properties
     private let viewModel: FilterViewModel
@@ -20,9 +20,9 @@ class FilterViewController: SheetViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
-        ///
+        self.filterView = FilterView()
         filterView.configure(with: viewModel)
+        configureViews()
     }
 }
 //

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, CompositionalLayoutProvider {
     var compositionalLayoutSections: [CompositionalLayoutableSection] = []
     private(set) lazy var delegate = CompositionalLayoutDelegate(provider: self)
     private(set) lazy var datasource = CompositionalLayoutDataSource(provider: self)
+    let segmentTitle = ["Sort", "Filter", "Arrange"]
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController, CompositionalLayoutProvider {
         collectionView.dataSource = datasource
         //
         setupViewModel()
+ 
     }
     //
     private func setupViewModel() {
