@@ -30,6 +30,7 @@
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="category.subtitle"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="category.subtitle"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLH-n1-0Qu" customClass="SearchTextField" customModule="Mega_Mall" customModuleProvider="target">

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -39,6 +40,7 @@
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="loginAlert.title"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="loginAlert.title"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBs-Ux-zNv" customClass="MediumLabel" customModule="Mega_Mall" customModuleProvider="target">
@@ -48,6 +50,7 @@
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="loginAlert.subtitle"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="loginAlert.subtitle"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
                             </subviews>
@@ -58,6 +61,7 @@
                             <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="onboarding.login"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="onboarding.login"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="h7e-66-Xkh"/>

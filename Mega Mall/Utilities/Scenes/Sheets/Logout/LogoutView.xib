@@ -53,6 +53,7 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="account.logout.cancel"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="account.logout.cancel"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="cancellButtonAction:" destination="-1" eventType="touchUpInside" id="UkK-X3-2yS"/>
@@ -64,6 +65,7 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="account.logout.button"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="account.logout.button"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="logoutButtonTapped:" destination="-1" eventType="touchUpInside" id="ksa-ZC-bkw"/>

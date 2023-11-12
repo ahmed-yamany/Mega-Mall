@@ -24,7 +24,6 @@ class HomeViewController: UIViewController, CompositionalLayoutProvider {
         collectionView.dataSource = datasource
         //
         setupViewModel()
- 
     }
     //
     private func setupViewModel() {

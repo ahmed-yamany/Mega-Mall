@@ -56,7 +56,6 @@
 		EE83AD6F2AE3E5C900E40FF1 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD6D2AE3E5C900E40FF1 /* DescriptionView.swift */; };
 		EE83AD702AE3E5C900E40FF1 /* DescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD6E2AE3E5C900E40FF1 /* DescriptionView.xib */; };
 		EE83AD762AE3E92A00E40FF1 /* MakeConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD752AE3E92A00E40FF1 /* MakeConstraints */; };
-		EE83AD792AE3E94700E40FF1 /* Localizable in Frameworks */ = {isa = PBXBuildFile; productRef = EE83AD782AE3E94700E40FF1 /* Localizable */; };
 		EE83AD852AE3F2BC00E40FF1 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE83AD842AE3F2BC00E40FF1 /* swiftgen.yml */; };
 		EE83AD8B2AE3F7C600E40FF1 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD8A2AE3F7C600E40FF1 /* Strings+Generated.swift */; };
 		EE83AD912AE3FC3D00E40FF1 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83AD8F2AE3FC3D00E40FF1 /* OnboardingTextField.swift */; };
@@ -380,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEFCC62F2AE418E100213626 /* IQKeyboardManagerSwift in Frameworks */,
-				EE83AD792AE3E94700E40FF1 /* Localizable in Frameworks */,
 				EEC30B1F2AE946730003F2ED /* ViewAnimator in Frameworks */,
 				EE83AD672AE3E40400E40FF1 /* Factory in Frameworks */,
 				EE32A9D82AEACC96008F15B0 /* CompositionalLayoutableSection in Frameworks */,
@@ -1191,7 +1189,6 @@
 			packageProductDependencies = (
 				EE83AD662AE3E40400E40FF1 /* Factory */,
 				EE83AD752AE3E92A00E40FF1 /* MakeConstraints */,
-				EE83AD782AE3E94700E40FF1 /* Localizable */,
 				EE83AD942AE3FD3800E40FF1 /* Extensions */,
 				EEFCC62E2AE418E100213626 /* IQKeyboardManagerSwift */,
 				EEC30B1E2AE946730003F2ED /* ViewAnimator */,
@@ -1251,7 +1248,6 @@
 			packageReferences = (
 				EE83AD652AE3E40400E40FF1 /* XCRemoteSwiftPackageReference "Factory" */,
 				EE83AD742AE3E92A00E40FF1 /* XCLocalSwiftPackageReference "Packages/MakeConstraints" */,
-				EE83AD772AE3E94700E40FF1 /* XCLocalSwiftPackageReference "Packages/Localizable" */,
 				EE83AD932AE3FD3800E40FF1 /* XCLocalSwiftPackageReference "Packages/Extensions" */,
 				EEFCC62D2AE418E100213626 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				EEC30B1D2AE946730003F2ED /* XCLocalSwiftPackageReference "Packages/ViewAnimator" */,
@@ -1798,10 +1794,6 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/MakeConstraints;
 		};
-		EE83AD772AE3E94700E40FF1 /* XCLocalSwiftPackageReference "Packages/Localizable" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Packages/Localizable;
-		};
 		EE83AD932AE3FD3800E40FF1 /* XCLocalSwiftPackageReference "Packages/Extensions" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/Extensions;
@@ -1844,10 +1836,6 @@
 		EE83AD752AE3E92A00E40FF1 /* MakeConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MakeConstraints;
-		};
-		EE83AD782AE3E94700E40FF1 /* Localizable */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Localizable;
 		};
 		EE83AD942AE3FD3800E40FF1 /* Extensions */ = {
 			isa = XCSwiftPackageProductDependency;

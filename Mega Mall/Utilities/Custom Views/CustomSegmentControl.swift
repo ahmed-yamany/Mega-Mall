@@ -8,7 +8,6 @@
 import UIKit
 import Combine
 
-
 @objc public protocol SegmentControlDelegate: NSObjectProtocol {
     /// Notifies the delegate when a selected button is updated.
     @objc optional func segmentControl(_ segmentControl: CustomSegmetedControl, updateSelected button: UIButton)

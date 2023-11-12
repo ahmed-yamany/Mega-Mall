@@ -45,6 +45,7 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="onboarding.reset"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="onboarding.reset"/>
                                     </userDefinedRuntimeAttributes>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czw-T4-D83" customClass="PrimaryButton" customModule="Mega_Mall" customModuleProvider="target">
@@ -53,6 +54,7 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="onboarding.apply"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="onboarding.apply"/>
                                     </userDefinedRuntimeAttributes>
                                 </button>
                             </subviews>
