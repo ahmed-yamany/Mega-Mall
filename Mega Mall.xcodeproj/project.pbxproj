@@ -109,6 +109,7 @@
 		EEA904672AEC117A00C43637 /* OfferSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA904662AEC117A00C43637 /* OfferSection.swift */; };
 		EEA9046A2AEC11BF00C43637 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA904682AEC11BF00C43637 /* OfferCollectionViewCell.swift */; };
 		EEA9046B2AEC11BF00C43637 /* OfferCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA904692AEC11BF00C43637 /* OfferCollectionViewCell.xib */; };
+		EEAA371E2B59A1CB00D3A2D4 /* CollectionViewSectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAA371D2B59A1CB00D3A2D4 /* CollectionViewSectionFactory.swift */; };
 		EEAF38242AF1378000F588AF /* AllNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF38202AF1378000F588AF /* AllNewsViewController.swift */; };
 		EEAF38252AF1378000F588AF /* AllNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF38212AF1378000F588AF /* AllNewsViewModel.swift */; };
 		EEAF38262AF1378000F588AF /* AllNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEAF38222AF1378000F588AF /* AllNewsViewController.xib */; };
@@ -295,6 +296,7 @@
 		EEA904662AEC117A00C43637 /* OfferSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSection.swift; sourceTree = "<group>"; };
 		EEA904682AEC11BF00C43637 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		EEA904692AEC11BF00C43637 /* OfferCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCollectionViewCell.xib; sourceTree = "<group>"; };
+		EEAA371D2B59A1CB00D3A2D4 /* CollectionViewSectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionFactory.swift; sourceTree = "<group>"; };
 		EEAF38202AF1378000F588AF /* AllNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsViewController.swift; sourceTree = "<group>"; };
 		EEAF38212AF1378000F588AF /* AllNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsViewModel.swift; sourceTree = "<group>"; };
 		EEAF38222AF1378000F588AF /* AllNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllNewsViewController.xib; sourceTree = "<group>"; };
@@ -991,6 +993,7 @@
 				EEB009502AEA9CC50032A287 /* HomeViewModel.swift */,
 				EEB0094F2AEA9CC50032A287 /* HomeViewController.swift */,
 				EE32A9DD2AEAD9D5008F15B0 /* HomeViewController.xib */,
+				EEAA371D2B59A1CB00D3A2D4 /* CollectionViewSectionFactory.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1438,6 +1441,7 @@
 				EE945D682AE50DE10013DF0B /* RegisterViewModel.swift in Sources */,
 				EEB009532AEA9CC50032A287 /* HomeViewController.swift in Sources */,
 				EE8A53022AF97D220029191A /* UserDefaultsKeys.swift in Sources */,
+				EEAA371E2B59A1CB00D3A2D4 /* CollectionViewSectionFactory.swift in Sources */,
 				EEFC0A532AF92B4500670BF6 /* LogoutView.swift in Sources */,
 				EE83AD432AE3C4A900E40FF1 /* UIFont+Style.swift in Sources */,
 				EEA0EF6A2AE7DEAE0018383D /* LoginViewModelType.swift in Sources */,

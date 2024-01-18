@@ -55,7 +55,7 @@ class DetailNewsViewController: UICollectionViewController, CompositionalLayoutP
 // MARK: - Actions
 private extension DetailNewsViewController {
     @objc private func newsSectionBottomViewAction(_ sender: Any) {
-        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
+        LoginManager.shared.checkLogin(loginHandler: { [unowned self] in
             if let navigationController {
                 let allNewsVC = Coordinator.shared.allNews()
                 navigationController.pushViewController(allNewsVC, animated: true)

@@ -11,10 +11,10 @@ import Extensions
 class LoginManager {
     static let shared = LoginManager()
     private init() {}
-    func checkLogin(loginHandeler: @escaping () -> Void = {},
+    func checkLogin(loginHandler: @escaping () -> Void = {},
                     notLoginHandeler: @escaping () -> Void = {}) {
         guard !TabBarViewModel.shared.isLogin else {
-            loginHandeler()
+            loginHandler()
             return
         }
         //

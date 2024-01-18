@@ -33,7 +33,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
             Logger.log("failed to wrap product", category: \.home, level: .fault)
             return
         }
-        LoginManager.shared.checkLogin(loginHandeler: {
+        LoginManager.shared.checkLogin(loginHandler: {
             ProductActionViewController(product: product).presentSheet()
         })
     }

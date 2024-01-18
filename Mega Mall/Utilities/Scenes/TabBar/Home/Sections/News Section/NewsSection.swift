@@ -120,7 +120,7 @@ extension NewsCollectionViewSection: CompositionalLayoutableSectionDelegate {
      }
     //
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
+        LoginManager.shared.checkLogin(loginHandler: { [unowned self] in
             let news = items[indexPath.item]
             navigateTo(news)
         })

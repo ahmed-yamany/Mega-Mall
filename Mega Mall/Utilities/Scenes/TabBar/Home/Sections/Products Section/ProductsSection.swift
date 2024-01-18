@@ -135,7 +135,7 @@ extension ProductsCollectionViewSection: CompositionalLayoutableSectionDelegate 
     }
     ///
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        LoginManager.shared.checkLogin(loginHandeler: { [unowned self] in
+        LoginManager.shared.checkLogin(loginHandler: { [unowned self] in
             let product = items[indexPath.item]
             navigateTo(product)
         })
