@@ -9,23 +9,20 @@ import UIKit
 import Extensions
 import CompositionalLayoutableSection
 
-class CollectionViewSectionFactory {
-    let viewController: UIViewController
-    init(owner viewController: UIViewController) {
+protocol SectionFactory {
+    var viewController: UIViewController { get set }
+    init(viewController: UIViewController)
+    func createSection(from section: Section, owner viewController: UIViewController) -> CompositionalLayoutableSection
+}
+
+class AddsSectionFactory: SectionFactory {
+    var viewController: UIViewController
+    
+    required init(viewController: UIViewController) {
         self.viewController = viewController
     }
     
-    func makeCompositionalLayoutableSection(from section: Section) -> CompositionalLayoutableSection {
-        switch section.type {
-            case .adds: return makeAddsSection(from: section)
-            case .categories: return makeCategoriesSection(from: section)
-            case .products: return makeProductsSection(from: section)
-            case .offers: return makeOffersSection(from: section)
-            case .news: return makeNewsSection(from: section)
-        }
-    }
-    
-    private func makeAddsSection(from section: Section) -> CompositionalLayoutableSection {
+    func createSection(from section: Section, owner viewController: UIViewController) -> CompositionalLayoutableSection {
         let collectionViewSection = AddsCollectionViewSection()
         if let adds = section.adds {
             collectionViewSection.items = adds
@@ -34,8 +31,16 @@ class CollectionViewSectionFactory {
         }
         return collectionViewSection
     }
+}
+
+class CategoriesSectionFactory: SectionFactory {
+    var viewController: UIViewController
     
-    private func makeCategoriesSection(from section: Section) -> CompositionalLayoutableSection {
+    required init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
+    func createSection(from section: Section, owner viewController: UIViewController) -> CompositionalLayoutableSection {
         let collectionViewSection = HomeCategoriesCollectionViewSection()
         
         if let categories = section.categories {
@@ -50,8 +55,16 @@ class CollectionViewSectionFactory {
         
         return collectionViewSection
     }
+}
+
+class ProductsSectionFactory: SectionFactory {
+    var viewController: UIViewController
     
-    private func makeProductsSection(from section: Section) -> CompositionalLayoutableSection {
+    required init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
+    func createSection(from section: Section, owner viewController: UIViewController) -> CompositionalLayoutableSection {
         let collectionViewSection = ProductsCollectionViewSection()
         
         if let categories = section.products {
@@ -67,8 +80,16 @@ class CollectionViewSectionFactory {
         
         return collectionViewSection
     }
+}
+
+class OffersSectionFactory: SectionFactory {
+    var viewController: UIViewController
     
-    private func makeOffersSection(from section: Section) -> CompositionalLayoutableSection {
+    required init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
+    func createSection(from section: Section, owner viewController: UIViewController) -> CompositionalLayoutableSection {
         let collectionViewSection = OfferCollectionViewSection()
         
         if let offers = section.offers {
@@ -78,8 +99,16 @@ class CollectionViewSectionFactory {
         }
         return collectionViewSection
     }
+}
+
+class NewsSectionFactory: SectionFactory {
+    var viewController: UIViewController
     
-    private func makeNewsSection(from section: Section) -> CompositionalLayoutableSection {
+    required init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
+    func createSection(from section: Section, owner viewController: UIViewController) -> CompositionalLayoutableSection {
         let collectionViewSection = NewsCollectionViewSection()
         
         if let news = section.news {
@@ -98,6 +127,7 @@ class CollectionViewSectionFactory {
         return collectionViewSection
     }
     
+    
     @objc private func newsSectionBottomViewAction(_ sender: Any) {
         LoginManager.shared.checkLogin(loginHandler: { [weak self] in
             if let navigationController = self?.viewController.navigationController {
@@ -106,5 +136,28 @@ class CollectionViewSectionFactory {
                 Logger.log("Failed to Wrap navigationController", category: \.home, level: .fault)
             }
         })
+    }
+}
+
+class CollectionViewSectionFactory {
+    private lazy var addsSection: SectionFactory = AddsSectionFactory(viewController: viewController)
+    private lazy var categoriesSection: SectionFactory = CategoriesSectionFactory(viewController: viewController)
+    private lazy var productsSection: SectionFactory = ProductsSectionFactory(viewController: viewController)
+    private lazy var offersSection: SectionFactory = OffersSectionFactory(viewController: viewController)
+    private lazy var newsSection: SectionFactory = NewsSectionFactory(viewController: viewController)
+    
+    let viewController: UIViewController
+    init(owner viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
+    func makeCompositionalLayoutableSection(from section: Section) -> CompositionalLayoutableSection {
+        switch section.type {
+            case .adds: return addsSection.createSection(from: section, owner: viewController)
+            case .categories: return categoriesSection.createSection(from: section, owner: viewController)
+            case .products: return productsSection.createSection(from: section, owner: viewController)
+            case .offers: return offersSection.createSection(from: section, owner: viewController)
+            case .news: return newsSection.createSection(from: section, owner: viewController)
+        }
     }
 }

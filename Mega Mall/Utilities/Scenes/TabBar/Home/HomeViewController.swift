@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, CompositionalLayoutProvider {
     var compositionalLayoutSections: [CompositionalLayoutableSection] = []
     private(set) lazy var delegate = CompositionalLayoutDelegate(provider: self)
     private(set) lazy var datasource = CompositionalLayoutDataSource(provider: self)
+    
     private lazy var sectionFactory = CollectionViewSectionFactory(owner: self)
     
     let segmentTitle = ["Sort", "Filter", "Arrange"]
